@@ -758,9 +758,6 @@ SECTIONS
     __romPos = ALIGN(__romPos, 4);
     . = ALIGN(., 4);
 
-    /* Hack to export symbols */
-#include "symbols_main.txt"
-
     /DISCARD/ :
     {
         *(*);

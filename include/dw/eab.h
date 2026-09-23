@@ -38,7 +38,7 @@ extern GsRVIEW2 EAB_D_800619E4;
 extern int8_t EAB_D_80061A04[12];
 extern EabParticle EAB_D_80061A10[];
 
-extern char *MAIN_D_80134C28;
+extern char *BOSS_EFE_TMD;
 extern SVECTOR MAIN_D_80134C2C;
 extern SVECTOR MAIN_D_80134C34;
 extern RGB8 MAIN_D_80134C3C;

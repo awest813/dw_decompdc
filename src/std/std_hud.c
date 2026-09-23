@@ -23,6 +23,8 @@
 
 #include "common.h"
 
+#define STD_TMD_BUFFER	((uint8_t *)0x80038000)
+
 typedef struct {
 	uint32_t *vertTop;
 	int32_t numVert;
@@ -53,11 +55,11 @@ extern int16_t MAIN_D_8013518E;
 extern GsRVIEW2 GS_VIEWPOINT;
 extern int32_t ACTIVE_FRAMEBUFFER;
 extern int32_t VIEWPORT_DISTANCE;
-extern uint8_t *MAIN_D_801351A8;
+extern uint8_t *STD_DRAW_TMD;
 extern uint8_t CURRENT_SCREEN;
 extern int32_t MAIN_D_801351AC;
 extern int32_t MAIN_D_801350F0;
-extern uint8_t *MAIN_D_801351B0;
+extern uint8_t *STD_DAI_TMD;
 
 void STD_func_8006B1F0(uint32_t *tmd, int32_t vofs, int32_t nofs, int32_t objIdx);
 void STD_func_8006B6F4(void);
@@ -1100,12 +1102,12 @@ void STD_func_8006B2BC(void)
 	int32_t i;
 
 	MAIN_D_801351A4 = 0;
-	MAIN_D_801351A8 = (uint8_t *)0x80038000;
-	readFile(MAIN_D_801348D8, MAIN_D_801351A8);
-	GsMapModelingData((u_long *)(MAIN_D_801351A8 + 4));
+	STD_DRAW_TMD = STD_TMD_BUFFER;
+	readFile(MAIN_D_801348D8, STD_DRAW_TMD);
+	GsMapModelingData((u_long *)(STD_DRAW_TMD + 4));
 
 	for (i = 0; i < 4; i++) {
-		GsLinkObject4((u_long)(MAIN_D_801351A8 + 0xc), &STD_D_8007C7B0[i].data.obj, i);
+		GsLinkObject4((u_long)(STD_DRAW_TMD + 0xc), &STD_D_8007C7B0[i].data.obj, i);
 		GsInitCoordinate2(NULL, &STD_D_8007C7B0[i].data.posMatrix);
 		STD_D_8007C7B0[i].data.obj.attribute = 0;
 		STD_D_8007C7B0[i].data.obj.coord2 = &STD_D_8007C7B0[i].data.posMatrix;
@@ -1303,14 +1305,14 @@ void STD_func_8006BA18(void)
 		setupModelMatrix(&STD_D_8007C7B0[i].data);
 	}
 
-	MAIN_D_801351B0 = (uint8_t *)0x80038000;
+	STD_DAI_TMD = STD_TMD_BUFFER;
 	if (CURRENT_SCREEN == 0x6a) {
-		readFile(STD_D_8007AAF0, MAIN_D_801351B0);
+		readFile(STD_D_8007AAF0, STD_DAI_TMD);
 	} else {
-		readFile(STD_D_8007AB04, MAIN_D_801351B0);
+		readFile(STD_D_8007AB04, STD_DAI_TMD);
 	}
-	GsMapModelingData((u_long *)(MAIN_D_801351B0 + 4));
-	GsLinkObject4((u_long)(MAIN_D_801351B0 + 0xc), &STD_D_8007F528[0].data.obj, 0);
+	GsMapModelingData((u_long *)(STD_DAI_TMD + 4));
+	GsLinkObject4((u_long)(STD_DAI_TMD + 0xc), &STD_D_8007F528[0].data.obj, 0);
 	GsInitCoordinate2(NULL, &STD_D_8007F528[0].data.posMatrix);
 	STD_D_8007F528[0].data.obj.attribute = 0;
 	STD_D_8007F528[0].data.obj.coord2 = &STD_D_8007F528[0].data.posMatrix;

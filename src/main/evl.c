@@ -9,6 +9,8 @@
 
 #include "common.h"
 
+#define EVL_MMD_BUFFER	((uint8_t *)0x80020000)
+
 extern int8_t EVL_LOADING_COMPLETE;
 
 void stopBGM(void);
@@ -17,7 +19,7 @@ void loadMapSounds2();
 void isSoundLoaded();
 void loadVLALL();
 
-uint8_t *MAIN_D_801349E4 = (uint8_t *)0x80020000;
+uint8_t *MAIN_D_801349E4 = EVL_MMD_BUFFER;
 RGB8 MAIN_D_801349E8 = { 0x0a, 0xff, 0x0a };
 SVECTOR MAIN_D_801349EC = { 0 };
 int8_t MAIN_D_801349F4 = 1;

@@ -10,6 +10,7 @@
 #include <dw/file_queue.h>
 #include <dw/font.h>
 #include <dw/item.h>
+#include <dw/main.h>
 #include <dw/map_object.h>
 #include <dw/math.h>
 #include <dw/params.h>
@@ -1729,7 +1730,7 @@ void scriptInstruction64to7E(int32_t op)
 			break;
 		case 0x33:
 			addFileReadRequestPath(MAIN_D_80130394,
-			                       (uint8_t *)0x80058000, 0, 0,
+			                       BOSS_EFE_TMD_BUFFER, 0, 0,
 			                       0);
 			loadDynamicLibrary(EAB_REL, 0, 0, 0, 0);
 			readVBALLSection(5, 0x73);

@@ -8,6 +8,7 @@
 #include <dw/entity.h>
 #include <dw/font.h>
 #include <dw/item.h>
+#include <dw/main.h>
 #include <dw/params.h>
 #include <dw/partner.h>
 #include <dw/script.h>
@@ -183,8 +184,6 @@ extern char MAIN_D_801BF768[];
 extern int32_t CHANGED_INPUT;
 extern GsOT *ACTIVE_ORDERING_TABLE;
 extern char *MOVE_NAMES[];
-extern uint8_t MAIN_D_8008D000[];
-extern struct DIRENTRY MAIN_D_8008E400[];
 
 int8_t getFileCityTopMap(void);
 void renderUIBoxBorder(int16_t *rect, int32_t flag);
@@ -355,9 +354,9 @@ char MAIN_D_801346C4[] = "Player";
 
 char MAIN_D_801346CC[] = "%i";
 
-struct DIRENTRY *MAIN_D_801346D0 = MAIN_D_8008E400;
+struct DIRENTRY *MEMCARD_DIRENTRIES = (struct DIRENTRY *)(TEXTURE_BUFFER + 0x5c00);
 
-uint8_t *MAIN_D_801346D4 = MAIN_D_8008D000;
+uint8_t *VS_SAVE_DATA = TEXTURE_BUFFER + 0x4800;
 
 char MAIN_D_80131008[] = "NEW GAME";
 
@@ -3344,7 +3343,7 @@ void tickMainMenu(void)
 		MemCardSync(0, (unsigned long *)&command, (unsigned long *)&result);
 		MAIN_D_8013190C[0xF] = MAIN_D_80131648[MEMORY_CARD_SLOT];
 		input = MemCardGetDirentry(MEMORY_CARD_ID, MAIN_D_8013190C,
-					MAIN_D_801346D0, (long *)&count, 0, 1);
+					MEMCARD_DIRENTRIES, (long *)&count, 0, 1);
 		MEMORY_CARD_ERROR = -1;
 		switch (input) {
 		case -1:
@@ -3556,17 +3555,17 @@ void tickMainMenu(void)
 			if (result == 0) {
 				if (((SavegamePayload *)MAIN_D_80131B2C)->checksum ==
 				    createSavegameChecksum(0)) {
-					memcpy(MAIN_D_801346D4 + VS_PLAYER_INDEX * 0xA00,
+					memcpy(VS_SAVE_DATA + VS_PLAYER_INDEX * 0xA00,
 					       MAIN_D_80131B2C + 0x500, 0xA00);
 				} else if (((SavegamePayload *)MAIN_D_80132A2C)->checksum ==
 					   createSavegameChecksum(1)) {
-					memcpy(MAIN_D_801346D4 + VS_PLAYER_INDEX * 0xA00,
+					memcpy(VS_SAVE_DATA + VS_PLAYER_INDEX * 0xA00,
 					       MAIN_D_80132F2C, 0xA00);
 				} else {
 					setMemoryCardReadError(2, 0x32);
 					break;
 				}
-				if (MAIN_func_8011341C(MAIN_D_801346D4 +
+				if (MAIN_func_8011341C(VS_SAVE_DATA +
 							 VS_PLAYER_INDEX * 0xA00)) {
 					TARGET_MENU = 0x37;
 				} else {
@@ -3592,8 +3591,8 @@ void tickMainMenu(void)
 			removeObject(0x1388, 0);
 			removeObject(0xFA3, 0);
 			loadDynamicLibrary(VS_REL, &loadComplete, 0, 0, 0);
-			VS__initializeVSMode((char *)MAIN_D_801346D4,
-					     (char *)MAIN_D_801346D4 + 0xA00);
+			VS__initializeVSMode((char *)VS_SAVE_DATA,
+					     (char *)VS_SAVE_DATA + 0xA00);
 			addObject(0xFA3, 0, NULL, (RenderFunction)renderMainMenuBackground);
 			addObject(0x1388, 0, (TickFunction)tickMainMenu,
 				  (RenderFunction)renderMainMenu);
@@ -3689,7 +3688,7 @@ void tickMainMenu(void)
 		MemCardSync(0, (unsigned long *)&command, (unsigned long *)&result);
 		MAIN_D_8013190C[0xF] = MAIN_D_80131648[MEMORY_CARD_SLOT];
 		input = MemCardGetDirentry(MEMORY_CARD_ID, MAIN_D_8013190C,
-					MAIN_D_801346D0, (long *)&count, 0, 1);
+					MEMCARD_DIRENTRIES, (long *)&count, 0, 1);
 		MEMORY_CARD_ERROR = -1;
 		switch (input) {
 		case -1:
@@ -3939,7 +3938,7 @@ int32_t countUsedMemoryCardBlocks(int32_t channel, int32_t returnMenu)
 	int32_t status;
 
 	MemCardSync(0, &cmd, &result);
-	status = MemCardGetDirentry(channel, MAIN_D_801346C0 + 2, MAIN_D_801346D0,
+	status = MemCardGetDirentry(channel, MAIN_D_801346C0 + 2, MEMCARD_DIRENTRIES,
 			&fileCount, 0, 15);
 	/* Keep the success block after both errors for the retail branch layout. */
 	if (status == -1)
@@ -3958,7 +3957,7 @@ success:
 
 	blocks = 0;
 	for (i = 0; i < fileCount; i++) {
-		blocks += (MAIN_D_801346D0[i].size + 0x1FFF) / 0x2000;
+		blocks += (MEMCARD_DIRENTRIES[i].size + 0x1FFF) / 0x2000;
 	}
 	return blocks;
 }
@@ -3976,7 +3975,7 @@ int32_t loadSaveSlotData(int32_t channel, char *filename, SaveSlotPreview *slots
 
 	/* The fourth caller argument is unused in retail. */
 	MemCardSync(0, &cmd, &result);
-	status = MemCardGetDirentry(channel, filename, MAIN_D_801346D0, &fileCount, 0, 15);
+	status = MemCardGetDirentry(channel, filename, MEMCARD_DIRENTRIES, &fileCount, 0, 15);
 	/* Keep the success block after both errors for the retail branch layout. */
 	if (status == -1)
 		goto missing;
@@ -3996,13 +3995,13 @@ success:
 		slots[i].valid = 0;
 	}
 	for (i = 0; i < fileCount; i++) {
-		if ((MAIN_D_801346D0[i].name[15] >= '0') &&
-				(MAIN_D_801346D0[i].name[15] < ':')) {
-			slot = MAIN_D_801346D0[i].name[15] - '0';
+		if ((MEMCARD_DIRENTRIES[i].name[15] >= '0') &&
+				(MEMCARD_DIRENTRIES[i].name[15] < ':')) {
+			slot = MEMCARD_DIRENTRIES[i].name[15] - '0';
 		} else {
-			slot = MAIN_D_801346D0[i].name[15] - '7';
+			slot = MEMCARD_DIRENTRIES[i].name[15] - '7';
 		}
-		if (MemCardReadFile(channel, MAIN_D_801346D0[i].name, (long *)data, 0, 0x80) != 1) {
+		if (MemCardReadFile(channel, MEMCARD_DIRENTRIES[i].name, (long *)data, 0, 0x80) != 1) {
 			setMemoryCardReadError(0, 0);
 			return 0;
 		}

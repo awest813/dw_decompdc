@@ -13,10 +13,6 @@ rom:0x00000B94 reloc:MIPS_HI16 symbol:MAIN_jtbl_80135400
 rom:0x00000B98 reloc:MIPS_LO16 symbol:MAIN_jtbl_80135400
 rom:0x0000A750 reloc:MIPS_NONE symbol:NONE
 rom:0x0000A758 reloc:MIPS_NONE symbol:NONE
-//rom:0x00013318 reloc:MIPS_HI16 symbol:TEXTURE_BUFFER addend:-0x10000
-//rom:0x00013324 reloc:MIPS_LO16 symbol:TEXTURE_BUFFER
-//rom:0x00013328 reloc:MIPS_HI16 symbol:TEXTURE_BUFFER addend:-0x10004
-//rom:0x0001332C reloc:MIPS_LO16 symbol:TEXTURE_BUFFER addend:0x4
 rom:0x00019A50 reloc:MIPS_26 symbol:STD_tickTamerTournament
 rom:0x00019D74 reloc:MIPS_26 symbol:KAR_tick
 rom:0x0001ACE0 reloc:MIPS_26 symbol:ENDI_tickEnding
@@ -30,8 +26,6 @@ rom:0x0001AE80 reloc:MIPS_26 symbol:MURD_tick
 rom:0x0001AE9C reloc:MIPS_26 symbol:MURD_tick
 rom:0x0001BAC4 reloc:MIPS_26 symbol:BTL_battleMain
 rom:0x000263AC reloc:MIPS_26 symbol:STD_tickNPCTournament
-//rom:0x0002B510 reloc:MIPS_HI16 symbol:TEXTURE_BUFFER addend:-0x10000
-//rom:0x0002B518 reloc:MIPS_LO16 symbol:TEXTURE_BUFFER
 rom:0x00034778 reloc:MIPS_26 symbol:BTL_healStatusEffect
 rom:0x00034798 reloc:MIPS_26 symbol:BTL_healStatusEffect
 rom:0x00034854 reloc:MIPS_26 symbol:BTL_removeDeathCountdown
@@ -87,6 +81,10 @@ rom:0x00057DC4 reloc:MIPS_HI16 symbol:MAIN_func_800E7DEC
 rom:0x00057DE8 reloc:MIPS_LO16 symbol:MAIN_func_800E7DEC
 rom:0x00058C08 reloc:MIPS_HI16 symbol:loadSoundCompleteCallback
 rom:0x00058C14 reloc:MIPS_LO16 symbol:loadSoundCompleteCallback
+rom:0x0005C270 reloc:MIPS_NONE symbol:NONE
+rom:0x0005C274 reloc:MIPS_NONE symbol:NONE
+rom:0x0005C284 reloc:MIPS_NONE symbol:NONE
+rom:0x0005C288 reloc:MIPS_NONE symbol:NONE
 rom:0x0005D588 reloc:MIPS_26 symbol:BTL_appendMoveLearnedText
 rom:0x0005D5CC reloc:MIPS_HI16 symbol:BTL_END_BOX_TEXTBUFFER
 rom:0x0005D5D0 reloc:MIPS_LO16 symbol:BTL_END_BOX_TEXTBUFFER
@@ -305,8 +303,6 @@ rom:0x00074014 reloc:MIPS_26 symbol:TRN_func_8008C068
 rom:0x00074024 reloc:MIPS_26 symbol:TRN_func_8008B0D0
 rom:0x00074034 reloc:MIPS_26 symbol:TRN_func_8008CE90
 rom:0x00074158 reloc:MIPS_26 symbol:DOO2_func_8007189C
-//rom:0x00074370 reloc:MIPS_HI16 symbol:MAIN_D_80058000 addend:-0x10000
-//rom:0x0007437C reloc:MIPS_LO16 symbol:MAIN_D_80058000
 rom:0x00074424 reloc:MIPS_26 symbol:EAB_func_8006148C
 rom:0x00075DDC reloc:MIPS_26 symbol:initTournamentSchedule
 rom:0x00075E4C reloc:MIPS_26 symbol:DOO2_func_80071934
@@ -366,6 +362,5 @@ rom:0x000A48D8 reloc:MIPS_32 symbol:STD_D_8007AAB0
 rom:0x000A4A20 reloc:MIPS_32 symbol:KAR_D_8005ABB8
 rom:0x000A4B10 reloc:MIPS_32 symbol:VS_D_80070B1C
 rom:0x000A4C1C reloc:MIPS_NONE symbol:NONE
-//rom:0x000A4C28 reloc:MIPS_32 symbol:MAIN_D_80058000
 rom:0x000151E8 reloc:MIPS_HI16 symbol:DOOA_REINCARNATION_SEQ addend:0x24
 rom:0x000151F8 reloc:MIPS_LO16 symbol:DOOA_REINCARNATION_SEQ addend:0x24

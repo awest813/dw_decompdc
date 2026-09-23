@@ -18,7 +18,7 @@
 #include <dw/utils.h>
 #include <dw/world_object.h>
 
-#define BTL_EMBEDDED_TEXTURE1	((char *)0x80052ae0)
+#define BTL_FINISHER_TIM	((char *)0x80052ae0)
 #define BTL_FINISHER_MODEL	((char *)0x80053800)
 #define BTL_CONFUSION_MODEL	((char *)0x80054838)
 #define BTL_STUN_MODEL		((char *)0x80054d00)
@@ -461,7 +461,7 @@ void loadBattleData(int32_t entityId, int32_t count)
 	BTL_initializeBattleItemParticles();
 	BTL_initializeUnk3();
 	BTL_initializeUnk2();
-	BTL_initializeFinisherAuraModel(BTL_EMBEDDED_TEXTURE1,
+	BTL_initializeFinisherAuraModel(BTL_FINISHER_TIM,
 					BTL_FINISHER_MODEL);
 	if (IS_PREDEFINED_BATTLE != 1) {
 		tickPartnerCollision();

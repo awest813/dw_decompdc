@@ -127,7 +127,7 @@ void EAB_setModelColor(int32_t *color)
 	char (*pb)[0x20];
 
 	idx = 0;
-	hdr = (int32_t *)((int32_t)((uint32_t)MAIN_D_80134C28 + 0xc) + (idx * 28));
+	hdr = (int32_t *)((int32_t)((uint32_t)BOSS_EFE_TMD + 0xc) + (idx * 28));
 	rec = (int32_t *)hdr[4];
 	count = hdr[5];
 	pr = (char (*)[0x20])((char *)rec + 0x14);
@@ -239,7 +239,7 @@ void EAB_renderBuildupRing(int32_t id)
 	scale.vx = scale.vz = lerp(0x10b8, 0x614, 1, 0x12, p[0]);
 	scale.vy = ((_sin(lerp(0, 0x80, 1, 0x12, p[0])) * 0xc3c) / 4096) + 0x15c;
 	copyVector(&trans, &entity->posData->location);
-	renderTMDModel((uint8_t *)MAIN_D_80134C28, 0, &coord, NULL, &trans, &rot, &scale);
+	renderTMDModel((uint8_t *)BOSS_EFE_TMD, 0, &coord, NULL, &trans, &rot, &scale);
 }
 
 int32_t EAB_addSpawnRing(Entity *entity)
@@ -292,7 +292,7 @@ void EAB_renderSpawnRing(int32_t id)
 	scale.vx = scale.vz = lerp(0x16cc, 0x10b8, 1, 0x12, p[0]);
 	scale.vy = ((_sin(lerp(0, 0x80, 1, 0x12, p[0])) * 0x2b8) / 4096) + 0xae;
 	copyVector(&trans, &entity->posData->location);
-	renderTMDModel((uint8_t *)MAIN_D_80134C28, 0, &coord, NULL, &trans, &rot, &scale);
+	renderTMDModel((uint8_t *)BOSS_EFE_TMD, 0, &coord, NULL, &trans, &rot, &scale);
 }
 
 void EAB_removeRings(void)
@@ -609,7 +609,7 @@ void EAB_startBuildup(Entity *entity)
 {
 	VECTOR color;
 
-	GsMapModelingData((unsigned long *)(MAIN_D_80134C28 + 4));
+	GsMapModelingData((unsigned long *)(BOSS_EFE_TMD + 4));
 	color = EAB_D_800616DC;
 	EAB_setModelColor((int32_t *)&color);
 	MAIN_D_801353F0.frame = 0;

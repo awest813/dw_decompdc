@@ -26,7 +26,6 @@ options:
 
   symbol_addrs_path:
     - config/symbols.txt
-    - config/symbols_main.txt
   reloc_addrs_path:
     - config/relocs_main.txt
 

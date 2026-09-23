@@ -20,6 +20,8 @@
 #include <dw/ui.h>
 #include <dw/utils.h>
 
+#define MURD_ORDERING_TABLE_0	((GsOT_TAG *)0x8008c000)
+
 typedef struct {
 	int16_t timer;
 	int16_t phase;
@@ -327,7 +329,7 @@ void MURD_renderScene(void)
 
 void MURD_initializeOrderingTables(void)
 {
-	GsOT_TAG *tags = (GsOT_TAG *)0x8008c000;
+	GsOT_TAG *tags = MURD_ORDERING_TABLE_0;
 
 	MURD_ORDERING_TABLES[0].length = 0xb;
 	MURD_ORDERING_TABLES[0].org = tags;

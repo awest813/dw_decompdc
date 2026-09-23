@@ -13,6 +13,8 @@
 
 #include "common.h"
 
+#define VS_TMD_BUFFER	((uint8_t *)0x80038000)
+
 extern int16_t MAIN_D_80135090[2];
 extern uint8_t MAIN_D_801352C4;
 extern int8_t GAME_STATE;
@@ -36,7 +38,7 @@ extern uint8_t MAIN_D_801352DA[2];
 extern int32_t ACTIVE_FRAMEBUFFER;
 extern GsRVIEW2 GS_VIEWPOINT;
 extern int32_t VIEWPORT_DISTANCE;
-extern uint8_t *MAIN_D_801352DC;
+extern uint8_t *VS_DRAW_TMD;
 extern uint8_t VS_D_80070764[][10];
 extern int16_t MAIN_D_801352BC[2];
 extern int16_t MAIN_D_801352C0[2];
@@ -1189,12 +1191,12 @@ void VS_loadVersusSceneModel(void)
 {
 	int32_t i;
 
-	MAIN_D_801352DC = (uint8_t *)0x80038000;
-	readFile(MAIN_D_80134B10, MAIN_D_801352DC);
-	GsMapModelingData((u_long *)(MAIN_D_801352DC + 4));
+	VS_DRAW_TMD = VS_TMD_BUFFER;
+	readFile(MAIN_D_80134B10, VS_DRAW_TMD);
+	GsMapModelingData((u_long *)(VS_DRAW_TMD + 4));
 
 	for (i = 0; i < 4; i++) {
-		GsLinkObject4((u_long)(MAIN_D_801352DC + 0xc), &VS_D_80072754[i].data.obj, i);
+		GsLinkObject4((u_long)(VS_DRAW_TMD + 0xc), &VS_D_80072754[i].data.obj, i);
 		GsInitCoordinate2(NULL, &VS_D_80072754[i].data.posMatrix);
 		VS_D_80072754[i].data.obj.attribute = 0;
 		VS_D_80072754[i].data.obj.coord2 = &VS_D_80072754[i].data.posMatrix;

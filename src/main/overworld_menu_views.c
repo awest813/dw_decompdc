@@ -2,6 +2,7 @@
 
 #include <dw/entity.h>
 #include <dw/graphics.h>
+#include <dw/main.h>
 #include <dw/move.h>
 #include <dw/params.h>
 #include <dw/partner.h>
@@ -90,7 +91,7 @@ static void *overworld_menu_views_functions[] = {
 
 int32_t loadCardImage(int32_t id)
 {
-	return loadStackedTIMEntry(MAIN_D_80123E78, (uint8_t *)0x80088800,
+	return loadStackedTIMEntry(MAIN_D_80123E78, TEXTURE_BUFFER,
 				    id * 0xe, 0xe);
 }
 

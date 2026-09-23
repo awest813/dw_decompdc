@@ -17,6 +17,12 @@
 
 #include "common.h"
 
+#define VS_FINISHER_TIM	((char *)0x80052ae0)
+#define VS_FINISHER_MODEL	((char *)0x80053800)
+#define VS_CONFUSION_MODEL	((char *)0x80054838)
+#define VS_STUN_MODEL		((char *)0x80054d00)
+#define VS_BUFF_MODEL		((TMDModel *)0x80055328)
+
 typedef struct {
 	int16_t hp;
 	int16_t mp;
@@ -1212,13 +1218,13 @@ void VS_loadVSAssets(int32_t arena)
 	VS_initializeLighting(arena);
 	VS_loadArenaAssets();
 	VS_loadStageModels();
-	VS_initializeFinisherAuraModel((char *)0x80052ae0, (char *)0x80053800);
+	VS_initializeFinisherAuraModel(VS_FINISHER_TIM, VS_FINISHER_MODEL);
 	VS_initializePoisonBubble();
-	VS_initializeConfusionEffect((char *)0x80054838);
-	VS_initializeStunEffect((char *)0x80054d00);
-	initializeBuffModel((TMDModel *)0x80055328);
+	VS_initializeConfusionEffect(VS_CONFUSION_MODEL);
+	VS_initializeStunEffect(VS_STUN_MODEL);
+	initializeBuffModel(VS_BUFF_MODEL);
 	VS_loadTIMToVRAM(VS_D_8006FB94);
-	loadTIMFile(VS_D_8006FBA8, (void *)0x80010000);
+	loadTIMFile(VS_D_8006FBA8, GENERAL_BUFFER);
 }
 
 void VS_addInputObjects(void)

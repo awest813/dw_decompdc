@@ -21,6 +21,12 @@
 
 #include "common.h"
 
+#define STD_FINISHER_TIM	((char *)0x80052ae0)
+#define STD_FINISHER_MODEL	((char *)0x80053800)
+#define STD_CONFUSION_MODEL	((char *)0x80054838)
+#define STD_STUN_MODEL		((char *)0x80054d00)
+#define STD_BUFF_MODEL		((TMDModel *)0x80055328)
+
 extern int32_t MAIN_D_801350EC;
 extern void *MAIN_D_80135130;
 extern int8_t GAME_STATE;
@@ -234,12 +240,12 @@ void STD_func_80056CA8(int32_t arena, uint8_t *arg)
 	STD_func_8006B6F4();
 	loadTIMFile(STD_D_80079C24[arg[0]], GENERAL_BUFFER_PTR);
 	STD_loadTIMToVRAM(STD_D_80079C80);
-	loadTIMFile(STD_D_80079C94, (void *)0x80010000);
-	STD_initializeFinisherAuraModel((char *)0x80052ae0, (char *)0x80053800);
+	loadTIMFile(STD_D_80079C94, GENERAL_BUFFER);
+	STD_initializeFinisherAuraModel(STD_FINISHER_TIM, STD_FINISHER_MODEL);
 	STD_initializePoisonBubble();
-	STD_initializeConfusionEffect((char *)0x80054838);
-	STD_initializeStunEffect((char *)0x80054d00);
-	initializeBuffModel((TMDModel *)0x80055328);
+	STD_initializeConfusionEffect(STD_CONFUSION_MODEL);
+	STD_initializeStunEffect(STD_STUN_MODEL);
+	initializeBuffModel(STD_BUFF_MODEL);
 }
 
 void STD_func_80056E2C(int32_t type, int16_t slot, int32_t tier)

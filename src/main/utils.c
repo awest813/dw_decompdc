@@ -10,6 +10,8 @@
 #include <dw/ui.h>
 #include <dw/utils.h>
 
+#define SHOP_LOAD_ADDRESS	((char *)0x80080800)
+
 void damageTick(FighterData* fighter, Stats* stats);
 void sortItemsById(uint8_t *data, int32_t count);
 void initStringFT4(POLY_FT4* poly);
@@ -77,7 +79,7 @@ void *MAIN_D_8012B96C[16] = {
 	DOO2_D_80070000,
 	DOOA_D_80080000,
 	TEXTURE_BUFFER,
-	(char *)0x80080800,
+	SHOP_LOAD_ADDRESS,
 	DGET_D_80080800,
 	TEXTURE_BUFFER,
 	MURD_D_8007C000,
