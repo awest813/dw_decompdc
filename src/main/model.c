@@ -79,11 +79,10 @@ static inline int32_t applyTPageOffset(int32_t tpageOffset,
 }
 
 // clang-format off
-SkeletonBone MAIN_D_80133B2C[4] = {
+SkeletonBone MAIN_D_80133B2C[3] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
-	{ 0x00, 0x00 },
 };
 
 int32_t PARTNER_WIREFRAME_TOTAL = 0x00000010;
@@ -822,7 +821,7 @@ char MAIN_D_801340EC[8] = ".TMD";
 
 char MAIN_D_801340F4[8] = ".MTN";
 
-SkeletonBone MAIN_D_8011C170[18] = {
+SkeletonBone MAIN_D_8011C170[17] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -840,7 +839,6 @@ SkeletonBone MAIN_D_8011C170[18] = {
 	{ 0x0b, 0x0a },
 	{ 0x0c, 0x0e },
 	{ 0x0d, 0x0f },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011C194[22] = {
@@ -955,7 +953,7 @@ SkeletonBone MAIN_D_8011C224[28] = {
 	{ 0x12, 0x1a },
 };
 
-SkeletonBone MAIN_D_8011C25C[28] = {
+SkeletonBone MAIN_D_8011C25C[27] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x01, 0x01 },
@@ -983,7 +981,6 @@ SkeletonBone MAIN_D_8011C25C[28] = {
 	{ 0x16, 0x11 },
 	{ 0x17, 0x18 },
 	{ 0x18, 0x19 },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011C294[22] = {
@@ -1061,7 +1058,7 @@ SkeletonBone MAIN_D_8011C2FC[14] = {
 	{ 0x05, 0x0c },
 };
 
-SkeletonBone MAIN_D_8011C318[24] = {
+SkeletonBone MAIN_D_8011C318[23] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1085,10 +1082,9 @@ SkeletonBone MAIN_D_8011C318[24] = {
 	{ 0x0e, 0x13 },
 	{ 0x0f, 0x14 },
 	{ 0x10, 0x15 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011C348[22] = {
+SkeletonBone MAIN_D_8011C348[21] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1110,10 +1106,9 @@ SkeletonBone MAIN_D_8011C348[22] = {
 	{ 0x09, 0x11 },
 	{ 0x0a, 0x12 },
 	{ 0x0b, 0x13 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011C374[28] = {
+SkeletonBone MAIN_D_8011C374[27] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1141,10 +1136,9 @@ SkeletonBone MAIN_D_8011C374[28] = {
 	{ 0x10, 0x17 },
 	{ 0x11, 0x18 },
 	{ 0x12, 0x19 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011C3AC[20] = {
+SkeletonBone MAIN_D_8011C3AC[19] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1164,10 +1158,9 @@ SkeletonBone MAIN_D_8011C3AC[20] = {
 	{ 0xff, 0x0c },
 	{ 0x0a, 0x10 },
 	{ 0x0b, 0x11 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011C3D4[22] = {
+SkeletonBone MAIN_D_8011C3D4[21] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1189,10 +1182,9 @@ SkeletonBone MAIN_D_8011C3D4[22] = {
 	{ 0x0c, 0x11 },
 	{ 0x0d, 0x12 },
 	{ 0x0e, 0x13 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011C400[12] = {
+SkeletonBone MAIN_D_8011C400[11] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1204,7 +1196,6 @@ SkeletonBone MAIN_D_8011C400[12] = {
 	{ 0x04, 0x07 },
 	{ 0x05, 0x08 },
 	{ 0x06, 0x09 },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011C418[26] = {
@@ -1236,7 +1227,7 @@ SkeletonBone MAIN_D_8011C418[26] = {
 	{ 0x11, 0x12 },
 };
 
-SkeletonBone MAIN_D_8011C44C[32] = {
+SkeletonBone MAIN_D_8011C44C[31] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1268,10 +1259,9 @@ SkeletonBone MAIN_D_8011C44C[32] = {
 	{ 0xff, 0x18 },
 	{ 0x11, 0x1c },
 	{ 0x12, 0x1d },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011C48C[28] = {
+SkeletonBone MAIN_D_8011C48C[27] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1299,7 +1289,6 @@ SkeletonBone MAIN_D_8011C48C[28] = {
 	{ 0x16, 0x17 },
 	{ 0x17, 0x10 },
 	{ 0x18, 0x19 },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011C4C4[20] = {
@@ -1381,7 +1370,7 @@ SkeletonBone MAIN_D_8011C518[28] = {
 	{ 0x11, 0x1a },
 };
 
-SkeletonBone MAIN_D_8011C550[12] = {
+SkeletonBone MAIN_D_8011C550[11] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1393,10 +1382,9 @@ SkeletonBone MAIN_D_8011C550[12] = {
 	{ 0x06, 0x02 },
 	{ 0x07, 0x02 },
 	{ 0x08, 0x02 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011C568[28] = {
+SkeletonBone MAIN_D_8011C568[27] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x07, 0x01 },
@@ -1424,10 +1412,9 @@ SkeletonBone MAIN_D_8011C568[28] = {
 	{ 0x14, 0x17 },
 	{ 0x15, 0x18 },
 	{ 0x16, 0x19 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011C5A0[8] = {
+SkeletonBone MAIN_D_8011C5A0[7] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1435,7 +1422,6 @@ SkeletonBone MAIN_D_8011C5A0[8] = {
 	{ 0x02, 0x03 },
 	{ 0x03, 0x02 },
 	{ 0x04, 0x05 },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011C5B0[20] = {
@@ -1555,7 +1541,7 @@ SkeletonBone MAIN_D_8011C64C[24] = {
 	{ 0x15, 0x16 },
 };
 
-SkeletonBone MAIN_D_8011C67C[10] = {
+SkeletonBone MAIN_D_8011C67C[9] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1565,7 +1551,6 @@ SkeletonBone MAIN_D_8011C67C[10] = {
 	{ 0x04, 0x02 },
 	{ 0x05, 0x06 },
 	{ 0x06, 0x07 },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011C690[26] = {
@@ -1701,7 +1686,7 @@ SkeletonBone MAIN_D_8011C750[22] = {
 	{ 0x0f, 0x14 },
 };
 
-SkeletonBone MAIN_D_8011C77C[18] = {
+SkeletonBone MAIN_D_8011C77C[17] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1719,10 +1704,9 @@ SkeletonBone MAIN_D_8011C77C[18] = {
 	{ 0x0c, 0x0a },
 	{ 0x0d, 0x0e },
 	{ 0x0e, 0x0f },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011C7A0[26] = {
+SkeletonBone MAIN_D_8011C7A0[25] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1748,7 +1732,6 @@ SkeletonBone MAIN_D_8011C7A0[26] = {
 	{ 0xff, 0x15 },
 	{ 0x10, 0x16 },
 	{ 0x11, 0x17 },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011C7D4[18] = {
@@ -1827,7 +1810,7 @@ SkeletonBone MAIN_D_8011C834[16] = {
 	{ 0x00, 0x01 },
 };
 
-SkeletonBone MAIN_D_8011C854[18] = {
+SkeletonBone MAIN_D_8011C854[17] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x04, 0x01 },
@@ -1845,10 +1828,9 @@ SkeletonBone MAIN_D_8011C854[18] = {
 	{ 0x0c, 0x0d },
 	{ 0x0e, 0x07 },
 	{ 0x0d, 0x07 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011C878[16] = {
+SkeletonBone MAIN_D_8011C878[15] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x02, 0x01 },
@@ -1864,7 +1846,6 @@ SkeletonBone MAIN_D_8011C878[16] = {
 	{ 0x0a, 0x0b },
 	{ 0x0b, 0x05 },
 	{ 0x0c, 0x05 },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011C898[18] = {
@@ -1888,7 +1869,7 @@ SkeletonBone MAIN_D_8011C898[18] = {
 	{ 0x0f, 0x10 },
 };
 
-SkeletonBone MAIN_D_8011C8BC[26] = {
+SkeletonBone MAIN_D_8011C8BC[25] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1914,7 +1895,6 @@ SkeletonBone MAIN_D_8011C8BC[26] = {
 	{ 0x13, 0x0f },
 	{ 0x14, 0x0f },
 	{ 0x15, 0x0f },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011C8F0[28] = {
@@ -1948,7 +1928,7 @@ SkeletonBone MAIN_D_8011C8F0[28] = {
 	{ 0x19, 0x1a },
 };
 
-SkeletonBone MAIN_D_8011C928[22] = {
+SkeletonBone MAIN_D_8011C928[21] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1970,10 +1950,9 @@ SkeletonBone MAIN_D_8011C928[22] = {
 	{ 0x10, 0x02 },
 	{ 0x11, 0x12 },
 	{ 0x12, 0x13 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011C954[24] = {
+SkeletonBone MAIN_D_8011C954[23] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -1997,7 +1976,6 @@ SkeletonBone MAIN_D_8011C954[24] = {
 	{ 0x12, 0x13 },
 	{ 0x13, 0x14 },
 	{ 0x14, 0x15 },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011C984[24] = {
@@ -2104,7 +2082,7 @@ SkeletonBone MAIN_D_8011CA24[12] = {
 	{ 0x09, 0x02 },
 };
 
-SkeletonBone MAIN_D_8011CA3C[32] = {
+SkeletonBone MAIN_D_8011CA3C[31] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -2136,7 +2114,6 @@ SkeletonBone MAIN_D_8011CA3C[32] = {
 	{ 0x1a, 0x1b },
 	{ 0x1b, 0x02 },
 	{ 0x1c, 0x1d },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011CA7C[12] = {
@@ -2154,7 +2131,7 @@ SkeletonBone MAIN_D_8011CA7C[12] = {
 	{ 0x09, 0x0a },
 };
 
-SkeletonBone MAIN_D_8011CA94[22] = {
+SkeletonBone MAIN_D_8011CA94[21] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -2176,10 +2153,9 @@ SkeletonBone MAIN_D_8011CA94[22] = {
 	{ 0x0f, 0x11 },
 	{ 0x10, 0x12 },
 	{ 0x11, 0x13 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011CAC0[16] = {
+SkeletonBone MAIN_D_8011CAC0[15] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x01, 0x01 },
@@ -2195,10 +2171,9 @@ SkeletonBone MAIN_D_8011CAC0[16] = {
 	{ 0x09, 0x0b },
 	{ 0x0a, 0x0c },
 	{ 0x00, 0x01 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011CAE0[24] = {
+SkeletonBone MAIN_D_8011CAE0[23] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -2222,7 +2197,6 @@ SkeletonBone MAIN_D_8011CAE0[24] = {
 	{ 0x12, 0x10 },
 	{ 0x13, 0x14 },
 	{ 0x14, 0x15 },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011CB10[22] = {
@@ -2250,16 +2224,15 @@ SkeletonBone MAIN_D_8011CB10[22] = {
 	{ 0x13, 0x14 },
 };
 
-SkeletonBone MAIN_D_8011CB3C[6] = {
+SkeletonBone MAIN_D_8011CB3C[5] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
 	{ 0x01, 0x01 },
 	{ 0x02, 0x01 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011CB48[20] = {
+SkeletonBone MAIN_D_8011CB48[19] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0xff, 0x01 },
@@ -2279,10 +2252,9 @@ SkeletonBone MAIN_D_8011CB48[20] = {
 	{ 0x0a, 0x0f },
 	{ 0x0b, 0x10 },
 	{ 0x0c, 0x11 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011CB70[20] = {
+SkeletonBone MAIN_D_8011CB70[19] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0xff, 0x01 },
@@ -2302,10 +2274,9 @@ SkeletonBone MAIN_D_8011CB70[20] = {
 	{ 0x09, 0x0f },
 	{ 0x0a, 0x10 },
 	{ 0x0b, 0x11 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011CB98[20] = {
+SkeletonBone MAIN_D_8011CB98[19] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -2325,7 +2296,6 @@ SkeletonBone MAIN_D_8011CB98[20] = {
 	{ 0x0d, 0x0c },
 	{ 0x0e, 0x10 },
 	{ 0x0f, 0x11 },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011CBC0[32] = {
@@ -2382,7 +2352,7 @@ SkeletonBone MAIN_D_8011CC00[16] = {
 	{ 0x0d, 0x0e },
 };
 
-SkeletonBone MAIN_D_8011CC20[22] = {
+SkeletonBone MAIN_D_8011CC20[21] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -2404,10 +2374,9 @@ SkeletonBone MAIN_D_8011CC20[22] = {
 	{ 0x09, 0x11 },
 	{ 0x0a, 0x12 },
 	{ 0x0b, 0x13 },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011CC4C[30] = {
+SkeletonBone MAIN_D_8011CC4C[29] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -2437,10 +2406,9 @@ SkeletonBone MAIN_D_8011CC4C[30] = {
 	{ 0x14, 0x19 },
 	{ 0x15, 0x1a },
 	{ 0x16, 0x1b },
-	{ 0x00, 0x00 },
 };
 
-SkeletonBone MAIN_D_8011CC88[26] = {
+SkeletonBone MAIN_D_8011CC88[25] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -2466,7 +2434,6 @@ SkeletonBone MAIN_D_8011CC88[26] = {
 	{ 0x14, 0x12 },
 	{ 0x15, 0x16 },
 	{ 0x16, 0x17 },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011CCBC[26] = {
@@ -2498,7 +2465,7 @@ SkeletonBone MAIN_D_8011CCBC[26] = {
 	{ 0x10, 0x18 },
 };
 
-SkeletonBone MAIN_D_8011CCF0[18] = {
+SkeletonBone MAIN_D_8011CCF0[17] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -2516,7 +2483,6 @@ SkeletonBone MAIN_D_8011CCF0[18] = {
 	{ 0xff, 0x02 },
 	{ 0x0b, 0x0e },
 	{ 0x0c, 0x0e },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011CD14[28] = {
@@ -2579,7 +2545,7 @@ SkeletonBone MAIN_D_8011CD4C[26] = {
 	{ 0x17, 0x18 },
 };
 
-SkeletonBone MAIN_D_8011CD80[8] = {
+SkeletonBone MAIN_D_8011CD80[7] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -2587,7 +2553,6 @@ SkeletonBone MAIN_D_8011CD80[8] = {
 	{ 0x02, 0x02 },
 	{ 0x03, 0x02 },
 	{ 0x04, 0x01 },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011CD90[20] = {
@@ -2613,7 +2578,7 @@ SkeletonBone MAIN_D_8011CD90[20] = {
 	{ 0x0f, 0x12 },
 };
 
-SkeletonBone MAIN_D_8011CDB8[28] = {
+SkeletonBone MAIN_D_8011CDB8[27] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -2641,7 +2606,6 @@ SkeletonBone MAIN_D_8011CDB8[28] = {
 	{ 0x16, 0x17 },
 	{ 0x17, 0x01 },
 	{ 0x18, 0x19 },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011CDF0[22] = {
@@ -2669,7 +2633,7 @@ SkeletonBone MAIN_D_8011CDF0[22] = {
 	{ 0x12, 0x14 },
 };
 
-SkeletonBone MAIN_D_8011CE1C[16] = {
+SkeletonBone MAIN_D_8011CE1C[15] = {
 	{ 0xff, 0xff },
 	{ 0xff, 0x00 },
 	{ 0x00, 0x01 },
@@ -2685,7 +2649,6 @@ SkeletonBone MAIN_D_8011CE1C[16] = {
 	{ 0x0a, 0x0b },
 	{ 0x0b, 0x07 },
 	{ 0x0c, 0x0d },
-	{ 0x00, 0x00 },
 };
 
 SkeletonBone MAIN_D_8011CE3C[18] = {
