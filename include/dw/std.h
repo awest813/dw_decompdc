@@ -55,7 +55,6 @@ typedef struct {
 	uint8_t unkD;
 } StdUnkBAF4;
 
-extern uint8_t STD_D_80052AE0[];
 extern int16_t STD_D_8007AA40[];
 extern char STD_D_8007AAB0[];
 extern int32_t STD_D_8007AA10[];

@@ -3,6 +3,8 @@ SECTIONS
 	OVERLAY 0x80052AE0 : NOCROSSREFS
 	{
 		.BTL {
+			btl_START = .;
+
 			KEEP(build/asm/btl/data/texture.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
 			KEEP(build/asm/btl/data/model_0.rodata.s.o(.rodata.*));
@@ -14,7 +16,7 @@ SECTIONS
 			KEEP(build/asm/btl/data/model_3.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
 
-			btl_TEXT_START = .;
+			btl_HEADER = .;
 
 			KEEP(build/asm/btl/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
@@ -81,9 +83,10 @@ SECTIONS
 	OVERLAY 0x80080800 : NOCROSSREFS
 	{
 		.DGET {
-			dget_TEXT_START = .;
+			dget_START = .;
+			dget_HEADER = .;
 
-			build/asm/dget/data/header.rodata.s.o(.rodata.*);
+			KEEP(build/asm/dget/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
 
 			build/src/dget/dget.c.o(.text.*);
@@ -105,7 +108,8 @@ SECTIONS
 	OVERLAY 0x80070000 : NOCROSSREFS
 	{
 		.DOO2 {
-			doo2_TEXT_START = .;
+			doo2_START = .;
+			doo2_HEADER = .;
 
 			KEEP(build/asm/doo2/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
@@ -130,7 +134,8 @@ SECTIONS
 	OVERLAY 0x80080000 : NOCROSSREFS
 	{
 		.DOOA {
-			dooa_TEXT_START = .;
+			dooa_START = .;
+			dooa_HEADER = .;
 
 			KEEP(build/asm/dooa/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
@@ -160,7 +165,8 @@ SECTIONS
 	OVERLAY 0x80060000 : NOCROSSREFS
 	{
 		.EAB {
-			eab_TEXT_START = .;
+			eab_START = .;
+			eab_HEADER = .;
 
 			KEEP(build/asm/eab/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
@@ -188,7 +194,8 @@ SECTIONS
 	OVERLAY 0x80060000 : NOCROSSREFS
 	{
 		.ENDI {
-			endi_TEXT_START = .;
+			endi_START = .;
+			endi_HEADER = .;
 
 			KEEP(build/asm/endi/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
@@ -210,7 +217,8 @@ SECTIONS
 	OVERLAY 0x80060000 : NOCROSSREFS
 	{
 		.EVL {
-			evl_TEXT_START = .;
+			evl_START = .;
+			evl_HEADER = .;
 
 			KEEP(build/asm/evl/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
@@ -238,7 +246,8 @@ SECTIONS
 	OVERLAY 0x80070000 : NOCROSSREFS
 	{
 		.FISH {
-			fish_TEXT_START = .;
+			fish_START = .;
+			fish_HEADER = .;
 
 			KEEP(build/asm/fish/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
@@ -270,7 +279,8 @@ SECTIONS
 	OVERLAY 0x80053800 : NOCROSSREFS
 	{
 		.KAR {
-			kar_TEXT_START = .;
+			kar_START = .;
+			kar_HEADER = .;
 
 			KEEP(build/asm/kar/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
@@ -294,7 +304,8 @@ SECTIONS
 	OVERLAY 0x80010000 : NOCROSSREFS
 	{
 		.MOV {
-			mov_TEXT_START = .;
+			mov_START = .;
+			mov_HEADER = .;
 
 			KEEP(build/asm/mov/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
@@ -319,7 +330,8 @@ SECTIONS
 	OVERLAY 0x8007C000 : NOCROSSREFS
 	{
 		.MURD {
-			murd_TEXT_START = .;
+			murd_START = .;
+			murd_HEADER = .;
 
 			KEEP(build/asm/murd/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
@@ -343,6 +355,7 @@ SECTIONS
 	OVERLAY 0x80052AE0 : NOCROSSREFS
 	{
 		.STD {
+			std_START = .;
 			KEEP(build/asm/std/data/texture.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
 			KEEP(build/asm/std/data/model_0.rodata.s.o(.rodata.*));
@@ -354,7 +367,7 @@ SECTIONS
 			KEEP(build/asm/std/data/model_3.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
 
-			std_TEXT_START = .;
+			std_HEADER = .;
 
 			KEEP(build/asm/std/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
@@ -407,7 +420,8 @@ SECTIONS
 	OVERLAY 0x80088800 : NOCROSSREFS
 	{
 		.TRN2 {
-			trn2_TEXT_START = .;
+			trn2_START = .;
+			trn2_HEADER = .;
 
 			KEEP(build/asm/trn2/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
@@ -494,7 +508,8 @@ SECTIONS
 	OVERLAY 0x80088800 : NOCROSSREFS
 	{
 		.TRN {
-			trn_TEXT_START = .;
+			trn_START = .;
+			trn_HEADER = .;
 
 			KEEP(build/asm/trn/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
@@ -581,6 +596,7 @@ SECTIONS
 	OVERLAY 0x80052AE0 : NOCROSSREFS
 	{
 		.VS {
+			vs_START = .;
 			KEEP(build/asm/vs/data/texture.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
 			KEEP(build/asm/vs/data/model_0.rodata.s.o(.rodata.*));
@@ -592,7 +608,7 @@ SECTIONS
 			KEEP(build/asm/vs/data/model_3.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);
 
-			vs_TEXT_START = .;
+			vs_HEADER = .;
 
 			KEEP(build/asm/vs/data/header.rodata.s.o(.rodata.*));
 			. = ALIGN(., 4);

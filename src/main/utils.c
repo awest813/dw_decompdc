@@ -10,7 +10,7 @@
 #include <dw/ui.h>
 #include <dw/utils.h>
 
-#define SHOP_LOAD_ADDRESS	((char *)0x80080800)
+#define shop_START		((char *)0x80080800)
 
 void damageTick(FighterData* fighter, Stats* stats);
 void sortItemsById(uint8_t *data, int32_t count);
@@ -28,17 +28,21 @@ extern int32_t ACTIVE_FRAMEBUFFER;
 extern GsOT GS_ORDERING_TABLE[];
 extern PACKET GS_WORK_BASES[];
 extern char DRAW_OFFSETS[];
-extern char BTL_EMBEDDED_TEXTURE1[];
-extern char DGET_D_80080800[];
-extern char DOO2_D_80070000[];
-extern char DOOA_D_80080000[];
-extern char EAB_D_80060000[];
-extern char ENDI_D_80060000[];
-extern char EVL_D_80060000[];
-extern char FISH_D_80070000[];
-extern char KAR_D_80053800[];
-extern char MURD_D_8007C000[];
-extern char VS_D_80052AE0[];
+extern char btl_START[];
+extern char dget_START[];
+extern char doo2_START[];
+extern char dooa_START[];
+extern char eab_START[];
+extern char endi_START[];
+extern char evl_START[];
+extern char fish_START[];
+extern char kar_START[];
+extern char mov_START[];
+extern char murd_START[];
+extern char std_START[];
+extern char trn_START[];
+extern char trn2_START[];
+extern char vs_START[];
 
 // clang-format off
 RGB8 TEXT_COLORS[17] = {
@@ -69,22 +73,22 @@ char MAIN_D_8012B94C[32] = {
 };
 
 void *MAIN_D_8012B96C[16] = {
-	BTL_EMBEDDED_TEXTURE1,
-	STD_D_80052AE0,
-	FISH_D_80070000,
-	EVL_D_80060000,
-	KAR_D_80053800,
-	VS_D_80052AE0,
-	GENERAL_BUFFER,
-	DOO2_D_80070000,
-	DOOA_D_80080000,
-	TEXTURE_BUFFER,
-	SHOP_LOAD_ADDRESS,
-	DGET_D_80080800,
-	TEXTURE_BUFFER,
-	MURD_D_8007C000,
-	ENDI_D_80060000,
-	EAB_D_80060000,
+	btl_START,
+	std_START,
+	fish_START,
+	evl_START,
+	kar_START,
+	vs_START,
+	mov_START,
+	doo2_START,
+	dooa_START,
+	trn_START,
+	shop_START,
+	dget_START,
+	trn2_START,
+	murd_START,
+	endi_START,
+	eab_START,
 };
 
 char MAIN_D_8012B9AC[12] = "BTL_REL.BIN";
