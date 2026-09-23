@@ -76,7 +76,7 @@ extern char *MAP_NAME_PTR[];
 extern char *ITEM_DESC_PTR[];
 extern int8_t MAIN_D_80134F98;
 extern int32_t MAIN_D_80134FA8;
-extern char MAIN_D_801345F0[8];
+extern char MAIN_D_801345F0[3];
 extern char MAIN_D_80134554[];
 extern char MAIN_D_8013455C[];
 extern char MAIN_D_80134564[];
@@ -324,85 +324,85 @@ static void *script_common_text_order[] = {
 };
 
 // clang-format off
-char MAIN_D_8012F6D0[32] = "Non Bewildering Forest Theme";
-char MAIN_D_8012F6F0[36] = "Non Bewildering Forest Night Theme";
-char MAIN_D_8012F714[16] = "Tropical Theme";
-char MAIN_D_8012F724[24] = "Tropical Night Theme";
-char MAIN_D_8012F73C[20] = "Mt. Panorama Theme";
-char MAIN_D_8012F750[28] = "Mt. Panorama Night Theme";
-char MAIN_D_8012F76C[20] = "Drill Tunnel Theme";
+char MAIN_D_8012F6D0[] = "Non Bewildering Forest Theme";
+char MAIN_D_8012F6F0[] = "Non Bewildering Forest Night Theme";
+char MAIN_D_8012F714[] = "Tropical Theme";
+char MAIN_D_8012F724[] = "Tropical Night Theme";
+char MAIN_D_8012F73C[] = "Mt. Panorama Theme";
+char MAIN_D_8012F750[] = "Mt. Panorama Night Theme";
+char MAIN_D_8012F76C[] = "Drill Tunnel Theme";
 char MAIN_D_8012F780[20] = "Ogre Fortress Theme";
 char MAIN_D_8012F794[24] = "Overdell Cemetary Theme";
-char MAIN_D_8012F7AC[16] = "Canyon Theme";
+char MAIN_D_8012F7AC[] = "Canyon Theme";
 char MAIN_D_8012F7BC[20] = "Ogremon Theme No. 2";
-char MAIN_D_8012F7D0[24] = "Everything Shop Theme";
-char MAIN_D_8012F7E8[20] = "Ogremon ThemeNo. 3";
+char MAIN_D_8012F7D0[] = "Everything Shop Theme";
+char MAIN_D_8012F7E8[] = "Ogremon ThemeNo. 3";
 char MAIN_D_8012F7FC[16] = "Lava Cave Theme";
-char MAIN_D_8012F80C[32] = "Dark Aristcrat's Mansion Theme";
-char MAIN_D_8012F82C[24] = "Underground Lab Theme";
-char MAIN_D_8012F844[20] = "Gear Savanna Theme";
-char MAIN_D_8012F858[28] = "Gear Savanna Night Theme";
-char MAIN_D_8012F874[16] = "Leomon Theme";
-char MAIN_D_8012F884[20] = "Amida Forest Theme";
-char MAIN_D_8012F898[28] = "Amida Forest Night Theme";
-char MAIN_D_8012F8B4[52] = "The Ancient Region of Dino Speedy Time Zone Theme";
+char MAIN_D_8012F80C[] = "Dark Aristcrat's Mansion Theme";
+char MAIN_D_8012F82C[] = "Underground Lab Theme";
+char MAIN_D_8012F844[] = "Gear Savanna Theme";
+char MAIN_D_8012F858[] = "Gear Savanna Night Theme";
+char MAIN_D_8012F874[] = "Leomon Theme";
+char MAIN_D_8012F884[] = "Amida Forest Theme";
+char MAIN_D_8012F898[] = "Amida Forest Night Theme";
+char MAIN_D_8012F8B4[] = "The Ancient Region of Dino Speedy Time Zone Theme";
 char MAIN_D_8012F8E8[56] = "The Ancient Region of Dino Speedy Time Zone Night Theme";
-char MAIN_D_8012F920[52] = "The Ancient Region of Dino Glacial Time Zone Theme";
-char MAIN_D_8012F954[60] = "The Ancient Region of Dino Glacial Time Zone Night Theme";
-char MAIN_D_8012F990[20] = "Freezeland Theme";
-char MAIN_D_8012F9A4[24] = "Freezeland Night Theme";
+char MAIN_D_8012F920[] = "The Ancient Region of Dino Glacial Time Zone Theme";
+char MAIN_D_8012F954[] = "The Ancient Region of Dino Glacial Time Zone Night Theme";
+char MAIN_D_8012F990[] = "Freezeland Theme";
+char MAIN_D_8012F9A4[] = "Freezeland Night Theme";
 char MAIN_D_8012F9BC[12] = "Igloo Theme";
-char MAIN_D_8012F9C8[16] = "Curling Theme";
+char MAIN_D_8012F9C8[] = "Curling Theme";
 char MAIN_D_8012F9D8[16] = "Sanctuary Theme";
-char MAIN_D_8012F9E8[24] = "Sanctuary Below Theme";
-char MAIN_D_8012FA00[20] = "Gecko Swamp Theme";
+char MAIN_D_8012F9E8[] = "Sanctuary Below Theme";
+char MAIN_D_8012FA00[] = "Gecko Swamp Theme";
 char MAIN_D_8012FA14[24] = "Gecko Swamp Night Theme";
-char MAIN_D_8012FA2C[20] = "Misty Trees Theme";
+char MAIN_D_8012FA2C[] = "Misty Trees Theme";
 char MAIN_D_8012FA40[24] = "Misty Trees Night Theme";
 char MAIN_D_8012FA58[20] = "WaruMonzaemon Theme";
-char MAIN_D_8012FA6C[16] = "Toy Town Theme";
-char MAIN_D_8012FA7C[20] = "Theme of Factorial";
-char MAIN_D_8012FA90[24] = "Factorial Night Theme";
+char MAIN_D_8012FA6C[] = "Toy Town Theme";
+char MAIN_D_8012FA7C[] = "Theme of Factorial";
+char MAIN_D_8012FA90[] = "Factorial Night Theme";
 char MAIN_D_8012FAA8[12] = "Sewer Theme";
-char MAIN_D_8012FAB4[24] = "Trash Mountain Theme";
-char MAIN_D_8012FACC[28] = "Trash Mountain Night Theme";
-char MAIN_D_8012FAE8[16] = "Beatland Theme";
-char MAIN_D_8012FAF8[24] = "Beatland Night Theme";
+char MAIN_D_8012FAB4[] = "Trash Mountain Theme";
+char MAIN_D_8012FACC[] = "Trash Mountain Night Theme";
+char MAIN_D_8012FAE8[] = "Beatland Theme";
+char MAIN_D_8012FAF8[] = "Beatland Night Theme";
 char MAIN_D_8012FB10[24] = "Secret Beach Cave Theme";
 char MAIN_D_8012FB28[16] = "Last Room Theme";
 char MAIN_D_8012FB38[16] = "File City Theme";
-char MAIN_D_8012FB48[24] = "File City Night Theme";
+char MAIN_D_8012FB48[] = "File City Night Theme";
 char MAIN_D_8012FB60[24] = "Tornament Opening Theme";
-char MAIN_D_8012FB78[28] = "Tornament Progress Theme";
-char MAIN_D_8012FB94[32] = "Tornament Championship Theme";
-char MAIN_D_8012FBB4[28] = "Partner's Entrance Theme";
-char MAIN_D_8012FBD0[48] = "Competition Battle Opponent's Entrance Theme";
-char MAIN_D_8012FC00[28] = "Arena Battle Theme No. 1";
+char MAIN_D_8012FB78[] = "Tornament Progress Theme";
+char MAIN_D_8012FB94[] = "Tornament Championship Theme";
+char MAIN_D_8012FBB4[] = "Partner's Entrance Theme";
+char MAIN_D_8012FBD0[] = "Competition Battle Opponent's Entrance Theme";
+char MAIN_D_8012FC00[] = "Arena Battle Theme No. 1";
 char MAIN_D_8012FC1C[20] = "Partner's Win Theme";
-char MAIN_D_8012FC30[24] = "Partner's Loss Theme";
-char MAIN_D_8012FC48[28] = "Arena Battle Theme No. 2";
-char MAIN_D_8012FC64[28] = "Arena Battle Theme No. 3";
-char MAIN_D_8012FC80[20] = "Event Battle Theme";
+char MAIN_D_8012FC30[] = "Partner's Loss Theme";
+char MAIN_D_8012FC48[] = "Arena Battle Theme No. 2";
+char MAIN_D_8012FC64[] = "Arena Battle Theme No. 3";
+char MAIN_D_8012FC80[] = "Event Battle Theme";
 char MAIN_D_8012FC94[20] = "Normal Battle Theme";
-char MAIN_D_8012FCA8[28] = "Normal Battle  Theme No.2";
-char MAIN_D_8012FCC4[20] = "Last Battle Theme";
-char MAIN_D_8012FCD8[16] = "Version 1 Cup";
-char MAIN_D_8012FCE8[16] = "Version 2 Cup";
-char MAIN_D_8012FCF8[16] = "Version 3 Cup";
-char MAIN_D_8012FD08[16] = "Version 4 Cup";
-char MAIN_D_8012FD18[16] = "Version 0 Cup";
-char MAIN_D_8012FD28[12] = "Fire Cup";
+char MAIN_D_8012FCA8[] = "Normal Battle  Theme No.2";
+char MAIN_D_8012FCC4[] = "Last Battle Theme";
+char MAIN_D_8012FCD8[] = "Version 1 Cup";
+char MAIN_D_8012FCE8[] = "Version 2 Cup";
+char MAIN_D_8012FCF8[] = "Version 3 Cup";
+char MAIN_D_8012FD08[] = "Version 4 Cup";
+char MAIN_D_8012FD18[] = "Version 0 Cup";
+char MAIN_D_8012FD28[] = "Fire Cup";
 char MAIN_D_8012FD34[12] = "Grapple Cup";
-char MAIN_D_8012FD40[20] = "Thunder Wind Cup";
-char MAIN_D_8012FD54[12] = "Cool Cup";
-char MAIN_D_8012FD60[12] = "Nature Cup";
+char MAIN_D_8012FD40[] = "Thunder Wind Cup";
+char MAIN_D_8012FD54[] = "Cool Cup";
+char MAIN_D_8012FD60[] = "Nature Cup";
 char MAIN_D_8012FD6C[12] = "Metalic Cup";
-char MAIN_D_8012FD78[12] = "Filth Cup";
-char MAIN_D_8012FD84[12] = "Dino Cup";
-char MAIN_D_8012FD90[12] = "Wing Cup";
-char MAIN_D_8012FD9C[12] = "Animal Cup";
-char MAIN_D_8012FDA8[12] = "Human Cup";
-char MAIN_D_8012FDB4[12] = "Beetle Cup";
+char MAIN_D_8012FD78[] = "Filth Cup";
+char MAIN_D_8012FD84[] = "Dino Cup";
+char MAIN_D_8012FD90[] = "Wing Cup";
+char MAIN_D_8012FD9C[] = "Animal Cup";
+char MAIN_D_8012FDA8[] = "Human Cup";
+char MAIN_D_8012FDB4[] = "Beetle Cup";
 
 GsSPRITE MAIN_D_8012FDC0 = {
 	0x50000000,			/* attribute */
@@ -725,7 +725,7 @@ int16_t MAIN_D_801302FC[8] = {
 	0x00aa, 0x00ca, 0x00ca, 0x00aa, 0x00ca, 0x0092, 0x0092, 0x00aa,
 };
 
-char MAIN_D_8013030C[12] = "Coelamon";
+char MAIN_D_8013030C[] = "Coelamon";
 
 int16_t MAIN_D_80130318[22] = {
 	0x03e7, 0x03e7, 0x03e7, 0x03e7, 0x270f, 0x270f, 0x270f, 0x270f,
@@ -749,10 +749,10 @@ char *MAIN_D_8013035C[6] = {
 	MAIN_D_801345E8,
 };
 
-char MAIN_D_80130374[20] = "\\SCN\\MAPHEAD.SCN";
+char MAIN_D_80130374[] = "\\SCN\\MAPHEAD.SCN";
 char MAIN_D_80130388[12] = "\\SCN\\DG.SCN";
 char MAIN_D_80130394[20] = "\\ETCHI\\BOSS_EFE.TMD";
-char MAIN_D_801303A8[16] = "\\ETCHI\\OP.TIM";
+char MAIN_D_801303A8[] = "\\ETCHI\\OP.TIM";
 
 uint8_t MAIN_D_801303B8[128] = {
 	0x01, 0x00, 0x01, 0x01, 0x02, 0x00, 0x02, 0x01,
@@ -783,49 +783,49 @@ uint8_t MAIN_D_80130444[12] = {
 	0x15, 0x00, 0x00, 0x00,
 };
 
-char MAIN_D_80130450[12] = {
+char MAIN_D_80130450[] = {
 	0x82, 0xa0, 0x82, 0xa2, 0x82, 0xa4, 0x82, 0xa6,
-	0x82, 0xa8, 0x00, 0x00,
+	0x82, 0xa8, 0x00,
 };
 
-char MAIN_D_8013045C[12] = {
+char MAIN_D_8013045C[] = {
 	0x82, 0xa9, 0x82, 0xab, 0x82, 0xad, 0x82, 0xaf,
-	0x82, 0xc6, 0x00, 0x00,
+	0x82, 0xc6, 0x00,
 };
 
-char MAIN_D_80130468[12] = {
+char MAIN_D_80130468[] = {
 	0x82, 0xb3, 0x82, 0xb5, 0x82, 0xb7, 0x82, 0xb9,
-	0x82, 0xbb, 0x00, 0x00,
+	0x82, 0xbb, 0x00,
 };
 
-char MAIN_D_80130474[12] = {
+char MAIN_D_80130474[] = {
 	0x82, 0xbd, 0x82, 0xbf, 0x82, 0xc2, 0x82, 0xc4,
-	0x82, 0xc6, 0x00, 0x00,
+	0x82, 0xc6, 0x00,
 };
 
-char MAIN_D_80130480[12] = {
+char MAIN_D_80130480[] = {
 	0x82, 0xc8, 0x82, 0xc9, 0x82, 0xca, 0x82, 0xcb,
-	0x82, 0xcc, 0x00, 0x00,
+	0x82, 0xcc, 0x00,
 };
 
-char MAIN_D_8013048C[12] = {
+char MAIN_D_8013048C[] = {
 	0x82, 0xcd, 0x82, 0xd0, 0x82, 0xd3, 0x82, 0xd6,
-	0x82, 0xd9, 0x00, 0x00,
+	0x82, 0xd9, 0x00,
 };
 
-char MAIN_D_80130498[12] = {
+char MAIN_D_80130498[] = {
 	0x82, 0xdc, 0x82, 0xdd, 0x82, 0xde, 0x82, 0xdf,
-	0x82, 0xe0, 0x00, 0x00,
+	0x82, 0xe0, 0x00,
 };
 
-char MAIN_D_801304A4[12] = {
+char MAIN_D_801304A4[] = {
 	0x82, 0xe2, 0x81, 0x40, 0x82, 0xe4, 0x81, 0x40,
-	0x82, 0xe6, 0x00, 0x00,
+	0x82, 0xe6, 0x00,
 };
 
-char MAIN_D_801304B0[12] = {
+char MAIN_D_801304B0[] = {
 	0x82, 0xe7, 0x82, 0xe8, 0x82, 0xe9, 0x82, 0xea,
-	0x82, 0xeb, 0x00, 0x00,
+	0x82, 0xeb, 0x00,
 };
 
 char *MAIN_D_801304BC[9] = {
@@ -840,49 +840,49 @@ char *MAIN_D_801304BC[9] = {
 	MAIN_D_801304B0,
 };
 
-char MAIN_D_801304E0[12] = {
+char MAIN_D_801304E0[] = {
 	0x82, 0xed, 0x81, 0x40, 0x82, 0xf0, 0x81, 0x40,
-	0x82, 0xf1, 0x00, 0x00,
+	0x82, 0xf1, 0x00,
 };
 
-char MAIN_D_801304EC[12] = {
+char MAIN_D_801304EC[] = {
 	0x82, 0xaa, 0x82, 0xac, 0x82, 0xae, 0x82, 0xb0,
-	0x82, 0xb2, 0x00, 0x00,
+	0x82, 0xb2, 0x00,
 };
 
-char MAIN_D_801304F8[12] = {
+char MAIN_D_801304F8[] = {
 	0x82, 0xb4, 0x82, 0xb6, 0x82, 0xb8, 0x82, 0xba,
-	0x82, 0xbc, 0x00, 0x00,
+	0x82, 0xbc, 0x00,
 };
 
-char MAIN_D_80130504[12] = {
+char MAIN_D_80130504[] = {
 	0x82, 0xbe, 0x82, 0xc0, 0x82, 0xc3, 0x82, 0xc5,
-	0x82, 0xc7, 0x00, 0x00,
+	0x82, 0xc7, 0x00,
 };
 
-char MAIN_D_80130510[12] = {
+char MAIN_D_80130510[] = {
 	0x82, 0xce, 0x82, 0xd1, 0x82, 0xd4, 0x82, 0xd7,
-	0x82, 0xda, 0x00, 0x00,
+	0x82, 0xda, 0x00,
 };
 
-char MAIN_D_8013051C[12] = {
+char MAIN_D_8013051C[] = {
 	0x82, 0xcf, 0x82, 0xd2, 0x82, 0xd5, 0x82, 0xd8,
-	0x82, 0xdb, 0x00, 0x00,
+	0x82, 0xdb, 0x00,
 };
 
-char MAIN_D_80130528[12] = {
+char MAIN_D_80130528[] = {
 	0x82, 0x9f, 0x82, 0xa1, 0x82, 0xa3, 0x82, 0xa5,
-	0x82, 0xa7, 0x00, 0x00,
+	0x82, 0xa7, 0x00,
 };
 
-char MAIN_D_80130534[12] = {
+char MAIN_D_80130534[] = {
 	0x82, 0xc1, 0x82, 0xe1, 0x82, 0xe3, 0x82, 0xe5,
-	0x81, 0x5b, 0x00, 0x00,
+	0x81, 0x5b, 0x00,
 };
 
-char MAIN_D_80130540[12] = {
+char MAIN_D_80130540[] = {
 	0x81, 0x40, 0x81, 0x40, 0x81, 0x40, 0x81, 0x40,
-	0x81, 0x40, 0x00, 0x00,
+	0x81, 0x40, 0x00,
 };
 
 char *MAIN_D_8013054C[9] = {
@@ -897,49 +897,49 @@ char *MAIN_D_8013054C[9] = {
 	MAIN_D_80130540,
 };
 
-char MAIN_D_80130570[12] = {
+char MAIN_D_80130570[] = {
 	0x83, 0x41, 0x83, 0x43, 0x83, 0x45, 0x83, 0x47,
-	0x83, 0x49, 0x00, 0x00,
+	0x83, 0x49, 0x00,
 };
 
-char MAIN_D_8013057C[12] = {
+char MAIN_D_8013057C[] = {
 	0x83, 0x4a, 0x83, 0x4c, 0x83, 0x4e, 0x83, 0x50,
-	0x83, 0x52, 0x00, 0x00,
+	0x83, 0x52, 0x00,
 };
 
-char MAIN_D_80130588[12] = {
+char MAIN_D_80130588[] = {
 	0x83, 0x54, 0x83, 0x56, 0x83, 0x58, 0x83, 0x5a,
-	0x83, 0x5c, 0x00, 0x00,
+	0x83, 0x5c, 0x00,
 };
 
-char MAIN_D_80130594[12] = {
+char MAIN_D_80130594[] = {
 	0x83, 0x5e, 0x83, 0x60, 0x83, 0x63, 0x83, 0x65,
-	0x83, 0x67, 0x00, 0x00,
+	0x83, 0x67, 0x00,
 };
 
-char MAIN_D_801305A0[12] = {
+char MAIN_D_801305A0[] = {
 	0x83, 0x69, 0x83, 0x6a, 0x83, 0x6b, 0x83, 0x6c,
-	0x83, 0x6d, 0x00, 0x00,
+	0x83, 0x6d, 0x00,
 };
 
-char MAIN_D_801305AC[12] = {
+char MAIN_D_801305AC[] = {
 	0x83, 0x6e, 0x83, 0x71, 0x83, 0x74, 0x83, 0x77,
-	0x83, 0x7a, 0x00, 0x00,
+	0x83, 0x7a, 0x00,
 };
 
-char MAIN_D_801305B8[12] = {
+char MAIN_D_801305B8[] = {
 	0x83, 0x7d, 0x83, 0x7e, 0x83, 0x80, 0x83, 0x81,
-	0x83, 0x82, 0x00, 0x00,
+	0x83, 0x82, 0x00,
 };
 
-char MAIN_D_801305C4[12] = {
+char MAIN_D_801305C4[] = {
 	0x83, 0x84, 0x81, 0x40, 0x83, 0x86, 0x81, 0x40,
-	0x83, 0x88, 0x00, 0x00,
+	0x83, 0x88, 0x00,
 };
 
-char MAIN_D_801305D0[12] = {
+char MAIN_D_801305D0[] = {
 	0x83, 0x89, 0x83, 0x8a, 0x83, 0x8b, 0x83, 0x8c,
-	0x83, 0x8d, 0x00, 0x00,
+	0x83, 0x8d, 0x00,
 };
 
 char *MAIN_D_801305DC[9] = {
@@ -954,44 +954,44 @@ char *MAIN_D_801305DC[9] = {
 	MAIN_D_801305D0,
 };
 
-char MAIN_D_80130600[12] = {
+char MAIN_D_80130600[] = {
 	0x83, 0x8f, 0x81, 0x40, 0x83, 0x92, 0x81, 0x40,
-	0x83, 0x93, 0x00, 0x00,
+	0x83, 0x93, 0x00,
 };
 
-char MAIN_D_8013060C[12] = {
+char MAIN_D_8013060C[] = {
 	0x83, 0x4b, 0x83, 0x4d, 0x83, 0x4f, 0x83, 0x51,
-	0x83, 0x53, 0x00, 0x00,
+	0x83, 0x53, 0x00,
 };
 
-char MAIN_D_80130618[12] = {
+char MAIN_D_80130618[] = {
 	0x83, 0x55, 0x83, 0x57, 0x83, 0x59, 0x83, 0x5b,
-	0x83, 0x5d, 0x00, 0x00,
+	0x83, 0x5d, 0x00,
 };
 
-char MAIN_D_80130624[12] = {
+char MAIN_D_80130624[] = {
 	0x83, 0x5f, 0x83, 0x61, 0x83, 0x64, 0x83, 0x66,
-	0x83, 0x68, 0x00, 0x00,
+	0x83, 0x68, 0x00,
 };
 
-char MAIN_D_80130630[12] = {
+char MAIN_D_80130630[] = {
 	0x83, 0x6f, 0x83, 0x72, 0x83, 0x75, 0x83, 0x78,
-	0x83, 0x7b, 0x00, 0x00,
+	0x83, 0x7b, 0x00,
 };
 
-char MAIN_D_8013063C[12] = {
+char MAIN_D_8013063C[] = {
 	0x83, 0x70, 0x83, 0x73, 0x83, 0x76, 0x83, 0x79,
-	0x83, 0x7c, 0x00, 0x00,
+	0x83, 0x7c, 0x00,
 };
 
-char MAIN_D_80130648[12] = {
+char MAIN_D_80130648[] = {
 	0x83, 0x40, 0x83, 0x42, 0x83, 0x44, 0x83, 0x46,
-	0x83, 0x48, 0x00, 0x00,
+	0x83, 0x48, 0x00,
 };
 
-char MAIN_D_80130654[12] = {
+char MAIN_D_80130654[] = {
 	0x83, 0x62, 0x83, 0x83, 0x83, 0x85, 0x83, 0x87,
-	0x81, 0x5b, 0x00, 0x00,
+	0x81, 0x5b, 0x00,
 };
 
 char *MAIN_D_80130660[9] = {
@@ -1006,34 +1006,34 @@ char *MAIN_D_80130660[9] = {
 	MAIN_D_80130540,
 };
 
-char MAIN_D_80130684[12] = {
+char MAIN_D_80130684[] = {
 	0x82, 0x60, 0x82, 0x61, 0x82, 0x62, 0x82, 0x63,
-	0x82, 0x64, 0x00, 0x00,
+	0x82, 0x64, 0x00,
 };
 
-char MAIN_D_80130690[12] = {
+char MAIN_D_80130690[] = {
 	0x82, 0x65, 0x82, 0x66, 0x82, 0x67, 0x82, 0x68,
-	0x82, 0x69, 0x00, 0x00,
+	0x82, 0x69, 0x00,
 };
 
-char MAIN_D_8013069C[12] = {
+char MAIN_D_8013069C[] = {
 	0x82, 0x6a, 0x82, 0x6b, 0x82, 0x6c, 0x82, 0x6d,
-	0x82, 0x6e, 0x00, 0x00,
+	0x82, 0x6e, 0x00,
 };
 
-char MAIN_D_801306A8[12] = {
+char MAIN_D_801306A8[] = {
 	0x82, 0x6f, 0x82, 0x70, 0x82, 0x71, 0x82, 0x72,
-	0x82, 0x73, 0x00, 0x00,
+	0x82, 0x73, 0x00,
 };
 
-char MAIN_D_801306B4[12] = {
+char MAIN_D_801306B4[] = {
 	0x82, 0x74, 0x82, 0x75, 0x82, 0x76, 0x82, 0x77,
-	0x82, 0x78, 0x00, 0x00,
+	0x82, 0x78, 0x00,
 };
 
-char MAIN_D_801306C0[12] = {
+char MAIN_D_801306C0[] = {
 	0x82, 0x79, 0x81, 0x40, 0x81, 0x40, 0x81, 0x40,
-	0x81, 0x40, 0x00, 0x00,
+	0x81, 0x40, 0x00,
 };
 
 char *MAIN_D_801306CC[9] = {
@@ -1048,44 +1048,44 @@ char *MAIN_D_801306CC[9] = {
 	MAIN_D_80130540,
 };
 
-char MAIN_D_801306F0[12] = {
+char MAIN_D_801306F0[] = {
 	0x82, 0x81, 0x82, 0x82, 0x82, 0x83, 0x82, 0x84,
-	0x82, 0x85, 0x00, 0x00,
+	0x82, 0x85, 0x00,
 };
 
-char MAIN_D_801306FC[12] = {
+char MAIN_D_801306FC[] = {
 	0x82, 0x86, 0x82, 0x87, 0x82, 0x88, 0x82, 0x89,
-	0x82, 0x8a, 0x00, 0x00,
+	0x82, 0x8a, 0x00,
 };
 
-char MAIN_D_80130708[12] = {
+char MAIN_D_80130708[] = {
 	0x82, 0x8b, 0x82, 0x8c, 0x82, 0x8d, 0x82, 0x8e,
-	0x82, 0x8f, 0x00, 0x00,
+	0x82, 0x8f, 0x00,
 };
 
-char MAIN_D_80130714[12] = {
+char MAIN_D_80130714[] = {
 	0x82, 0x90, 0x82, 0x91, 0x82, 0x92, 0x82, 0x93,
-	0x82, 0x94, 0x00, 0x00,
+	0x82, 0x94, 0x00,
 };
 
-char MAIN_D_80130720[12] = {
+char MAIN_D_80130720[] = {
 	0x82, 0x95, 0x82, 0x96, 0x82, 0x97, 0x82, 0x98,
-	0x82, 0x99, 0x00, 0x00,
+	0x82, 0x99, 0x00,
 };
 
-char MAIN_D_8013072C[12] = {
+char MAIN_D_8013072C[] = {
 	0x82, 0x9a, 0x81, 0x40, 0x81, 0x40, 0x81, 0x40,
-	0x81, 0x40, 0x00, 0x00,
+	0x81, 0x40, 0x00,
 };
 
-char MAIN_D_80130738[12] = {
+char MAIN_D_80130738[] = {
 	0x82, 0x4f, 0x82, 0x50, 0x82, 0x51, 0x82, 0x52,
-	0x82, 0x53, 0x00, 0x00,
+	0x82, 0x53, 0x00,
 };
 
-char MAIN_D_80130744[12] = {
+char MAIN_D_80130744[] = {
 	0x82, 0x54, 0x82, 0x55, 0x82, 0x56, 0x82, 0x57,
-	0x82, 0x58, 0x00, 0x00,
+	0x82, 0x58, 0x00,
 };
 
 char *MAIN_D_80130750[9] = {

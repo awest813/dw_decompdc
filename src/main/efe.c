@@ -226,7 +226,7 @@ uint8_t MAIN_D_8013421C[4] = {
 	0x40, 0x00, 0x00, 0x00,
 };
 
-char MAIN_D_80134220[4] = ";1";
+char MAIN_D_80134220[] = ";1";
 // clang-format on
 
 static void createParticleFX__garbage__(void)

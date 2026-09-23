@@ -279,20 +279,20 @@ uint8_t MAIN_D_801344FC[4] = {
 	0x10, 0x07, 0x03, 0x00,
 };
 
-char MAIN_D_80134500[8] = {
-	0x82, 0x67, 0x82, 0x6f, 0x00, 0x00, 0x00, 0x00,
+char MAIN_D_80134500[] = {
+	0x82, 0x67, 0x82, 0x6f, 0x00,
 };
 
-char MAIN_D_80134508[8] = {
-	0x82, 0x6c, 0x82, 0x6f, 0x00, 0x00, 0x00, 0x00,
+char MAIN_D_80134508[] = {
+	0x82, 0x6c, 0x82, 0x6f, 0x00,
 };
 
 int16_t MAIN_D_80134510[4] = {
 	0x0000, 0x0400, 0x0800, 0x0c00,
 };
 
-char MAIN_D_80134518[8] = {
-	0x97, 0x5e, 0x82, 0xa6, 0x82, 0xbd, 0x00, 0x00,
+char MAIN_D_80134518[] = {
+	0x97, 0x5e, 0x82, 0xa6, 0x82, 0xbd, 0x00,
 };
 
 uint8_t MAIN_D_80134520[8] = {
@@ -399,7 +399,7 @@ int32_t MAP_LIGHT_UPDATE_DATA[2] = {
 	0x003101b7, 0xffff0002,
 };
 
-char MAIN_D_801345CC[8] = "Sign";
+char MAIN_D_801345CC[] = "Sign";
 
 char MAIN_D_801345D4[4] = "Box";
 
@@ -407,15 +407,15 @@ char MAIN_D_801345D8[8] = "Betamon";
 
 char MAIN_D_801345E0[8] = "Tanemon";
 
-char MAIN_D_801345E8[8] = "Palmon";
+char MAIN_D_801345E8[] = "Palmon";
 
-char MAIN_D_801345F0[4] = ";1";
+char MAIN_D_801345F0[] = ";1";
 
 char MAIN_D_801345F4[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-char MAIN_D_801345F8[8] = "Name";
+char MAIN_D_801345F8[] = "Name";
 
 char MAIN_D_80134600[8] = {
 	0x42, 0x61, 0x63, 0x6b, 0x4f, 0x4b, 0x00, 0x00,
@@ -469,9 +469,9 @@ char MAIN_D_8012CE64[20] = "\\ETCDAT\\FI_INFO.TIM";
 
 char MAIN_D_8012CE78[20] = "\\ETCNA\\TITLE256.TIM";
 
-char MAIN_D_8012CE8C[20] = "\\ETCDAT\\ETCTIM.BIN";
+char MAIN_D_8012CE8C[] = "\\ETCDAT\\ETCTIM.BIN";
 
-char MAIN_D_8012CEA0[20] = "\\ETCNA\\TITLE2.TIM";
+char MAIN_D_8012CEA0[] = "\\ETCNA\\TITLE2.TIM";
 
 DigimonPara DIGIMON_DATA[180] = {
 	{

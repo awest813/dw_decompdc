@@ -307,33 +307,33 @@ char MAIN_D_80134660[2] = {
 
 uint16_t MAIN_D_80134662 = 0x0032;
 
-char MAIN_D_80134664[8] = "YesNo";
+char MAIN_D_80134664[] = "YesNo";
 
-char MAIN_D_8013466C[8] = "Yes No";
+char MAIN_D_8013466C[] = "Yes No";
 
-char MAIN_D_80134674[4] = {
-	0x82, 0x51, 0x00, 0x00,
+char MAIN_D_80134674[] = {
+	0x82, 0x51, 0x00,
 };
 
-char MAIN_D_80134678[4] = {
-	0x82, 0xc9, 0x00, 0x00,
+char MAIN_D_80134678[] = {
+	0x82, 0xc9, 0x00,
 };
 
-char MAIN_D_8013467C[4] = {
-	0x82, 0xaa, 0x00, 0x00,
+char MAIN_D_8013467C[] = {
+	0x82, 0xaa, 0x00,
 };
 
-char MAIN_D_80134680[4] = {
-	0x82, 0xf0, 0x00, 0x00,
+char MAIN_D_80134680[] = {
+	0x82, 0xf0, 0x00,
 };
 
-char MAIN_D_80134684[8] = "Name";
+char MAIN_D_80134684[] = "Name";
 
 char MAIN_D_8013468C[8] = "Digimon";
 
-char MAIN_D_80134694[4] = "HP";
+char MAIN_D_80134694[] = "HP";
 
-char MAIN_D_80134698[4] = "MP";
+char MAIN_D_80134698[] = "MP";
 
 char MAIN_D_8013469C[8] = "Offense";
 
@@ -341,136 +341,136 @@ char MAIN_D_801346A4[8] = "Defense";
 
 char MAIN_D_801346AC[4] = "Yes";
 
-char MAIN_D_801346B0[4] = "No";
+char MAIN_D_801346B0[] = "No";
 
-char MAIN_D_801346B4[4] = " ";
+char MAIN_D_801346B4[] = " ";
 
-char MAIN_D_801346B8[8] = " is in";
+char MAIN_D_801346B8[] = " is in";
 
 char MAIN_D_801346C0[4] = {
 	0x2e, 0x00, 0x2a, 0x00,
 };
 
-char MAIN_D_801346C4[8] = "Player";
+char MAIN_D_801346C4[] = "Player";
 
-char MAIN_D_801346CC[4] = "%i";
+char MAIN_D_801346CC[] = "%i";
 
 struct DIRENTRY *MAIN_D_801346D0 = MAIN_D_8008E400;
 
 uint8_t *MAIN_D_801346D4 = MAIN_D_8008D000;
 
-char MAIN_D_80131008[12] = "NEW GAME";
+char MAIN_D_80131008[] = "NEW GAME";
 
-char MAIN_D_80131014[16] = "CONTINUE GAME";
+char MAIN_D_80131014[] = "CONTINUE GAME";
 
 char MAIN_D_80131024[12] = "DELETE GAME";
 
 char MAIN_D_80131030[12] = "BATTLE MODE";
 
-char MAIN_D_8013103C[16] = "START SLOT 1";
+char MAIN_D_8013103C[] = "START SLOT 1";
 
 char MAIN_D_8013104C[16] = "CONTINUE SLOT 1";
 
-char MAIN_D_8013105C[16] = "ERASE SLOT 1";
+char MAIN_D_8013105C[] = "ERASE SLOT 1";
 
-char MAIN_D_8013106C[16] = "NO MEMORY CARD";
+char MAIN_D_8013106C[] = "NO MEMORY CARD";
 
-char MAIN_D_8013107C[20] = "SAVE SURING GAME";
+char MAIN_D_8013107C[] = "SAVE SURING GAME";
 
 char MAIN_D_80131090[20] = "BATTLE REGISTRATION";
 
-char MAIN_D_801310A4[16] = "SPECIAL ITEM";
+char MAIN_D_801310A4[] = "SPECIAL ITEM";
 
-char MAIN_D_801310B4[24] = "Checking Memory Card";
+char MAIN_D_801310B4[] = "Checking Memory Card";
 
-char MAIN_D_801310CC[20] = "Saving data file";
+char MAIN_D_801310CC[] = "Saving data file";
 
-char MAIN_D_801310E0[20] = "Loading data file";
+char MAIN_D_801310E0[] = "Loading data file";
 
-char MAIN_D_801310F4[20] = "Copying data file";
+char MAIN_D_801310F4[] = "Copying data file";
 
-char MAIN_D_80131108[20] = "Deleting data file";
+char MAIN_D_80131108[] = "Deleting data file";
 
-char MAIN_D_8013111C[24] = "Formatting Memory Card";
+char MAIN_D_8013111C[] = "Formatting Memory Card";
 
-char MAIN_D_80131134[16] = "Not Inserted";
+char MAIN_D_80131134[] = "Not Inserted";
 
-char MAIN_D_80131144[12] = "Data Error";
+char MAIN_D_80131144[] = "Data Error";
 
 char MAIN_D_80131150[24] = "Do Not Insert or Remove";
 
-char MAIN_D_80131168[16] = "Not Formatted";
+char MAIN_D_80131168[] = "Not Formatted";
 
 char MAIN_D_80131178[20] = "File Does Not Exist";
 
-char MAIN_D_8013118C[16] = "No Open Block";
+char MAIN_D_8013118C[] = "No Open Block";
 
-char MAIN_D_8013119C[24] = "Digimon Not Registered";
+char MAIN_D_8013119C[] = "Digimon Not Registered";
 
-char MAIN_D_801311B4[12] = "Item Full";
+char MAIN_D_801311B4[] = "Item Full";
 
 char MAIN_D_801311C0[20] = "Item Already Exists";
 
-char MAIN_D_801311D4[24] = "Record new adventure?";
+char MAIN_D_801311D4[] = "Record new adventure?";
 
 char MAIN_D_801311EC[20] = "Continue adventure?";
 
-char MAIN_D_80131200[24] = "Delete adventure in?";
+char MAIN_D_80131200[] = "Delete adventure in?";
 
-char MAIN_D_80131218[16] = "Read record?";
+char MAIN_D_80131218[] = "Read record?";
 
-char MAIN_D_80131228[12] = "Add Item?";
+char MAIN_D_80131228[] = "Add Item?";
 
-char MAIN_D_80131234[12] = "Start Game";
+char MAIN_D_80131234[] = "Start Game";
 
-char MAIN_D_80131240[20] = "Memory Card Battle";
+char MAIN_D_80131240[] = "Memory Card Battle";
 
-char MAIN_D_80131254[16] = "Battle Try Out";
+char MAIN_D_80131254[] = "Battle Try Out";
 
 char MAIN_D_80131264[20] = "Special Item Record";
 
-char MAIN_D_80131278[24] = "Don't remove or insert";
+char MAIN_D_80131278[] = "Don't remove or insert";
 
-char MAIN_D_80131290[16] = "a Memory Card.";
+char MAIN_D_80131290[] = "a Memory Card.";
 
-char MAIN_D_801312A0[24] = "YOU WON'T BE ABLE TO";
+char MAIN_D_801312A0[] = "YOU WON'T BE ABLE TO";
 
-char MAIN_D_801312B8[24] = "SAVE TO A MEMORY CARD";
+char MAIN_D_801312B8[] = "SAVE TO A MEMORY CARD";
 
-char MAIN_D_801312D0[20] = "EVEN IF YOU INSERT";
+char MAIN_D_801312D0[] = "EVEN IF YOU INSERT";
 
-char MAIN_D_801312E4[24] = "ONE DURING GAMEPLAY.";
+char MAIN_D_801312E4[] = "ONE DURING GAMEPLAY.";
 
-char MAIN_D_801312FC[28] = "Memory Card in Slot 1 is";
+char MAIN_D_801312FC[] = "Memory Card in Slot 1 is";
 
-char MAIN_D_80131318[16] = "not formatted.";
+char MAIN_D_80131318[] = "not formatted.";
 
-char MAIN_D_80131328[24] = "Do you want to format?";
+char MAIN_D_80131328[] = "Do you want to format?";
 
-char MAIN_D_80131340[12] = "Not used";
+char MAIN_D_80131340[] = "Not used";
 
-char MAIN_D_8013134C[32] = {
+char MAIN_D_8013134C[] = {
 	0x83, 0x58, 0x83, 0x8d, 0x83, 0x62, 0x83, 0x67,
 	0x82, 0x50, 0x82, 0xcc, 0x83, 0x81, 0x83, 0x82,
 	0x83, 0x8a, 0x81, 0x5b, 0x83, 0x4a, 0x81, 0x5b,
-	0x83, 0x68, 0x82, 0xc9, 0x00, 0x00, 0x00, 0x00,
+	0x83, 0x68, 0x82, 0xc9, 0x00,
 };
 
 char MAIN_D_8013136C[12] = "Go to sleep";
 
-char MAIN_D_80131378[24] = "Save and go to sleep";
+char MAIN_D_80131378[] = "Save and go to sleep";
 
-char MAIN_D_80131390[32] = "Data file will be overwritten";
+char MAIN_D_80131390[] = "Data file will be overwritten";
 
-char MAIN_D_801313B0[32] = "Do you want to save data file?";
+char MAIN_D_801313B0[] = "Do you want to save data file?";
 
-char MAIN_D_801313D0[20] = "There was an error";
+char MAIN_D_801313D0[] = "There was an error";
 
 char MAIN_D_801313E4[28] = "Please insert a Memory Card";
 
-char MAIN_D_80131400[28] = "which contains Competition";
+char MAIN_D_80131400[] = "which contains Competition";
 
-char MAIN_D_8013141C[32] = "Data for Player 1 in Slot 1 ";
+char MAIN_D_8013141C[] = "Data for Player 1 in Slot 1 ";
 
 char MAIN_D_8013143C[12] = "Technique 1";
 
@@ -478,19 +478,19 @@ char MAIN_D_80131448[12] = "Technique 2";
 
 char MAIN_D_80131454[12] = "Technique 3";
 
-char MAIN_D_80131460[28] = "Do you want to register?";
+char MAIN_D_80131460[] = "Do you want to register?";
 
-char MAIN_D_8013147C[28] = "Select registration slot";
+char MAIN_D_8013147C[] = "Select registration slot";
 
 char MAIN_D_80131498[24] = "Do you want to register";
 
 char MAIN_D_801314B0[24] = "The Competition Digimon";
 
-char MAIN_D_801314C8[28] = "data will be saved during";
+char MAIN_D_801314C8[] = "data will be saved during";
 
-char MAIN_D_801314E4[28] = "the registration process";
+char MAIN_D_801314E4[] = "the registration process";
 
-char MAIN_D_80131500[28] = "Since you started the game";
+char MAIN_D_80131500[] = "Since you started the game";
 
 char MAIN_D_8013151C[28] = "without using a Memory Card";
 
@@ -498,17 +498,17 @@ char MAIN_D_80131538[20] = "you cannot register";
 
 char MAIN_D_8013154C[28] = "Competition Battle Digimon.";
 
-char MAIN_D_80131568[24] = "Do you want to save?";
+char MAIN_D_80131568[] = "Do you want to save?";
 
-char MAIN_D_80131580[32] = "training, Memory Card cannot";
+char MAIN_D_80131580[] = "training, Memory Card cannot";
 
-char MAIN_D_801315A0[32] = "be registered for Competition";
+char MAIN_D_801315A0[] = "be registered for Competition";
 
-char MAIN_D_801315C0[16] = "Please Insert";
+char MAIN_D_801315C0[] = "Please Insert";
 
 char MAIN_D_801315D0[28] = "Memory Card with saved data";
 
-char MAIN_D_801315EC[12] = "in Slot 1";
+char MAIN_D_801315EC[] = "in Slot 1";
 
 InventoryTable MAIN_D_801315F8 = {
 	{

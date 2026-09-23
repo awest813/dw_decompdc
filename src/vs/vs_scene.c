@@ -510,9 +510,9 @@ VsTextPiece VS_D_8006FA6C[21] = {
 	},
 };
 
-char VS_D_8006FB94[20] = "\\STDDAT\\STDTIM.BIN";
+char VS_D_8006FB94[] = "\\STDDAT\\STDTIM.BIN";
 
-char VS_D_8006FBA8[24] = "\\STDDAT\\16TAISEN.TIM";
+char VS_D_8006FBA8[] = "\\STDDAT\\16TAISEN.TIM";
 
 uint16_t VS_D_8006FBC0[216] = {
 	0x82a0, 0x82a2, 0x82a4, 0x82a6, 0x82a8, 0x82a9, 0x82ab, 0x82ad,
@@ -1041,11 +1041,11 @@ uint8_t VS_D_8006FF20[116][14] = {
 	},
 };
 
-char VS_D_80070578[20] = "\\STDDAT\\T_TOGI.TMD";
+char VS_D_80070578[] = "\\STDDAT\\T_TOGI.TMD";
 
-char VS_D_8007058C[20] = "\\STDDAT\\B_TOGI.TMD";
+char VS_D_8007058C[] = "\\STDDAT\\B_TOGI.TMD";
 
-char VS_D_800705A0[20] = "\\STDDAT\\E_TOGI.TMD";
+char VS_D_800705A0[] = "\\STDDAT\\E_TOGI.TMD";
 
 char *VS_D_800705B4[3] = {
 	VS_D_80070578,
@@ -1053,11 +1053,11 @@ char *VS_D_800705B4[3] = {
 	VS_D_800705A0,
 };
 
-char VS_D_800705C0[20] = "\\STDDAT\\T_TOGI.TIM";
+char VS_D_800705C0[] = "\\STDDAT\\T_TOGI.TIM";
 
-char VS_D_800705D4[20] = "\\STDDAT\\B_TOGI.TIM";
+char VS_D_800705D4[] = "\\STDDAT\\B_TOGI.TIM";
 
-char VS_D_800705E8[20] = "\\STDDAT\\E_TOGI.TIM";
+char VS_D_800705E8[] = "\\STDDAT\\E_TOGI.TIM";
 
 char *VS_D_800705FC[3] = {
 	VS_D_800705C0,
@@ -1065,9 +1065,9 @@ char *VS_D_800705FC[3] = {
 	VS_D_800705E8,
 };
 
-char VS_D_80070608[20] = "\\STDDAT\\B_TOGI.ATR";
+char VS_D_80070608[] = "\\STDDAT\\B_TOGI.ATR";
 
-char VS_D_8007061C[20] = "\\STDDAT\\E_TOGI.ATR";
+char VS_D_8007061C[] = "\\STDDAT\\E_TOGI.ATR";
 
 char *VS_D_80070630[3] = {
 	VS_D_80070608,
@@ -1101,11 +1101,11 @@ int32_t VS_D_800706C8[22] = {
 	0x00000000, 0x00000000,
 };
 
-char VS_D_80070720[12] = "Moderate";
+char VS_D_80070720[] = "Moderate";
 
-char VS_D_8007072C[12] = "Distance";
+char VS_D_8007072C[] = "Distance";
 
-char VS_D_80070738[12] = "Defensive";
+char VS_D_80070738[] = "Defensive";
 // clang-format on
 
 void VS_initializeVS(void)

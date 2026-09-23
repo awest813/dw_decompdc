@@ -139,10 +139,10 @@ static void *battle_hud_functions[] = {
 };
 
 // clang-format off
-const char BTL_D_80072E04[12] = "Your Call";
-const char BTL_D_80072E10[12] = "Moderate";
-const char BTL_D_80072E1C[12] = "Distance";
-const char BTL_D_80072E28[12] = "Defensive";
+const char BTL_D_80072E04[] = "Your Call";
+const char BTL_D_80072E10[] = "Moderate";
+const char BTL_D_80072E1C[] = "Distance";
+const char BTL_D_80072E28[] = "Defensive";
 
 const char *BTL_D_80072E34[8] = {
 	MAIN_D_80134714,

@@ -1047,9 +1047,9 @@ uint8_t STD_D_80079CBC[112][14] = {
 	},
 };
 
-char STD_D_8007A2DC[20] = "\\STDDAT\\T_TOGI.TMD";
+char STD_D_8007A2DC[] = "\\STDDAT\\T_TOGI.TMD";
 
-char STD_D_8007A2F0[20] = "\\STDDAT\\B_TOGI.TMD";
+char STD_D_8007A2F0[] = "\\STDDAT\\B_TOGI.TMD";
 
 char *STD_D_8007A304[3] = {
 	STD_D_8007A2DC,
@@ -1057,9 +1057,9 @@ char *STD_D_8007A304[3] = {
 	(void *)0x00000000,
 };
 
-char STD_D_8007A310[20] = "\\STDDAT\\T_TOGI.TIM";
+char STD_D_8007A310[] = "\\STDDAT\\T_TOGI.TIM";
 
-char STD_D_8007A324[20] = "\\STDDAT\\B_TOGI.TIM";
+char STD_D_8007A324[] = "\\STDDAT\\B_TOGI.TIM";
 
 char *STD_D_8007A338[3] = {
 	STD_D_8007A310,
@@ -1067,7 +1067,7 @@ char *STD_D_8007A338[3] = {
 	(void *)0x00000000,
 };
 
-char STD_D_8007A344[20] = "\\STDDAT\\B_TOGI.ATR";
+char STD_D_8007A344[] = "\\STDDAT\\B_TOGI.ATR";
 
 char *STD_D_8007A358[3] = {
 	STD_D_8007A344,
@@ -1243,16 +1243,16 @@ StdSrcA598 STD_D_8007A598[8] = {
 	},
 };
 
-char STD_D_8007A658[12] = {
+char STD_D_8007A658[] = {
 	0x83, 0x5f, 0x83, 0x81, 0x81, 0x5b, 0x83, 0x57,
-	0x00, 0x00, 0x00, 0x00,
+	0x00,
 };
 
-char STD_D_8007A664[12] = "Moderate";
+char STD_D_8007A664[] = "Moderate";
 
-char STD_D_8007A670[12] = "Distance";
+char STD_D_8007A670[] = "Distance";
 
-char STD_D_8007A67C[12] = "Defensive";
+char STD_D_8007A67C[] = "Defensive";
 
 char *STD_D_8007A688[8] = {
 	MAIN_D_80134894,

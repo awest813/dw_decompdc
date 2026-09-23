@@ -462,17 +462,17 @@ PlayerTabs MAIN_D_801342A4 = { { 0x01, 0x01, 0x01, 0x01 } };
 
 char MAIN_D_801342A8[8] = "Amateur";
 
-char MAIN_D_801342B0[8] = "Novice";
+char MAIN_D_801342B0[] = "Novice";
 
 char MAIN_D_801342B8[8] = "Veteran";
 
-char MAIN_D_801342C0[8] = "Super";
+char MAIN_D_801342C0[] = "Super";
 
-char MAIN_D_801342C8[8] = "Master";
+char MAIN_D_801342C8[] = "Master";
 
-char MAIN_D_801342D0[8] = "Genius";
+char MAIN_D_801342D0[] = "Genius";
 
-char MAIN_D_801342D8[8] = "Legend";
+char MAIN_D_801342D8[] = "Legend";
 
 RECT MAIN_D_801342E0 = { 0, 24, 256, 200 };
 
@@ -502,11 +502,11 @@ GsRVIEW2 MAIN_D_80123880 = {
 	-1050, 220, -10000, -1050, 220, 0, 0, NULL,
 };
 
-char MAIN_D_801238A0[16] = "Status  Tech";
+char MAIN_D_801238A0[] = "Status  Tech";
 
-char MAIN_D_801238B0[40] = "      Disc.      Life  Vir. HPMPnight";
+char MAIN_D_801238B0[] = "      Disc.      Life  Vir. HPMPnight";
 
-char MAIN_D_801238D8[40] = "sunup  day      groggysleepy sunset ";
+char MAIN_D_801238D8[] = "sunup  day      groggysleepy sunset ";
 
 char MAIN_D_80123900[20] = "TechsetFinal  Techs";
 
@@ -515,63 +515,63 @@ char MAIN_D_80123914[12] = {
 	0x20, 0x81, 0xa0, 0x00,
 };
 
-char MAIN_D_80123920[24] = {
+char MAIN_D_80123920[] = {
 	0x81, 0xa2, 0x20, 0x43, 0x68, 0x61, 0x6e, 0x67,
 	0x65, 0x20, 0x54, 0x65, 0x63, 0x68, 0x6e, 0x69,
-	0x71, 0x75, 0x65, 0x73, 0x00, 0x00, 0x00, 0x00,
+	0x71, 0x75, 0x65, 0x73, 0x00,
 };
 
-char MAIN_D_80123938[20] = "poisconfstunflat";
+char MAIN_D_80123938[] = "poisconfstunflat";
 
-char MAIN_D_8012394C[12] = {
+char MAIN_D_8012394C[] = {
 	0x81, 0x7e, 0x20, 0x43, 0x61, 0x6e, 0x63, 0x65,
-	0x6c, 0x00, 0x00, 0x00,
+	0x6c, 0x00,
 };
 
-char MAIN_D_80123958[24] = "S      L      W      A";
+char MAIN_D_80123958[] = "S      L      W      A";
 
-char MAIN_D_80123970[32] = "Select - choose to select tech";
+char MAIN_D_80123970[] = "Select - choose to select tech";
 
-char MAIN_D_80123990[28] = {
+char MAIN_D_80123990[] = {
 	0x43, 0x61, 0x6e, 0x63, 0x65, 0x6c, 0x20, 0x2d,
 	0x20, 0x81, 0xa2, 0x20, 0x64, 0x65, 0x73, 0x65,
 	0x6c, 0x65, 0x63, 0x74, 0x73, 0x20, 0x74, 0x65,
-	0x63, 0x68, 0x00, 0x00,
+	0x63, 0x68, 0x00,
 };
 
-char MAIN_D_801239AC[24] = "Technique Select Help";
+char MAIN_D_801239AC[] = "Technique Select Help";
 
-char MAIN_D_801239C4[12] = "Mastered";
+char MAIN_D_801239C4[] = "Mastered";
 
-char MAIN_D_801239D0[12] = "Unmastered";
+char MAIN_D_801239D0[] = "Unmastered";
 
-char MAIN_D_801239DC[12] = "Unusable";
+char MAIN_D_801239DC[] = "Unusable";
 
-char MAIN_D_801239E8[12] = "Selected";
+char MAIN_D_801239E8[] = "Selected";
 
 char MAIN_D_801239F4[36] = "BattleRecord Wins Losses Percentage";
 
-char MAIN_D_80123A18[36] = "Player   Chart    Med. Card Fish";
+char MAIN_D_80123A18[] = "Player   Chart    Med. Card Fish";
 
-char MAIN_D_80123A3C[36] = {
+char MAIN_D_80123A3C[] = {
 	0x4d, 0x65, 0x64, 0x61, 0x6c, 0x73, 0x20, 0x43,
 	0x68, 0x61, 0x72, 0x74, 0x20, 0x20, 0x20, 0x81,
 	0xa2, 0x81, 0x7e, 0x20, 0x53, 0x65, 0x6c, 0x65,
 	0x63, 0x74, 0x20, 0x20, 0x43, 0x61, 0x6e, 0x63,
-	0x65, 0x6c, 0x00, 0x00,
+	0x65, 0x6c, 0x00,
 };
 
-char MAIN_D_80123A60[28] = "NameLevel           Raised";
+char MAIN_D_80123A60[] = "NameLevel           Raised";
 
-char MAIN_D_80123A7C[28] = "Bits                Time";
+char MAIN_D_80123A7C[] = "Bits                Time";
 
-char MAIN_D_80123A98[24] = "Items          Medals";
+char MAIN_D_80123A98[] = "Items          Medals";
 
-char MAIN_D_80123AB0[32] = {
+char MAIN_D_80123AB0[] = {
 	0x43, 0x61, 0x72, 0x64, 0x20, 0x4c, 0x69, 0x73,
 	0x74, 0x81, 0xa2, 0x53, 0x65, 0x6c, 0x65, 0x63,
 	0x74, 0x20, 0x20, 0x20, 0x81, 0x7e, 0x43, 0x61,
-	0x6e, 0x63, 0x65, 0x6c, 0x00, 0x00, 0x00, 0x00,
+	0x6e, 0x63, 0x65, 0x6c, 0x00,
 };
 
 char MAIN_D_80123AD0[20] = {
@@ -580,84 +580,84 @@ char MAIN_D_80123AD0[20] = {
 	0x63, 0x65, 0x6c, 0x00,
 };
 
-char MAIN_D_80123AE4[44] = {
+char MAIN_D_80123AE4[] = {
 	0x54, 0x72, 0x65, 0x65, 0x20, 0x46, 0x72, 0x65,
 	0x73, 0x68, 0x54, 0x72, 0x61, 0x69, 0x6e, 0x69,
 	0x6e, 0x67, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,
 	0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,
 	0x20, 0x81, 0xa2, 0x53, 0x65, 0x6c, 0x65, 0x63,
-	0x74, 0x00, 0x00, 0x00,
+	0x74, 0x00,
 };
 
-char MAIN_D_80123B10[16] = "RookieChampion";
+char MAIN_D_80123B10[] = "RookieChampion";
 
-char MAIN_D_80123B20[12] = "Ultimate";
+char MAIN_D_80123B20[] = "Ultimate";
 
-char MAIN_D_80123B2C[12] = "Grade Cup";
+char MAIN_D_80123B2C[] = "Grade Cup";
 
 char MAIN_D_80123B38[12] = "Version Cup";
 
-char MAIN_D_80123B44[12] = "Type Cup";
+char MAIN_D_80123B44[] = "Type Cup";
 
 char MAIN_D_80123B50[12] = "Special Cup";
 
-char MAIN_D_80123B5C[12] = "100 Times";
+char MAIN_D_80123B5C[] = "100 Times";
 
-char MAIN_D_80123B68[20] = "Technique Master";
+char MAIN_D_80123B68[] = "Technique Master";
 
-char MAIN_D_80123B7C[16] = "Digimon Master";
+char MAIN_D_80123B7C[] = "Digimon Master";
 
-char MAIN_D_80123B8C[16] = "Max Abilities";
+char MAIN_D_80123B8C[] = "Max Abilities";
 
 char MAIN_D_80123B9C[16] = "Perfect Curling";
 
-char MAIN_D_80123BAC[12] = "100 Fish";
+char MAIN_D_80123BAC[] = "100 Fish";
 
-char MAIN_D_80123BB8[20] = "Town Flourishing";
+char MAIN_D_80123BB8[] = "Town Flourishing";
 
-char MAIN_D_80123BCC[16] = "Card Complete";
+char MAIN_D_80123BCC[] = "Card Complete";
 
-char MAIN_D_80123BDC[12] = "Bits Maxed";
+char MAIN_D_80123BDC[] = "Bits Maxed";
 
-char MAIN_D_80123BE8[12] = "10 Years";
+char MAIN_D_80123BE8[] = "10 Years";
 
-char MAIN_D_80123BF4[16] = "Cup D C B A S";
+char MAIN_D_80123BF4[] = "Cup D C B A S";
 
-char MAIN_D_80123C04[12] = "Win in all";
+char MAIN_D_80123C04[] = "Win in all";
 
-char MAIN_D_80123C10[28] = "Win in all VER 1 2 3 4 0";
+char MAIN_D_80123C10[] = "Win in all VER 1 2 3 4 0";
 
-char MAIN_D_80123C2C[28] = "Fire Grapple Thunder Wind";
+char MAIN_D_80123C2C[] = "Fire Grapple Thunder Wind";
 
-char MAIN_D_80123C48[32] = "Nature Cool Metallic Filth Cup";
+char MAIN_D_80123C48[] = "Nature Cool Metallic Filth Cup";
 
-char MAIN_D_80123C68[28] = "Dino Wing Animal Human Cup";
+char MAIN_D_80123C68[] = "Dino Wing Animal Human Cup";
 
-char MAIN_D_80123C84[28] = "Won Championship 100 times";
+char MAIN_D_80123C84[] = "Won Championship 100 times";
 
-char MAIN_D_80123CA0[32] = "Mastered 56 switch techniques";
+char MAIN_D_80123CA0[] = "Mastered 56 switch techniques";
 
-char MAIN_D_80123CC0[24] = "Raised all 61 Digimon";
+char MAIN_D_80123CC0[] = "Raised all 61 Digimon";
 
-char MAIN_D_80123CD8[28] = "Maxed all of the Digimons";
+char MAIN_D_80123CD8[] = "Maxed all of the Digimons";
 
-char MAIN_D_80123CF4[12] = "parameters";
+char MAIN_D_80123CF4[] = "parameters";
 
-char MAIN_D_80123D00[32] = "Got a perfect score in curling";
+char MAIN_D_80123D00[] = "Got a perfect score in curling";
 
 char MAIN_D_80123D20[16] = "100 fish caught";
 
-char MAIN_D_80123D30[20] = "Finished the game";
+char MAIN_D_80123D30[] = "Finished the game";
 
-char MAIN_D_80123D44[24] = "Jijimon said the town";
+char MAIN_D_80123D44[] = "Jijimon said the town";
 
-char MAIN_D_80123D5C[16] = "is flourishing";
+char MAIN_D_80123D5C[] = "is flourishing";
 
 char MAIN_D_80123D6C[28] = "Collected all Digimon Cards";
 
-char MAIN_D_80123D88[24] = "Collected 999999 bits";
+char MAIN_D_80123D88[] = "Collected 999999 bits";
 
-char MAIN_D_80123DA0[24] = "Survived for 300 days!";
+char MAIN_D_80123DA0[] = "Survived for 300 days!";
 
 uint8_t MAIN_D_80123DB8[24] = {
 	0x08, 0x08, 0x08, 0x09, 0x09, 0x09, 0x09, 0x09,
@@ -670,13 +670,13 @@ int32_t MAIN_D_80123DD0[6] = {
 	0x00000010, 0x00000002,
 };
 
-char MAIN_D_80123DE8[12] = "Beginner";
+char MAIN_D_80123DE8[] = "Beginner";
 
-char MAIN_D_80123DF4[16] = "Intermediate";
+char MAIN_D_80123DF4[] = "Intermediate";
 
-char MAIN_D_80123E04[12] = "Advanced";
+char MAIN_D_80123E04[] = "Advanced";
 
-char MAIN_D_80123E10[12] = "Top rate";
+char MAIN_D_80123E10[] = "Top rate";
 
 int16_t MAIN_D_80123E1C[6] = {
 	0x7a07, 0x7a47, 0x7a87, 0x7ac7, 0x7b07, 0x0000,
@@ -698,7 +698,7 @@ int16_t MAIN_D_80123E6C[6] = {
 	0x7a07, 0x7a47, 0x7a87, 0x7ac7, 0x7b07, 0x0000,
 };
 
-char MAIN_D_80123E78[16] = "\\CARD\\CARD.ALL";
+char MAIN_D_80123E78[] = "\\CARD\\CARD.ALL";
 
 int16_t MAIN_D_80123E88[6] = {
 	0x0010, 0x001c, 0x0001, 0x0c01, 0x1818, 0x3000,
@@ -1240,151 +1240,151 @@ char MAIN_D_80124C30[3][12] = {
 	"Brain",
 };
 
-char MAIN_D_80124C54[24] = {
+char MAIN_D_80124C54[] = {
 	0x82, 0x4f, 0x82, 0x50, 0x82, 0x51, 0x82, 0x52,
 	0x82, 0x53, 0x82, 0x54, 0x82, 0x55, 0x82, 0x56,
-	0x82, 0x57, 0x82, 0x58, 0x00, 0x00, 0x00, 0x00,
+	0x82, 0x57, 0x82, 0x58, 0x00,
 };
 
-char MAIN_D_80124C6C[12] = "Fire Tower";
+char MAIN_D_80124C6C[] = "Fire Tower";
 
 char MAIN_D_80124C78[16] = "Prominence Beam";
 
-char MAIN_D_80124C88[12] = "Spit Fire";
+char MAIN_D_80124C88[] = "Spit Fire";
 
 char MAIN_D_80124C94[12] = "Red Inferno";
 
-char MAIN_D_80124CA0[12] = "Magma Bomb";
+char MAIN_D_80124CA0[] = "Magma Bomb";
 
-char MAIN_D_80124CAC[12] = "Heat Laser";
+char MAIN_D_80124CAC[] = "Heat Laser";
 
-char MAIN_D_80124CB8[16] = "Inifinity Burn";
+char MAIN_D_80124CB8[] = "Inifinity Burn";
 
-char MAIN_D_80124CC8[12] = "Meltdown";
+char MAIN_D_80124CC8[] = "Meltdown";
 
 char MAIN_D_80124CD4[16] = "Thunder Justice";
 
-char MAIN_D_80124CE4[16] = "Spinning Shot";
+char MAIN_D_80124CE4[] = "Spinning Shot";
 
-char MAIN_D_80124CF4[16] = "Electric Cloud";
+char MAIN_D_80124CF4[] = "Electric Cloud";
 
-char MAIN_D_80124D04[16] = "Megalo Spark";
+char MAIN_D_80124D04[] = "Megalo Spark";
 
-char MAIN_D_80124D14[16] = "Static Elect";
+char MAIN_D_80124D14[] = "Static Elect";
 
 char MAIN_D_80124D24[12] = "Wind Cutter";
 
-char MAIN_D_80124D30[16] = "Confused Storm";
+char MAIN_D_80124D30[] = "Confused Storm";
 
-char MAIN_D_80124D40[12] = "Hurricane";
+char MAIN_D_80124D40[] = "Hurricane";
 
 char MAIN_D_80124D4C[12] = "Giga Freeze";
 
-char MAIN_D_80124D58[12] = "Ice Statue";
+char MAIN_D_80124D58[] = "Ice Statue";
 
-char MAIN_D_80124D64[16] = "Winter Blast";
+char MAIN_D_80124D64[] = "Winter Blast";
 
-char MAIN_D_80124D74[12] = "Ice Needle";
+char MAIN_D_80124D74[] = "Ice Needle";
 
-char MAIN_D_80124D80[12] = "Water Blit";
+char MAIN_D_80124D80[] = "Water Blit";
 
-char MAIN_D_80124D8C[12] = "Aqua Magic";
+char MAIN_D_80124D8C[] = "Aqua Magic";
 
-char MAIN_D_80124D98[16] = "Aurora Freeze";
+char MAIN_D_80124D98[] = "Aurora Freeze";
 
-char MAIN_D_80124DA8[12] = "Tear Drop";
+char MAIN_D_80124DA8[] = "Tear Drop";
 
 char MAIN_D_80124DB4[12] = "Power Crane";
 
-char MAIN_D_80124DC0[16] = "All Range Beam";
+char MAIN_D_80124DC0[] = "All Range Beam";
 
-char MAIN_D_80124DD0[16] = "Metal Sprinter";
+char MAIN_D_80124DD0[] = "Metal Sprinter";
 
 char MAIN_D_80124DE0[12] = "Pulse Laser";
 
-char MAIN_D_80124DEC[16] = "Delete Program";
+char MAIN_D_80124DEC[] = "Delete Program";
 
-char MAIN_D_80124DFC[16] = "DG Dimension";
+char MAIN_D_80124DFC[] = "DG Dimension";
 
-char MAIN_D_80124E0C[16] = "Full Potential";
+char MAIN_D_80124E0C[] = "Full Potential";
 
-char MAIN_D_80124E1C[16] = "Reverse Prog";
+char MAIN_D_80124E1C[] = "Reverse Prog";
 
-char MAIN_D_80124E2C[16] = "Poison Powder";
+char MAIN_D_80124E2C[] = "Poison Powder";
 
-char MAIN_D_80124E3C[12] = "Mass Morph";
+char MAIN_D_80124E3C[] = "Mass Morph";
 
-char MAIN_D_80124E48[16] = "Insect Plague";
+char MAIN_D_80124E48[] = "Insect Plague";
 
-char MAIN_D_80124E58[16] = "Charm Perfume";
+char MAIN_D_80124E58[] = "Charm Perfume";
 
 char MAIN_D_80124E68[12] = "Poison Claw";
 
-char MAIN_D_80124E74[16] = "Danger Sting";
+char MAIN_D_80124E74[] = "Danger Sting";
 
-char MAIN_D_80124E84[12] = "Green Trap";
+char MAIN_D_80124E84[] = "Green Trap";
 
-char MAIN_D_80124E90[16] = "Muscle Charge";
+char MAIN_D_80124E90[] = "Muscle Charge";
 
-char MAIN_D_80124EA0[12] = "Sonic Jab";
+char MAIN_D_80124EA0[] = "Sonic Jab";
 
-char MAIN_D_80124EAC[16] = "Dynamite Kick";
+char MAIN_D_80124EAC[] = "Dynamite Kick";
 
-char MAIN_D_80124EBC[16] = "Megaton Punch";
+char MAIN_D_80124EBC[] = "Megaton Punch";
 
 char MAIN_D_80124ECC[12] = "Buster Dive";
 
-char MAIN_D_80124ED8[12] = "Odor Spray";
+char MAIN_D_80124ED8[] = "Odor Spray";
 
-char MAIN_D_80124EE4[16] = "Poop Spd Toss";
+char MAIN_D_80124EE4[] = "Poop Spd Toss";
 
-char MAIN_D_80124EF4[16] = "Big Poop Toss";
+char MAIN_D_80124EF4[] = "Big Poop Toss";
 
-char MAIN_D_80124F04[16] = "Big Rnd Toss";
+char MAIN_D_80124F04[] = "Big Rnd Toss";
 
-char MAIN_D_80124F14[16] = "Poop Rnd Toss";
+char MAIN_D_80124F14[] = "Poop Rnd Toss";
 
-char MAIN_D_80124F24[16] = "Rnd Spd Toss";
+char MAIN_D_80124F24[] = "Rnd Spd Toss";
 
 char MAIN_D_80124F34[16] = "Horizontal Kick";
 
-char MAIN_D_80124F44[16] = "Ult Poop Hell";
+char MAIN_D_80124F44[] = "Ult Poop Hell";
 
 char MAIN_D_80124F54[12] = "Blaze Blast";
 
-char MAIN_D_80124F60[16] = "Pepper Breath";
+char MAIN_D_80124F60[] = "Pepper Breath";
 
-char MAIN_D_80124F70[16] = "Lovely Attack";
+char MAIN_D_80124F70[] = "Lovely Attack";
 
-char MAIN_D_80124F80[12] = "Fireball";
+char MAIN_D_80124F80[] = "Fireball";
 
-char MAIN_D_80124F8C[12] = "Death Claw";
+char MAIN_D_80124F8C[] = "Death Claw";
 
-char MAIN_D_80124F98[12] = "Mega Flame";
+char MAIN_D_80124F98[] = "Mega Flame";
 
 char MAIN_D_80124FA4[16] = "Howling Blaster";
 
-char MAIN_D_80124FB4[12] = "Party time";
+char MAIN_D_80124FB4[] = "Party time";
 
-char MAIN_D_80124FC0[16] = "Electric Shock";
+char MAIN_D_80124FC0[] = "Electric Shock";
 
-char MAIN_D_80124FD0[16] = "Abduction Beam";
+char MAIN_D_80124FD0[] = "Abduction Beam";
 
 char MAIN_D_80124FE0[12] = "Smiley Bomb";
 
-char MAIN_D_80124FEC[16] = "Spnning Needle";
+char MAIN_D_80124FEC[] = "Spnning Needle";
 
-char MAIN_D_80124FFC[16] = "Spiral Twister";
+char MAIN_D_80124FFC[] = "Spiral Twister";
 
 char MAIN_D_8012500C[12] = "Boom Bubble";
 
-char MAIN_D_80125018[16] = "Sweet Breath";
+char MAIN_D_80125018[] = "Sweet Breath";
 
-char MAIN_D_80125028[12] = "Bit Bomb";
+char MAIN_D_80125028[] = "Bit Bomb";
 
 char MAIN_D_80125034[12] = "Deadly Bomb";
 
-char MAIN_D_80125040[12] = "Drill Spin";
+char MAIN_D_80125040[] = "Drill Spin";
 
 char MAIN_D_8012504C[16] = "Electric Thread";
 
@@ -1392,167 +1392,167 @@ char MAIN_D_8012505C[12] = "Energy Bomb";
 
 char MAIN_D_80125068[16] = "Genoside Attack";
 
-char MAIN_D_80125078[20] = "Giga Scissor Claw";
+char MAIN_D_80125078[] = "Giga Scissor Claw";
 
-char MAIN_D_8012508C[12] = "Dark Shot";
+char MAIN_D_8012508C[] = "Dark Shot";
 
-char MAIN_D_80125098[16] = "Pummel Whack";
+char MAIN_D_80125098[] = "Pummel Whack";
 
-char MAIN_D_801250A8[16] = "Hand of Fate";
+char MAIN_D_801250A8[] = "Hand of Fate";
 
-char MAIN_D_801250B8[12] = "Dark Claw";
+char MAIN_D_801250B8[] = "Dark Claw";
 
-char MAIN_D_801250C4[16] = "Aerial Attack";
+char MAIN_D_801250C4[] = "Aerial Attack";
 
-char MAIN_D_801250D4[16] = "Bone Boomerang";
+char MAIN_D_801250D4[] = "Bone Boomerang";
 
-char MAIN_D_801250E4[12] = "Solar Ray";
+char MAIN_D_801250E4[] = "Solar Ray";
 
-char MAIN_D_801250F0[16] = "Hydro Pressure";
+char MAIN_D_801250F0[] = "Hydro Pressure";
 
-char MAIN_D_80125100[12] = "Ice Blast";
+char MAIN_D_80125100[] = "Ice Blast";
 
-char MAIN_D_8012510C[24] = "Iga School Knife Throw";
+char MAIN_D_8012510C[] = "Iga School Knife Throw";
 
-char MAIN_D_80125124[16] = "Blasting Spout";
+char MAIN_D_80125124[] = "Blasting Spout";
 
-char MAIN_D_80125134[24] = "Fist of the Beast King";
+char MAIN_D_80125134[] = "Fist of the Beast King";
 
-char MAIN_D_8012514C[32] = "Dark Network & Concert Crush";
+char MAIN_D_8012514C[] = "Dark Network & Concert Crush";
 
 char MAIN_D_8012516C[16] = "Electro Shocker";
 
 char MAIN_D_8012517C[12] = "Meteor Wing";
 
-char MAIN_D_80125188[12] = "Super Slap";
+char MAIN_D_80125188[] = "Super Slap";
 
 char MAIN_D_80125194[20] = "Nightmare Syndromer";
 
-char MAIN_D_801251A8[20] = "Frozen Fire Shot";
+char MAIN_D_801251A8[] = "Frozen Fire Shot";
 
-char MAIN_D_801251BC[12] = "Poison Ivy";
+char MAIN_D_801251BC[] = "Poison Ivy";
 
-char MAIN_D_801251C8[16] = "Blue Blaster";
+char MAIN_D_801251C8[] = "Blue Blaster";
 
-char MAIN_D_801251D8[16] = "Scissor Claw";
+char MAIN_D_801251D8[] = "Scissor Claw";
 
-char MAIN_D_801251E8[24] = "Super Thunder Strike";
+char MAIN_D_801251E8[] = "Super Thunder Strike";
 
-char MAIN_D_80125200[16] = "Spiral Sword";
+char MAIN_D_80125200[] = "Spiral Sword";
 
-char MAIN_D_80125210[16] = "Variable Darts";
+char MAIN_D_80125210[] = "Variable Darts";
 
 char MAIN_D_80125220[16] = "Volcanic Strike";
 
-char MAIN_D_80125230[20] = "Subzero Ice Punch";
+char MAIN_D_80125230[] = "Subzero Ice Punch";
 
 char MAIN_D_80125244[16] = "Infinity Cannon";
 
-char MAIN_D_80125254[16] = "Crimson Flare";
+char MAIN_D_80125254[] = "Crimson Flare";
 
-char MAIN_D_80125264[16] = "Glacial Blast";
+char MAIN_D_80125264[] = "Glacial Blast";
 
 char MAIN_D_80125274[12] = "Mail Strome";
 
-char MAIN_D_80125280[24] = "High Electro Shocker";
+char MAIN_D_80125280[] = "High Electro Shocker";
 
 char MAIN_D_80125298[24] = "Small Recovery: +500 HP";
 
-char MAIN_D_801252B0[28] = "Medium Recovery: +1500 HP";
+char MAIN_D_801252B0[] = "Medium Recovery: +1500 HP";
 
-char MAIN_D_801252CC[28] = "Large Recovery: +5000 HP";
+char MAIN_D_801252CC[] = "Large Recovery: +5000 HP";
 
 char MAIN_D_801252E8[24] = "Super Recovery: full HP";
 
-char MAIN_D_80125300[28] = "Recover +500 Magic Points";
+char MAIN_D_80125300[] = "Recover +500 Magic Points";
 
-char MAIN_D_8012531C[28] = "Med. MP: recover +1500 MP";
+char MAIN_D_8012531C[] = "Med. MP: recover +1500 MP";
 
-char MAIN_D_80125338[28] = "Lrg. MP: recover +5000 MP";
+char MAIN_D_80125338[] = "Lrg. MP: recover +5000 MP";
 
-char MAIN_D_80125354[28] = "Recovers +1500 MP and HP";
+char MAIN_D_80125354[] = "Recovers +1500 MP and HP";
 
 char MAIN_D_80125370[20] = "Cures Status Errors";
 
-char MAIN_D_80125384[28] = "Cures errors + rec. HP+MP";
+char MAIN_D_80125384[] = "Cures errors + rec. HP+MP";
 
 char MAIN_D_801253A0[28] = "Protects yr cond. in battle";
 
-char MAIN_D_801253BC[28] = "Cures Coma + rec. half HP";
+char MAIN_D_801253BC[] = "Cures Coma + rec. half HP";
 
 char MAIN_D_801253D8[28] = "Cures coma, errors +full HP";
 
-char MAIN_D_801253F4[32] = "Cures wounds + some sickness";
+char MAIN_D_801253F4[] = "Cures wounds + some sickness";
 
 char MAIN_D_80125414[24] = "Cures wounds + sickness";
 
-char MAIN_D_8012542C[28] = "Boost Off. Power in battle";
+char MAIN_D_8012542C[] = "Boost Off. Power in battle";
 
-char MAIN_D_80125448[28] = "Boost Def. Power in battle";
+char MAIN_D_80125448[] = "Boost Def. Power in battle";
 
-char MAIN_D_80125464[24] = "Boost Speed in battle";
+char MAIN_D_80125464[] = "Boost Speed in battle";
 
-char MAIN_D_8012547C[28] = "Boost all skills in battle";
+char MAIN_D_8012547C[] = "Boost all skills in battle";
 
-char MAIN_D_80125498[32] = "Super boost off. pwr in bat.";
+char MAIN_D_80125498[] = "Super boost off. pwr in bat.";
 
-char MAIN_D_801254B8[32] = "Super boost def. pwr in bat.";
+char MAIN_D_801254B8[] = "Super boost def. pwr in bat.";
 
 char MAIN_D_801254D8[28] = "Super boost Speed in battle";
 
-char MAIN_D_801254F4[28] = "Can return to city quickly";
+char MAIN_D_801254F4[] = "Can return to city quickly";
 
-char MAIN_D_80125510[32] = "Boost max off. pwr level +50";
+char MAIN_D_80125510[] = "Boost max off. pwr level +50";
 
-char MAIN_D_80125530[32] = "Boost max def. pwr level +50";
+char MAIN_D_80125530[] = "Boost max def. pwr level +50";
 
-char MAIN_D_80125550[28] = "Boost max Brains level +50";
+char MAIN_D_80125550[] = "Boost max Brains level +50";
 
-char MAIN_D_8012556C[28] = "Boost max Speed level +50";
+char MAIN_D_8012556C[] = "Boost max Speed level +50";
 
 char MAIN_D_80125588[24] = "Boost max HP level +500";
 
 char MAIN_D_801255A0[24] = "Boost max MP level +500";
 
-char MAIN_D_801255B8[28] = "Boost Off. Pwr+Brains +100";
+char MAIN_D_801255B8[] = "Boost Off. Pwr+Brains +100";
 
-char MAIN_D_801255D4[28] = "Boost Def. Pwr+Speed +100";
+char MAIN_D_801255D4[] = "Boost Def. Pwr+Speed +100";
 
-char MAIN_D_801255F0[28] = "Boost Off. Pwr+Speed +1000";
+char MAIN_D_801255F0[] = "Boost Off. Pwr+Speed +1000";
 
-char MAIN_D_8012560C[24] = "Can do potty anywhere";
+char MAIN_D_8012560C[] = "Can do potty anywhere";
 
-char MAIN_D_80125624[24] = "Train better with this";
+char MAIN_D_80125624[] = "Train better with this";
 
-char MAIN_D_8012563C[28] = "More recovery during rest";
+char MAIN_D_8012563C[] = "More recovery during rest";
 
 char MAIN_D_80125658[28] = "Repels enemies to stay away";
 
 char MAIN_D_80125674[24] = "Attract enemies to come";
 
-char MAIN_D_8012568C[24] = "Walk and HP + MP go up";
+char MAIN_D_8012568C[] = "Walk and HP + MP go up";
 
-char MAIN_D_801256A4[28] = "Makes Digimon a bit full";
+char MAIN_D_801256A4[] = "Makes Digimon a bit full";
 
-char MAIN_D_801256C0[28] = "Makes Digimon quite full .";
+char MAIN_D_801256C0[] = "Makes Digimon quite full .";
 
-char MAIN_D_801256DC[28] = "Makes Digimon very full.";
+char MAIN_D_801256DC[] = "Makes Digimon very full.";
 
-char MAIN_D_801256F8[24] = "Boosts training effect";
+char MAIN_D_801256F8[] = "Boosts training effect";
 
-char MAIN_D_80125710[28] = "Greatly reduces Tiredness";
+char MAIN_D_80125710[] = "Greatly reduces Tiredness";
 
 char MAIN_D_8012572C[24] = "Make Digimon a bit full";
 
-char MAIN_D_80125744[28] = "Greatly boosts Discipline";
+char MAIN_D_80125744[] = "Greatly boosts Discipline";
 
-char MAIN_D_80125760[24] = "Boosts all abilities";
+char MAIN_D_80125760[] = "Boosts all abilities";
 
 char MAIN_D_80125778[20] = "Makes Digimon happy";
 
 char MAIN_D_8012578C[28] = "Gives rest, boost disc.+hap";
 
-char MAIN_D_801257A8[32] = "Can be sold for a high price";
+char MAIN_D_801257A8[] = "Can be sold for a high price";
 
 char MAIN_D_801257C8[28] = "Makes full + boosts Weight!";
 
@@ -1560,117 +1560,117 @@ char MAIN_D_801257E4[24] = "Recovers HP completely!";
 
 char MAIN_D_801257FC[24] = "Recovers MP completely!";
 
-char MAIN_D_80125814[16] = "Lowers Weight!";
+char MAIN_D_80125814[] = "Lowers Weight!";
 
-char MAIN_D_80125824[28] = "Fully recovers HP and MP";
+char MAIN_D_80125824[] = "Fully recovers HP and MP";
 
-char MAIN_D_80125840[28] = "Boost Offensive Power +20!";
+char MAIN_D_80125840[] = "Boost Offensive Power +20!";
 
-char MAIN_D_8012585C[28] = "Boost Defensive Power +20!";
+char MAIN_D_8012585C[] = "Boost Defensive Power +20!";
 
-char MAIN_D_80125878[20] = "Boost Speed +20!";
+char MAIN_D_80125878[] = "Boost Speed +20!";
 
-char MAIN_D_8012588C[20] = "Boost Brains +20!";
+char MAIN_D_8012588C[] = "Boost Brains +20!";
 
-char MAIN_D_801258A0[20] = "Boost HP by +200!";
+char MAIN_D_801258A0[] = "Boost HP by +200!";
 
-char MAIN_D_801258B4[20] = "Boost MP by +200!";
+char MAIN_D_801258B4[] = "Boost MP by +200!";
 
-char MAIN_D_801258C8[28] = "Makes Digimon a bit full.";
+char MAIN_D_801258C8[] = "Makes Digimon a bit full.";
 
-char MAIN_D_801258E4[28] = "Makes Digimon quite full.";
+char MAIN_D_801258E4[] = "Makes Digimon quite full.";
 
 char MAIN_D_80125900[24] = "Makes Digimon very full";
 
-char MAIN_D_80125918[32] = "Full HP and MP + life span++";
+char MAIN_D_80125918[] = "Full HP and MP + life span++";
 
 char MAIN_D_80125938[28] = "Makes Digimon somewhat full";
 
-char MAIN_D_80125954[28] = "Boost Happiness, but risky";
+char MAIN_D_80125954[] = "Boost Happiness, but risky";
 
-char MAIN_D_80125970[24] = "Good for many things";
+char MAIN_D_80125970[] = "Good for many things";
 
-char MAIN_D_80125988[24] = "Digivolve to Greymon!";
+char MAIN_D_80125988[] = "Digivolve to Greymon!";
 
-char MAIN_D_801259A0[24] = "Digivolve to Meramon!";
+char MAIN_D_801259A0[] = "Digivolve to Meramon!";
 
 char MAIN_D_801259B8[24] = "Digivolve to Birdramon!";
 
-char MAIN_D_801259D0[28] = "Digivolve to Centarumon!";
+char MAIN_D_801259D0[] = "Digivolve to Centarumon!";
 
-char MAIN_D_801259EC[28] = "Digivolve to Monochromon!";
+char MAIN_D_801259EC[] = "Digivolve to Monochromon!";
 
-char MAIN_D_80125A08[28] = "Digivolve to Drimogemon!";
+char MAIN_D_80125A08[] = "Digivolve to Drimogemon!";
 
-char MAIN_D_80125A24[28] = "Digivolve to Tyrannomon!";
+char MAIN_D_80125A24[] = "Digivolve to Tyrannomon!";
 
-char MAIN_D_80125A40[24] = "Digivolve to Devimon!";
+char MAIN_D_80125A40[] = "Digivolve to Devimon!";
 
-char MAIN_D_80125A58[24] = "Digivolve to Ogremon!";
+char MAIN_D_80125A58[] = "Digivolve to Ogremon!";
 
-char MAIN_D_80125A70[24] = "Digivolve to Leomon!";
+char MAIN_D_80125A70[] = "Digivolve to Leomon!";
 
-char MAIN_D_80125A88[24] = "Digivolve to Angemon!";
+char MAIN_D_80125A88[] = "Digivolve to Angemon!";
 
-char MAIN_D_80125AA0[24] = "Digivolve to Bakemon!";
+char MAIN_D_80125AA0[] = "Digivolve to Bakemon!";
 
-char MAIN_D_80125AB8[28] = "Digivolve to Kaminarimon!";
+char MAIN_D_80125AB8[] = "Digivolve to Kaminarimon!";
 
 char MAIN_D_80125AD4[24] = "Digivolve to Airdramon!";
 
-char MAIN_D_80125AEC[28] = "Digivolve to Kokatorimon";
+char MAIN_D_80125AEC[] = "Digivolve to Kokatorimon";
 
-char MAIN_D_80125B08[24] = "Digivolve to Unimon!";
+char MAIN_D_80125B08[] = "Digivolve to Unimon!";
 
-char MAIN_D_80125B20[28] = "Digivolve to Kabuterimon!";
+char MAIN_D_80125B20[] = "Digivolve to Kabuterimon!";
 
 char MAIN_D_80125B3C[24] = "Digivolve to Kuwagamon!";
 
-char MAIN_D_80125B54[24] = "Digivolve to Vegiemon!";
+char MAIN_D_80125B54[] = "Digivolve to Vegiemon!";
 
-char MAIN_D_80125B6C[24] = "Digivolve to Ninjamon!";
+char MAIN_D_80125B6C[] = "Digivolve to Ninjamon!";
 
 char MAIN_D_80125B84[24] = "Digivolve to Seadramon!";
 
-char MAIN_D_80125B9C[24] = "Digivolve to Whamon!";
+char MAIN_D_80125B9C[] = "Digivolve to Whamon!";
 
-char MAIN_D_80125BB4[24] = "Digivolve to Shellmon!";
+char MAIN_D_80125BB4[] = "Digivolve to Shellmon!";
 
-char MAIN_D_80125BCC[24] = "Digivolve to Coelamon!";
+char MAIN_D_80125BCC[] = "Digivolve to Coelamon!";
 
 char MAIN_D_80125BE4[24] = "Digivolve to Garurumon!";
 
-char MAIN_D_80125BFC[24] = "Digivolve to Frigimon!";
+char MAIN_D_80125BFC[] = "Digivolve to Frigimon!";
 
-char MAIN_D_80125C14[24] = "Digivolve to Mojyamon!";
+char MAIN_D_80125C14[] = "Digivolve to Mojyamon!";
 
-char MAIN_D_80125C2C[24] = "Digivolve to Nanimon!";
+char MAIN_D_80125C2C[] = "Digivolve to Nanimon!";
 
-char MAIN_D_80125C44[28] = "Digivolve to MetalGreymon!";
+char MAIN_D_80125C44[] = "Digivolve to MetalGreymon!";
 
-char MAIN_D_80125C60[28] = "Digivolve to SkullGreymon!";
+char MAIN_D_80125C60[] = "Digivolve to SkullGreymon!";
 
-char MAIN_D_80125C7C[24] = "Digivolve to Andromon!";
+char MAIN_D_80125C7C[] = "Digivolve to Andromon!";
 
-char MAIN_D_80125C94[28] = "Digivolve to Megadramon!";
+char MAIN_D_80125C94[] = "Digivolve to Megadramon!";
 
-char MAIN_D_80125CB0[24] = "Digivolve to Mamemon!";
+char MAIN_D_80125CB0[] = "Digivolve to Mamemon!";
 
-char MAIN_D_80125CC8[28] = "Digivolve to MetalMamemon!";
+char MAIN_D_80125CC8[] = "Digivolve to MetalMamemon!";
 
-char MAIN_D_80125CE4[24] = "Digivolve to Giromon!";
+char MAIN_D_80125CE4[] = "Digivolve to Giromon!";
 
-char MAIN_D_80125CFC[24] = "Digivolve to Piximon!";
+char MAIN_D_80125CFC[] = "Digivolve to Piximon!";
 
 char MAIN_D_80125D14[24] = "Digivolve to Monzaemon!";
 
-char MAIN_D_80125D2C[24] = "Digivolve to Vademon!";
+char MAIN_D_80125D2C[] = "Digivolve to Vademon!";
 
-char MAIN_D_80125D44[24] = "Digivolve to Etemon!";
+char MAIN_D_80125D44[] = "Digivolve to Etemon!";
 
-char MAIN_D_80125D5C[28] = "Digivolve to Digitamamon!";
+char MAIN_D_80125D5C[] = "Digivolve to Digitamamon!";
 
-char MAIN_D_80125D78[28] = "Digivolve to Phoenixmon!";
+char MAIN_D_80125D78[] = "Digivolve to Phoenixmon!";
 
 char MAIN_D_80125D94[28] = "Become HerculesKabuterimon!";
 
@@ -1678,29 +1678,29 @@ char MAIN_D_80125DB0[28] = "Digivolve to MegaSeadramon!";
 
 char MAIN_D_80125DCC[28] = "Digivolve to WereGarurumon!";
 
-char MAIN_D_80125DE8[28] = "Seadramon friendship proof";
+char MAIN_D_80125DE8[] = "Seadramon friendship proof";
 
 char MAIN_D_80125E04[28] = "Enables you to fish at lake";
 
-char MAIN_D_80125E20[28] = "Gives good fishing at lake";
+char MAIN_D_80125E20[] = "Gives good fishing at lake";
 
-char MAIN_D_80125E3C[24] = "Stone Tablet of Leomon";
+char MAIN_D_80125E3C[] = "Stone Tablet of Leomon";
 
-char MAIN_D_80125E54[28] = "Key to Gray Lord Mansion";
+char MAIN_D_80125E54[] = "Key to Gray Lord Mansion";
 
-char MAIN_D_80125E70[16] = "Mystery Item";
+char MAIN_D_80125E70[] = "Mystery Item";
 
 char MAIN_D_80125E80[28] = "Recover 1000 MP +other uses";
 
-char MAIN_D_80125E9C[28] = "Key to open Refrigerator";
+char MAIN_D_80125E9C[] = "Key to open Refrigerator";
 
 char MAIN_D_80125EB8[28] = "You can read Ancient Script";
 
-char MAIN_D_80125ED4[28] = "Digivolve to Gigadramon!";
+char MAIN_D_80125ED4[] = "Digivolve to Gigadramon!";
 
 char MAIN_D_80125EF0[24] = "Digivolve to Panjyamon!";
 
-char MAIN_D_80125F08[28] = "Digivolve to MetalEtemon!";
+char MAIN_D_80125F08[] = "Digivolve to MetalEtemon!";
 
 InventoryTable DEFAULT_ITEM_AMOUNTS = {
 	{
@@ -1720,7 +1720,7 @@ InventoryTable DEFAULT_ITEM_TYPES = {
 	},
 };
 
-char IS_SICK_SUFFIX[12] = " is sick!";
+char IS_SICK_SUFFIX[] = " is sick!";
 
 uint8_t MAIN_D_80125F70[7][7] = {
 	{ 0x0a, 0x0f, 0x05, 0x14, 0x14, 0x0f, 0x14 },

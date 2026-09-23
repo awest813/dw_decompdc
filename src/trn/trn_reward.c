@@ -70,15 +70,15 @@ int8_t TRAINING_ANIM_IDS[67][2] = {
 	{ 0x2e, 0xa }, { 0x2e, 0xa }, { 0x2e, 0xa },
 };
 
-char TRN_D_8008F0D8[24] = "Give it all you got!";
+char TRN_D_8008F0D8[] = "Give it all you got!";
 
-char TRN_D_8008F0F0[16] = "Take it easy!";
+char TRN_D_8008F0F0[] = "Take it easy!";
 
-char TRN_D_8008F100[12] = "Get back!";
+char TRN_D_8008F100[] = "Get back!";
 
-char TRN_D_8008F10C[16] = "Change target!";
+char TRN_D_8008F10C[] = "Change target!";
 
-char TRN_D_8008F11C[16] = "Hang in there!";
+char TRN_D_8008F11C[] = "Hang in there!";
 
 char TRN_D_8008F12C[20] = "Technique mastered.";
 
@@ -105,7 +105,7 @@ int8_t TRN_D_8008F184[8][3] = {
 	{ 0xa, 0x5, 0x0 },
 };
 
-char TRN_D_8008F19C[16] = "was mastered!";
+char TRN_D_8008F19C[] = "was mastered!";
 // clang-format on
 
 void TRN_saveTrainingStartTime(void)

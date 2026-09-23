@@ -191,75 +191,75 @@ KarSpawnX KAR_D_8005AB98 = { { 0x000002c1, 0x000000eb, 0xffffff15 } };
 
 char KAR_D_8005ABA4[20] = "\\ETCDAT\\KARRING.TMD";
 
-char KAR_D_8005ABB8[24] = "Start GameExplain Game";
+char KAR_D_8005ABB8[] = "Start GameExplain Game";
 
-char KAR_D_8005ABD0[16] = " Penguinmon ";
+char KAR_D_8005ABD0[] = " Penguinmon ";
 
 char KAR_D_8005ABE0[28] = "First of all, please choose";
 
 char KAR_D_8005ABFC[20] = "your curling stone.";
 
-char KAR_D_8005AC10[32] = "There are heavy, medium, and";
+char KAR_D_8005AC10[] = "There are heavy, medium, and";
 
-char KAR_D_8005AC30[32] = "light ones, so think about the";
+char KAR_D_8005AC30[] = "light ones, so think about the";
 
 char KAR_D_8005AC50[24] = "best order to use them.";
 
 char KAR_D_8005AC68[28] = "Some stones have four pegs.";
 
-char KAR_D_8005AC84[32] = "They stick to where they land";
+char KAR_D_8005AC84[] = "They stick to where they land";
 
 char KAR_D_8005ACA4[28] = "and can become very useful.";
 
-char KAR_D_8005ACC0[28] = "Move the Directional Pad ";
+char KAR_D_8005ACC0[] = "Move the Directional Pad ";
 
-char KAR_D_8005ACDC[32] = "left and right to choose the ";
+char KAR_D_8005ACDC[] = "left and right to choose the ";
 
-char KAR_D_8005ACFC[28] = "direction of your throw.";
+char KAR_D_8005ACFC[] = "direction of your throw.";
 
 char KAR_D_8005AD18[28] = "Move screen up or down with";
 
-char KAR_D_8005AD34[28] = "Dir. Pad. Use X button to";
+char KAR_D_8005AD34[] = "Dir. Pad. Use X button to";
 
 char KAR_D_8005AD50[24] = "select throw direction.";
 
-char KAR_D_8005AD68[28] = "Press X button when power";
+char KAR_D_8005AD68[] = "Press X button when power";
 
-char KAR_D_8005AD84[28] = "gauge reaches the desired";
+char KAR_D_8005AD84[] = "gauge reaches the desired";
 
-char KAR_D_8005ADA0[32] = "level to pick throw strength.";
+char KAR_D_8005ADA0[] = "level to pick throw strength.";
 
 char KAR_D_8005ADC0[28] = "If your curling stone lands";
 
-char KAR_D_8005ADDC[28] = "and touches the GOOD mark,";
+char KAR_D_8005ADDC[] = "and touches the GOOD mark,";
 
 char KAR_D_8005ADF8[20] = "you get two points.";
 
-char KAR_D_8005AE0C[28] = "If you get it on the blue";
+char KAR_D_8005AE0C[] = "If you get it on the blue";
 
-char KAR_D_8005AE28[32] = "line, but outside the center";
+char KAR_D_8005AE28[] = "line, but outside the center";
 
-char KAR_D_8005AE48[24] = "GOOD mark, one point.";
+char KAR_D_8005AE48[] = "GOOD mark, one point.";
 
 char KAR_D_8005AE60[24] = "If you touch the BAD on";
 
-char KAR_D_8005AE78[28] = "bottom right, you'll lose";
+char KAR_D_8005AE78[] = "bottom right, you'll lose";
 
-char KAR_D_8005AE94[28] = "two points, so be careful.";
+char KAR_D_8005AE94[] = "two points, so be careful.";
 
-char KAR_D_8005AEB0[28] = "And, in the case of a tie,";
+char KAR_D_8005AEB0[] = "And, in the case of a tie,";
 
-char KAR_D_8005AECC[28] = "So let's start the game!!";
+char KAR_D_8005AECC[] = "So let's start the game!!";
 
-char KAR_D_8005AEE8[24] = "You're not that great!";
+char KAR_D_8005AEE8[] = "You're not that great!";
 
-char KAR_D_8005AF00[32] = "The battle is just beginning!";
+char KAR_D_8005AF00[] = "The battle is just beginning!";
 
 char KAR_D_8005AF20[24] = "Hey you're pretty good!";
 
-char KAR_D_8005AF38[16] = "Yeah! I won!";
+char KAR_D_8005AF38[] = "Yeah! I won!";
 
-char KAR_D_8005AF48[16] = "Awh, I lost. ";
+char KAR_D_8005AF48[] = "Awh, I lost. ";
 
 KarStrTbl KAR_D_8005AF58 = {{
 	KAR_D_8005ABD0,
@@ -332,59 +332,59 @@ KarOffTbl KAR_D_8005B04C = {
 	},
 };
 
-char KAR_D_8005B058[16] = " MetalMamemon ";
+char KAR_D_8005B058[] = " MetalMamemon ";
 
-char KAR_D_8005B068[28] = "Yeah. You gotta first pick";
+char KAR_D_8005B068[] = "Yeah. You gotta first pick";
 
-char KAR_D_8005B084[28] = "the type of curling stone.";
+char KAR_D_8005B084[] = "the type of curling stone.";
 
-char KAR_D_8005B0A0[28] = "I'm a genius, so I can use";
+char KAR_D_8005B0A0[] = "I'm a genius, so I can use";
 
 char KAR_D_8005B0BC[28] = "various stones in the right";
 
 char KAR_D_8005B0D8[28] = "order. It's key to winning.";
 
-char KAR_D_8005B0F4[28] = "Stones with four pegs stop";
+char KAR_D_8005B0F4[] = "Stones with four pegs stop";
 
-char KAR_D_8005B110[28] = "and stay where they land,";
+char KAR_D_8005B110[] = "and stay where they land,";
 
-char KAR_D_8005B12C[28] = "so they are very valuable.";
+char KAR_D_8005B12C[] = "so they are very valuable.";
 
-char KAR_D_8005B148[32] = "Choose the direction of throw";
+char KAR_D_8005B148[] = "Choose the direction of throw";
 
-char KAR_D_8005B168[28] = "with the Directional Pad,";
+char KAR_D_8005B168[] = "with the Directional Pad,";
 
-char KAR_D_8005B184[32] = "by moving it left and right.";
+char KAR_D_8005B184[] = "by moving it left and right.";
 
-char KAR_D_8005B1A4[32] = "You can scroll screen moving";
+char KAR_D_8005B1A4[] = "You can scroll screen moving";
 
-char KAR_D_8005B1C4[32] = "Directional Pad up and down.";
+char KAR_D_8005B1C4[] = "Directional Pad up and down.";
 
 char KAR_D_8005B1E4[28] = "Press X button to throw it.";
 
-char KAR_D_8005B200[28] = "gauge reaches the desired ";
+char KAR_D_8005B200[] = "gauge reaches the desired ";
 
-char KAR_D_8005B21C[24] = "Points: If you get the";
+char KAR_D_8005B21C[] = "Points: If you get the";
 
 char KAR_D_8005B234[24] = "stone on the GOOD mark,";
 
-char KAR_D_8005B24C[28] = "If you get on right bottom";
+char KAR_D_8005B24C[] = "If you get on right bottom";
 
-char KAR_D_8005B268[28] = "BAD mark, it will be minus";
+char KAR_D_8005B268[] = "BAD mark, it will be minus";
 
-char KAR_D_8005B284[32] = "In the case of a tie, I win!";
+char KAR_D_8005B284[] = "In the case of a tie, I win!";
 
-char KAR_D_8005B2A4[20] = "Start the game!!";
+char KAR_D_8005B2A4[] = "Start the game!!";
 
-char KAR_D_8005B2B8[12] = "I'll win!";
+char KAR_D_8005B2B8[] = "I'll win!";
 
 char KAR_D_8005B2C4[20] = "I haven't lost yet!";
 
-char KAR_D_8005B2D8[28] = "I can't lose this match!";
+char KAR_D_8005B2D8[] = "I can't lose this match!";
 
-char KAR_D_8005B2F4[16] = "Yeah, I won!";
+char KAR_D_8005B2F4[] = "Yeah, I won!";
 
-char KAR_D_8005B304[20] = "Awh, I almost won.";
+char KAR_D_8005B304[] = "Awh, I almost won.";
 
 KarStrTbl KAR_D_8005B318 = {{
 	KAR_D_8005B058,

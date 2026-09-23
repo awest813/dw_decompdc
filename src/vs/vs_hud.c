@@ -321,7 +321,7 @@ uint8_t VS_D_80070B10[2][5] = {
 	{ 0x02, 0x03, 0x04, 0x05, 0x06 },
 };
 
-char VS_D_80070B1C[20] = "\\STDDAT\\DRAW.TMD";
+char VS_D_80070B1C[] = "\\STDDAT\\DRAW.TMD";
 
 char VS_D_80070B30[20] = "\\STDDAT\\1P2PWIN.TMD";
 // clang-format on

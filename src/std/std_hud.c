@@ -345,15 +345,15 @@ int16_t STD_D_8007AA8C[18] = {
 	0x0140, 0x0000,
 };
 
-char STD_D_8007AAB0[20] = "\\STDDAT\\DRAW.TMD";
+char STD_D_8007AAB0[] = "\\STDDAT\\DRAW.TMD";
 
-char STD_D_8007AAC4[24] = "\\STDDAT\\WIN_LOSE.TMD";
+char STD_D_8007AAC4[] = "\\STDDAT\\WIN_LOSE.TMD";
 
-char STD_D_8007AADC[20] = "\\STDDAT\\CHAMP.TMD";
+char STD_D_8007AADC[] = "\\STDDAT\\CHAMP.TMD";
 
-char STD_D_8007AAF0[20] = "\\STDDAT\\B_DAI.TMD";
+char STD_D_8007AAF0[] = "\\STDDAT\\B_DAI.TMD";
 
-char STD_D_8007AB04[20] = "\\STDDAT\\T_DAI.TMD";
+char STD_D_8007AB04[] = "\\STDDAT\\T_DAI.TMD";
 // clang-format on
 
 void STD_func_80069134(int16_t tech)

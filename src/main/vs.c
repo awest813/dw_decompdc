@@ -51,8 +51,8 @@ typedef struct {
 
 extern char VS_D_80070B1C[];
 extern int16_t MAIN_D_8013527C[2];
-extern char MAIN_D_80134500[8];
-extern char MAIN_D_80134508[8];
+extern char MAIN_D_80134500[5];
+extern char MAIN_D_80134508[5];
 extern char MAIN_D_80124C24[];
 extern char MAIN_D_80124C54[];
 extern int16_t MAIN_D_80134F24;
@@ -96,7 +96,7 @@ extern uint8_t MAIN_D_80134F44;
 extern int16_t MAIN_D_80135264;
 extern char *MAIN_D_8013526C;
 extern char *MAIN_D_80135270;
-extern char MAIN_D_80134518[8];
+extern char MAIN_D_80134518[7];
 extern int32_t MAIN_D_80134F48;
 extern int16_t MAIN_D_80134510[4];
 extern int32_t COMBAT_AREA_CENTER_Y;
@@ -392,30 +392,30 @@ RGB8 MAIN_D_8012F438[10] = {
 	{ 0x00, 0x00, 0x00 },
 };
 
-char MAIN_D_8012F458[12] = {
+char MAIN_D_8012F458[] = {
 	0x83, 0x5f, 0x83, 0x81, 0x81, 0x5b, 0x83, 0x57,
-	0x00, 0x00, 0x00, 0x00,
+	0x00,
 };
 
-char MAIN_D_8012F464[20] = "\\ETCDAT\\ETCTIM.BIN";
+char MAIN_D_8012F464[] = "\\ETCDAT\\ETCTIM.BIN";
 
-char MAIN_D_8012F478[20] = "\\ETCNA\\TITLE2.TIM";
+char MAIN_D_8012F478[] = "\\ETCNA\\TITLE2.TIM";
 
-char MAIN_D_8012F48C[24] = "\\ETCDAT\\SYSTEM_W.TIM";
+char MAIN_D_8012F48C[] = "\\ETCDAT\\SYSTEM_W.TIM";
 
 char MAIN_D_8012F4A4[20] = "\\STDDAT\\TAISEN1.TIM";
 
 char MAIN_D_8012F4B8[20] = "\\STDDAT\\TAISEN2.TIM";
 
-char MAIN_D_8012F4CC[24] = "\\STDDAT\\16TAISEN.TIM";
+char MAIN_D_8012F4CC[] = "\\STDDAT\\16TAISEN.TIM";
 
-char MAIN_D_8012F4E4[24] = "\\STDDAT\\TAISEN_F.TIM";
+char MAIN_D_8012F4E4[] = "\\STDDAT\\TAISEN_F.TIM";
 
-char MAIN_D_8012F4FC[20] = "\\STDDAT\\TIME.TIM";
+char MAIN_D_8012F4FC[] = "\\STDDAT\\TIME.TIM";
 
 char MAIN_D_8012F510[12] = "Press Start";
 
-char MAIN_D_8012F51C[12] = "to begin.";
+char MAIN_D_8012F51C[] = "to begin.";
 
 uint8_t MAIN_D_8012F528[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x03, 0x01,
@@ -439,7 +439,7 @@ uint8_t MAIN_D_8012F578[12] = {
 };
 
 /* "ソウビナシ" (not equipped) */
-char MAIN_D_8012F584[12] = "\x83\x5c\x83\x45\x83\x72\x83\x69\x83\x56";
+char MAIN_D_8012F584[] = "\x83\x5c\x83\x45\x83\x72\x83\x69\x83\x56";
 
 VsListPanel MAIN_D_8012F590[12] = {
 	{ 0x0000, 0x01e8, 0x00, 0x00, 0x96, 0xd7, 0x06, 0x00, 0x00 },

@@ -37,7 +37,7 @@ extern int32_t IS_NATURAL_DEATH;
 extern int8_t ITEM_SCOLD_FLAG;
 extern int16_t STATUS_UI_OFFSET_X;
 
-char MAIN_D_801225A0[12] = "is Sick!";
+char MAIN_D_801225A0[] = "is Sick!";
 char MAIN_D_801225AC[16] = "\\ETCNA\\UNTI.TMD";
 RaiseData RAISE_DATA[66] = {
 	{ { -1, -1, -1, -1, -1, -1, -1, -1 },

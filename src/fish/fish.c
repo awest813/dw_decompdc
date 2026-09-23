@@ -485,43 +485,43 @@ SVECTOR FISH_D_8007A5BC[5] = {
 
 char FISH_PATH_ROD_MODEL[16] = "\\ETCDAT\\SAO.TMD";
 
-char FISH_MSG_TOOK_BAIT[20] = "They took my bait!";
+char FISH_MSG_TOOK_BAIT[] = "They took my bait!";
 
-char FISH_MSG_TOO_LATE[12] = "Too late!";
+char FISH_MSG_TOO_LATE[] = "Too late!";
 
-char FISH_MSG_GOT_BAIT[20] = "They got my bait!";
+char FISH_MSG_GOT_BAIT[] = "They got my bait!";
 
-char FISH_MSG_TOO_FAST[12] = "Too fast!";
+char FISH_MSG_TOO_FAST[] = "Too fast!";
 
-char FISH_MSG_STILL_HAVE_BAIT[28] = "But I still got my bait!";
+char FISH_MSG_STILL_HAVE_BAIT[] = "But I still got my bait!";
 
-char FISH_MSG_LENGTH_GREAT[32] = "Great! Total length %d m %d cm";
+char FISH_MSG_LENGTH_GREAT[] = "Great! Total length %d m %d cm";
 
 char FISH_MSG_LENGTH_M_CM[24] = "Total length %d m %d cm";
 
-char FISH_MSG_LENGTH_CM[20] = "Total length %d cm";
+char FISH_MSG_LENGTH_CM[] = "Total length %d cm";
 
-char FISH_MSG_GOT_ONE[12] = "I got one!";
+char FISH_MSG_GOT_ONE[] = "I got one!";
 
-char FISH_MSG_LET_IT_GO[28] = "It looks sad. Let it go.";
+char FISH_MSG_LET_IT_GO[] = "It looks sad. Let it go.";
 
-char FISH_MSG_LINE_CUT[20] = "My line got cut!";
+char FISH_MSG_LINE_CUT[] = "My line got cut!";
 
-char FISH_MSG_WATCH_TENSION[32] = "Pay attention to tension gauge";
+char FISH_MSG_WATCH_TENSION[] = "Pay attention to tension gauge";
 
-char FISH_MSG_BE_CALM[20] = "and be more calm";
+char FISH_MSG_BE_CALM[] = "and be more calm";
 
-char FISH_MSG_HOOK_LOST[20] = "My hook got lost!";
+char FISH_MSG_HOOK_LOST[] = "My hook got lost!";
 
 char FISH_MSG_STUCK_LINE1[28] = "Huh?! I wonder if something";
 
-char FISH_MSG_STUCK_LINE2[28] = "got stuck? It got stuck!";
+char FISH_MSG_STUCK_LINE2[] = "got stuck? It got stuck!";
 
 char FISH_MSG_BAG_FULL_LINE1[28] = "My bag was so full, I could";
 
-char FISH_MSG_BAG_FULL_LINE2[16] = "not carry it.";
+char FISH_MSG_BAG_FULL_LINE2[] = "not carry it.";
 
-char FISH_MSG_IT_GOT_STUCK[16] = "It got stuck!";
+char FISH_MSG_IT_GOT_STUCK[] = "It got stuck!";
 
 DVECTOR FISH_D_8007A794[9] = {
 	{ 0xfeca, 0xfff3 },
@@ -822,7 +822,7 @@ DVECTOR FISH_D_8007A9CC[8] = {
 
 char FISH_PATH_FISHING_TIM[20] = "\\ETCDAT\\FISHING.TIM";
 
-char FISH_PATH_FISHING2_TIM[24] = "\\ETCDAT\\FISHING2.TIM";
+char FISH_PATH_FISHING2_TIM[] = "\\ETCDAT\\FISHING2.TIM";
 
 VECTOR FISH_REEL_TARGET = { 0x00000000, 0x00000000, 0x00000000, 0x00000000 };
 

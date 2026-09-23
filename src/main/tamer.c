@@ -29,13 +29,13 @@
 #include <dw/ui.h>
 #include <dw/utils.h>
 
-char MAIN_D_80122D68[24] = "I can't hold anymore.";
-char MAIN_D_80122D80[20] = "Hey! It's empty!";
-char MAIN_D_80122D94[24] = "Tamer level went up!!!";
-char MAIN_D_80122DAC[28] = "Tamer level went down!!!";
-char MAIN_D_80122DC8[20] = "Congratulations!";
+char MAIN_D_80122D68[] = "I can't hold anymore.";
+char MAIN_D_80122D80[] = "Hey! It's empty!";
+char MAIN_D_80122D94[] = "Tamer level went up!!!";
+char MAIN_D_80122DAC[] = "Tamer level went down!!!";
+char MAIN_D_80122DC8[] = "Congratulations!";
 char MAIN_D_80122DDC[24] = "To recognize your great";
-char MAIN_D_80122DF4[28] = "recors, they sent a Medal!";
+char MAIN_D_80122DF4[] = "recors, they sent a Medal!";
 
 static void *tamer_data_order[] = {
 	MAIN_D_80122DF4,
@@ -48,7 +48,7 @@ static void *tamer_data_order[] = {
 };
 
 RECT MAIN_D_801341F4 = {0, 12, 256, 200};
-char MAIN_D_801341FC[8] = "Woah!";
+char MAIN_D_801341FC[] = "Woah!";
 RECT MAIN_D_80134204 = {0, 12, 256, 200};
 RECT MAIN_D_8013420C = {0, 12, 256, 200};
 

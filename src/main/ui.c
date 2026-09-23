@@ -48,13 +48,13 @@ uint8_t MAIN_D_80134334[4] = {
 
 char MAIN_D_80134338[4] = "Bug";
 
-char MAIN_D_8013433C[8] = "Tremar";
+char MAIN_D_8013433C[] = "Tremar";
 
 char MAIN_D_80134344[8] = "War Cry";
 
 char MAIN_D_8013434C[8] = "Counter";
 
-char MAIN_D_80134354[8] = "Bubble";
+char MAIN_D_80134354[] = "Bubble";
 // clang-format on
 
 void initializeUIBoxData(void)

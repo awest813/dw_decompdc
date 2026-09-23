@@ -391,9 +391,9 @@ int8_t COMBAT_AREA_CORNER_OFFSETS[8] = {
 	0xff, 0x01, 0x01, 0x01, 0xff, 0xff, 0x01, 0xff,
 };
 
-int8_t MAP_FILE_EXT_MAP[8] = ".MAP";
+int8_t MAP_FILE_EXT_MAP[] = ".MAP";
 
-int8_t MAP_FILE_EXT_TFS[6] = ".TFS";
+int8_t MAP_FILE_EXT_TFS[] = ".TFS";
 
 // mwcc aligns every array to four, so the two-byte separator can only be a scalar
 int16_t MAP_PATH_SEPARATOR = '\\';
@@ -421,150 +421,150 @@ int16_t COLLISION_GRACE_ROTATION[8][4] = {
 	{ 0x0000, 0x0c00, 0x0400, 0x0800 },
 };
 
-char MAIN_D_80128A34[28] = "      Native Forest     ";
+char MAIN_D_80128A34[] = "      Native Forest     ";
 
-char MAIN_D_80128A50[28] = "       Coela Point      ";
+char MAIN_D_80128A50[] = "       Coela Point      ";
 
-char MAIN_D_80128A6C[28] = "     Dragon Eye Lake    ";
+char MAIN_D_80128A6C[] = "     Dragon Eye Lake    ";
 
-char MAIN_D_80128A88[28] = "  Drill Tunnel Entrance ";
+char MAIN_D_80128A88[] = "  Drill Tunnel Entrance ";
 
-char MAIN_D_80128AA4[28] = "      Digimon Bridge    ";
+char MAIN_D_80128AA4[] = "      Digimon Bridge    ";
 
-char MAIN_D_80128AC0[28] = "     Tropical Jungle    ";
+char MAIN_D_80128AC0[] = "     Tropical Jungle    ";
 
-char MAIN_D_80128ADC[28] = "     Mangrove Region    ";
+char MAIN_D_80128ADC[] = "     Mangrove Region    ";
 
-char MAIN_D_80128AF8[28] = " Path Thru Mt. Panorama ";
+char MAIN_D_80128AF8[] = " Path Thru Mt. Panorama ";
 
-char MAIN_D_80128B14[28] = "  Entrance to File City ";
+char MAIN_D_80128B14[] = "  Entrance to File City ";
 
-char MAIN_D_80128B30[28] = "  Mt. Panorama Plains   ";
+char MAIN_D_80128B30[] = "  Mt. Panorama Plains   ";
 
-char MAIN_D_80128B4C[28] = "  Foot of Mt. Panorama  ";
+char MAIN_D_80128B4C[] = "  Foot of Mt. Panorama  ";
 
-char MAIN_D_80128B68[28] = "Mt. Panorama Spore Area ";
+char MAIN_D_80128B68[] = "Mt. Panorama Spore Area ";
 
-char MAIN_D_80128B84[28] = "      Drill Tunnel      ";
+char MAIN_D_80128B84[] = "      Drill Tunnel      ";
 
-char MAIN_D_80128BA0[28] = " Drill Tunnel 2nd floor ";
+char MAIN_D_80128BA0[] = " Drill Tunnel 2nd floor ";
 
-char MAIN_D_80128BBC[28] = " Drill Tunnel 3rd floor ";
+char MAIN_D_80128BBC[] = " Drill Tunnel 3rd floor ";
 
-char MAIN_D_80128BD8[28] = "    Residential Area    ";
+char MAIN_D_80128BD8[] = "    Residential Area    ";
 
-char MAIN_D_80128BF4[28] = "    Underground Pond    ";
+char MAIN_D_80128BF4[] = "    Underground Pond    ";
 
-char MAIN_D_80128C10[28] = "        Lava Cave       ";
+char MAIN_D_80128C10[] = "        Lava Cave       ";
 
-char MAIN_D_80128C2C[28] = "        Overdell        ";
+char MAIN_D_80128C2C[] = "        Overdell        ";
 
-char MAIN_D_80128C48[28] = "    Overdell Cemetery   ";
+char MAIN_D_80128C48[] = "    Overdell Cemetery   ";
 
-char MAIN_D_80128C64[28] = "  Great Canyon Entrance ";
+char MAIN_D_80128C64[] = "  Great Canyon Entrance ";
 
-char MAIN_D_80128C80[28] = "  Great Canyon Top Area ";
+char MAIN_D_80128C80[] = "  Great Canyon Top Area ";
 
-char MAIN_D_80128C9C[28] = "   Great Canyon Bridge  ";
+char MAIN_D_80128C9C[] = "   Great Canyon Bridge  ";
 
-char MAIN_D_80128CB8[28] = "    Fortress Entrance   ";
+char MAIN_D_80128CB8[] = "    Fortress Entrance   ";
 
-char MAIN_D_80128CD4[28] = " Great Canyon Bot. Area ";
+char MAIN_D_80128CD4[] = " Great Canyon Bot. Area ";
 
-char MAIN_D_80128CF0[28] = "      Ogre Fortress     ";
+char MAIN_D_80128CF0[] = "      Ogre Fortress     ";
 
-char MAIN_D_80128D0C[28] = "     Monochrome Shop    ";
+char MAIN_D_80128D0C[] = "     Monochrome Shop    ";
 
-char MAIN_D_80128D28[28] = "   Grey Lord's Mansion  ";
+char MAIN_D_80128D28[] = "   Grey Lord's Mansion  ";
 
-char MAIN_D_80128D44[28] = "    Mansion Basement    ";
+char MAIN_D_80128D44[] = "    Mansion Basement    ";
 
-char MAIN_D_80128D60[28] = "     Underground Lab    ";
+char MAIN_D_80128D60[] = "     Underground Lab    ";
 
-char MAIN_D_80128D7C[28] = "      Gear Savanna      ";
+char MAIN_D_80128D7C[] = "      Gear Savanna      ";
 
-char MAIN_D_80128D98[28] = "   Ancient Dino Region  ";
+char MAIN_D_80128D98[] = "   Ancient Dino Region  ";
 
-char MAIN_D_80128DB4[28] = " Ancient Glacial Region ";
+char MAIN_D_80128DB4[] = " Ancient Glacial Region ";
 
-char MAIN_D_80128DD0[28] = " Ancient Speedy Region  ";
+char MAIN_D_80128DD0[] = " Ancient Speedy Region  ";
 
-char MAIN_D_80128DEC[28] = "       Freezeland       ";
+char MAIN_D_80128DEC[] = "       Freezeland       ";
 
-char MAIN_D_80128E08[28] = "      Ice Sanctuary     ";
+char MAIN_D_80128E08[] = "      Ice Sanctuary     ";
 
-char MAIN_D_80128E24[28] = "        Green Gym       ";
+char MAIN_D_80128E24[] = "        Green Gym       ";
 
-char MAIN_D_80128E40[28] = " Leomon Ancestor's Cave ";
+char MAIN_D_80128E40[] = " Leomon Ancestor's Cave ";
 
-char MAIN_D_80128E5C[28] = "       Misty Trees      ";
+char MAIN_D_80128E5C[] = "       Misty Trees      ";
 
-char MAIN_D_80128E78[28] = "      Great Canyon      ";
+char MAIN_D_80128E78[] = "      Great Canyon      ";
 
-char MAIN_D_80128E94[28] = "        Geko Swamp      ";
+char MAIN_D_80128E94[] = "        Geko Swamp      ";
 
-char MAIN_D_80128EB0[28] = "      Volume Villa      ";
+char MAIN_D_80128EB0[] = "      Volume Villa      ";
 
-char MAIN_D_80128ECC[28] = "        File City       ";
+char MAIN_D_80128ECC[] = "        File City       ";
 
-char MAIN_D_80128EE8[28] = "      Item Keeper       ";
+char MAIN_D_80128EE8[] = "      Item Keeper       ";
 
-char MAIN_D_80128F04[28] = "      Centar Clinic     ";
+char MAIN_D_80128F04[] = "      Centar Clinic     ";
 
-char MAIN_D_80128F20[28] = "       Restaurant       ";
+char MAIN_D_80128F20[] = "       Restaurant       ";
 
-char MAIN_D_80128F3C[28] = "        Item Shop       ";
+char MAIN_D_80128F3C[] = "        Item Shop       ";
 
-char MAIN_D_80128F58[28] = "      Jijimon's house   ";
+char MAIN_D_80128F58[] = "      Jijimon's house   ";
 
-char MAIN_D_80128F74[28] = "    Secret Item Shop    ";
+char MAIN_D_80128F74[] = "    Secret Item Shop    ";
 
-char MAIN_D_80128F90[28] = "        Toy Town        ";
+char MAIN_D_80128F90[] = "        Toy Town        ";
 
-char MAIN_D_80128FAC[28] = "    Secret Beach Cave   ";
+char MAIN_D_80128FAC[] = "    Secret Beach Cave   ";
 
-char MAIN_D_80128FC8[28] = "     Factorial Town     ";
+char MAIN_D_80128FC8[] = "     Factorial Town     ";
 
-char MAIN_D_80128FE4[28] = "     Birdra Transport   ";
+char MAIN_D_80128FE4[] = "     Birdra Transport   ";
 
-char MAIN_D_80129000[28] = "       Arena Lobby      ";
+char MAIN_D_80129000[] = "       Arena Lobby      ";
 
-char MAIN_D_8012901C[28] = "      Treasure Hunt     ";
+char MAIN_D_8012901C[] = "      Treasure Hunt     ";
 
-char MAIN_D_80129038[28] = "     Trash Mountain     ";
+char MAIN_D_80129038[] = "     Trash Mountain     ";
 
-char MAIN_D_80129054[28] = "          Sewer         ";
+char MAIN_D_80129054[] = "          Sewer         ";
 
-char MAIN_D_80129070[28] = "      Beetle Land       ";
+char MAIN_D_80129070[] = "      Beetle Land       ";
 
-char MAIN_D_8012908C[28] = "      Mt. Infinity      ";
+char MAIN_D_8012908C[] = "      Mt. Infinity      ";
 
-char MAIN_D_801290A8[28] = "     Digimon Curling    ";
+char MAIN_D_801290A8[] = "     Digimon Curling    ";
 
-char MAIN_D_801290C4[28] = "       Toy Mansion      ";
+char MAIN_D_801290C4[] = "       Toy Mansion      ";
 
-char MAIN_D_801290E0[28] = "      Costume House     ";
+char MAIN_D_801290E0[] = "      Costume House     ";
 
-char MAIN_D_801290FC[28] = "       Robot House      ";
+char MAIN_D_801290FC[] = "       Robot House      ";
 
-char MAIN_D_80129118[28] = "    Mansion 2nd floor   ";
+char MAIN_D_80129118[] = "    Mansion 2nd floor   ";
 
-char MAIN_D_80129134[28] = "      Mansion Attic     ";
+char MAIN_D_80129134[] = "      Mansion Attic     ";
 
-char MAIN_D_80129150[28] = "     Back Dimension     ";
+char MAIN_D_80129150[] = "     Back Dimension     ";
 
-char MAIN_D_8012916C[28] = "      Kunemon's Bed     ";
+char MAIN_D_8012916C[] = "      Kunemon's Bed     ";
 
-char MAIN_D_80129188[28] = "      Amida Forest      ";
+char MAIN_D_80129188[] = "      Amida Forest      ";
 
-char MAP_PATH_PREFIX[12] = {
+char MAP_PATH_PREFIX[] = {
 	0x5c, 0x4d, 0x41, 0x50, 0x5c, 0x4d, 0x41, 0x50,
-	0x00, 0x00, 0x00, 0x00,
+	0x00,
 };
 
-char MAP_PATH_DIGITS[12] = {
+char MAP_PATH_DIGITS[] = {
 	0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37,
-	0x38, 0x39, 0x00, 0x00,
+	0x38, 0x39, 0x00,
 };
 
 char *MAP_NAME_PTR[70] = {

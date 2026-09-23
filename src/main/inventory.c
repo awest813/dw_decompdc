@@ -71,7 +71,7 @@ void updateInputHold();
 int32_t isInputTriggered(int32_t mask);
 void moveMenuCursor(uint8_t *cursor, int32_t unused, int32_t max);
 
-char CONFIRM_PROMPT[16] = "Are you sure?";
+char CONFIRM_PROMPT[] = "Are you sure?";
 uint8_t SORT_CATEGORY_ORDER[3][6] = {
 	{ 0x00, 0x01, 0x03, 0x02, 0x05, 0x04 },
 	{ 0x02, 0x05, 0x00, 0x01, 0x04, 0x03 },
@@ -79,11 +79,11 @@ uint8_t SORT_CATEGORY_ORDER[3][6] = {
 };
 char ACTION_LABELS[4][8] = { "Use", "Move", "Sort", "Drop" };
 
-char SORT_LABEL_BATTLE[8] = "Battle";
-char SORT_LABEL_RAISE[8] = "Raise";
-char SORT_LABEL_BASIC[8] = "Basic";
+char SORT_LABEL_BATTLE[] = "Battle";
+char SORT_LABEL_RAISE[] = "Raise";
+char SORT_LABEL_BASIC[] = "Basic";
 char CONFIRM_LABEL_YES[4] = "Yes";
-char CONFIRM_LABEL_NO[4] = "No";
+char CONFIRM_LABEL_NO[] = "No";
 
 int32_t INVENTORY_UNUSED;
 int32_t INVENTORY_STATE;

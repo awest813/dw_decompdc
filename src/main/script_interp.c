@@ -99,7 +99,7 @@ extern TextBoxTable MAIN_D_801BE80C;
 extern char MAIN_D_801307CC[];
 extern char **MAIN_D_80130774[];
 extern char MAIN_D_801B1D26[];
-extern char MAIN_D_801345F8[8];
+extern char MAIN_D_801345F8[5];
 extern char MAIN_D_80134600[8];
 extern int16_t MAIN_D_801302FC[];
 extern uint8_t *CURRENT_SCRIPT_PTR;

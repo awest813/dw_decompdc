@@ -672,15 +672,15 @@ uint8_t BTL_D_8007372C[12] = {
 };
 
 const char BTL_D_80072EF8[32] = "Listens to #C1! #W";
-const char BTL_D_80072F18[20] = "#R#C1dropped #C7";
-const char BTL_D_80072F2C[24] = "#C1#R was injured #W";
+const char BTL_D_80072F18[] = "#R#C1dropped #C7";
+const char BTL_D_80072F2C[] = "#C1#R was injured #W";
 const char BTL_D_80072F44[20] = "#C7set technique #R";
-const char BTL_D_80072F58[24] = "#C7Put up with it! #R";
+const char BTL_D_80072F58[] = "#C7Put up with it! #R";
 const char BTL_D_80072F70[32] = "#C7Move away!#RChange target!#R";
-const char BTL_D_80072F90[20] = "#C7Keep it down!#R";
-const char BTL_D_80072FA4[24] = "#C7Go all the way!#R";
-const char BTL_D_80072FBC[28] = "#C1MP Consumption Bonus!";
-const char BTL_D_80072FD8[12] = "reduced by";
+const char BTL_D_80072F90[] = "#C7Keep it down!#R";
+const char BTL_D_80072FA4[] = "#C7Go all the way!#R";
+const char BTL_D_80072FBC[] = "#C1MP Consumption Bonus!";
+const char BTL_D_80072FD8[] = "reduced by";
 const char BTL_D_80072FE4[16] = "#R#C1learned!#W";
 
 const MATRIX BTL_D_80072FF4 = {
