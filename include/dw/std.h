@@ -149,7 +149,7 @@ extern int32_t MAIN_D_80134908;
 extern uint8_t MAIN_D_8013490C[8];
 extern int8_t MAIN_D_80134914[6];
 extern SVECTOR MAIN_D_8013491C;
-extern int16_t MAIN_D_80134924[4];
+extern int16_t MAIN_D_80134924[3];
 extern SVECTOR MAIN_D_8013492C;
 extern RGB8 MAIN_D_80134934;
 extern SVECTOR MAIN_D_80134938;

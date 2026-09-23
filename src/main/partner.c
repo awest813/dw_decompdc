@@ -50,7 +50,7 @@ extern int32_t CHECKED_MEMORY_CARD;
 extern VECTOR STORED_TAMER_POS;
 
 
-extern int8_t ITEM_TAKE_DISTANCE[68];
+extern int8_t ITEM_TAKE_DISTANCE[66];
 
 void tickMainMenu(int32_t instanceId);
 void renderMainMenu(int32_t instanceId);

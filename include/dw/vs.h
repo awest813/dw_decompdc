@@ -51,7 +51,7 @@ extern int32_t MAIN_D_80134B40;
 extern uint8_t MAIN_D_80134B44[8];
 extern int8_t MAIN_D_80134B4C[6];
 extern SVECTOR MAIN_D_80134B54;
-extern int16_t MAIN_D_80134B5C[4];
+extern int16_t MAIN_D_80134B5C[3];
 extern SVECTOR MAIN_D_80134B64;
 extern RGB8 MAIN_D_80134B6C;
 extern SVECTOR MAIN_D_80134B70;
