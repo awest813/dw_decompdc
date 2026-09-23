@@ -13,4 +13,4 @@ tickTournamentInfo = 0x80081928;
 renderTournamentInfo = 0x800819A4;
 initTournamentSchedule = 0x80081A80;
 DGET_jtbl_80081CCC = 0x80081CCC; // align:0x4
-DGET_D_80081CE8 = 0x80081CE8;
+DGET_D_80081CE8 = 0x80081CE8; // size:0xB
