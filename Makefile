@@ -516,8 +516,9 @@ $(BUILDDIR)/%.s.o: %.s
 				--set-section-alignment .sbss=4 \
 				--set-section-alignment .sdata=4 $@
 
-# PsyQ jumptables are assembled from separate .rodata files
-$(BUILDDIR)/$(ASM_DIR)/main/psyq/%.s.o: ASFLAGS += -Wa,--defsym,_GLOBAL_JLABELS=1
+# Fix objdiff jump table mismatches by making jump table labels local
+C_ASM_OBJ := $(patsubst $(BUILDDIR)/src/%.c.o,$(BUILDDIR)/$(ASM_DIR)/%.s.o,$(filter %.c.o,$(OBJ)))
+$(C_ASM_OBJ): ASFLAGS += -Wa,--defsym,LOCAL_JLABELS=1
 
 $(MAIN_SBSS) &: config/sbss.yaml config/symbols.txt
 	@mkdir -p $(dir $@)

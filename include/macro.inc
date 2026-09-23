@@ -37,13 +37,8 @@
 
 
 # A label referenced by a jumptable.
-# Local by default, so jumptable entries are relocated against the function's
-# section like in compiled code. Define _GLOBAL_JLABELS when the jumptables are
-# assembled from a separate file (PsyQ libraries).
-.macro jlabel label, visibility=local
-.ifdef _GLOBAL_JLABELS
-    .global \label
-.else
+.macro jlabel label, visibility=global
+.ifndef LOCAL_JLABELS
     .\visibility \label
 .endif
     \label:
