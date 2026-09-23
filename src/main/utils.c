@@ -6,11 +6,12 @@
 #include <dw/btl.h>
 #include <dw/combat.h>
 #include <dw/main.h>
+#include <dw/psx_addr.h>
 #include <dw/std.h>
 #include <dw/ui.h>
 #include <dw/utils.h>
 
-#define shop_START		((char *)0x80080800)
+#define shop_START		((char *)PSX_ADDR(0x80080800))
 
 void damageTick(FighterData* fighter, Stats* stats);
 void sortItemsById(uint8_t *data, int32_t count);

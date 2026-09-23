@@ -15,17 +15,18 @@
 #include <dw/model.h>
 #include <dw/move.h>
 #include <dw/params.h>
+#include <dw/psx_addr.h>
 #include <dw/sound.h>
 #include <dw/std.h>
 #include <dw/types.h>
 
 #include "common.h"
 
-#define STD_FINISHER_TIM	((char *)0x80052ae0)
-#define STD_FINISHER_MODEL	((char *)0x80053800)
-#define STD_CONFUSION_MODEL	((char *)0x80054838)
-#define STD_STUN_MODEL		((char *)0x80054d00)
-#define STD_BUFF_MODEL		((TMDModel *)0x80055328)
+#define STD_FINISHER_TIM	((char *)PSX_ADDR(0x80052ae0))
+#define STD_FINISHER_MODEL	((char *)PSX_ADDR(0x80053800))
+#define STD_CONFUSION_MODEL	((char *)PSX_ADDR(0x80054838))
+#define STD_STUN_MODEL		((char *)PSX_ADDR(0x80054d00))
+#define STD_BUFF_MODEL		((TMDModel *)PSX_ADDR(0x80055328))
 
 extern int32_t MAIN_D_801350EC;
 extern void *MAIN_D_80135130;

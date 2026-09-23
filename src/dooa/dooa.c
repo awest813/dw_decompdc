@@ -19,6 +19,7 @@
 #include <dw/model.h>
 #include <dw/params.h>
 #include <dw/partner.h>
+#include <dw/psx_addr.h>
 #include <dw/script.h>
 #include <dw/sound.h>
 #include <dw/sound_async.h>
@@ -26,11 +27,11 @@
 #include <dw/utils.h>
 #include <dw/world_object.h>
 
-#define DOOA_MMD_BUFFER		((uint8_t *)0x80020000)
+#define DOOA_MMD_BUFFER		((uint8_t *)PSX_ADDR(0x80020000))
 #define DOOA_SHARD_BUFFER	0x80044800
 #define DOOA_SHARD_BUFFER_SIZE	0x5dc0
-#define DOOA_ORDERING_TABLE_0	((GsOT_TAG *)0x8008c000)
-#define DOOA_ORDERING_TABLE_1	((GsOT_TAG *)0x8008e000)
+#define DOOA_ORDERING_TABLE_0	((GsOT_TAG *)PSX_ADDR(0x8008c000))
+#define DOOA_ORDERING_TABLE_1	((GsOT_TAG *)PSX_ADDR(0x8008e000))
 
 typedef struct {
 	VECTOR offset;

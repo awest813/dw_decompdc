@@ -4,12 +4,13 @@
 #include <dw/evl.h>
 #include <dw/graphics.h>
 #include <dw/main.h>
+#include <dw/psx_addr.h>
 #include <dw/utils.h>
 #include <dw/world_object.h>
 
 #include "common.h"
 
-#define EVL_MMD_BUFFER	((uint8_t *)0x80020000)
+#define EVL_MMD_BUFFER	((uint8_t *)PSX_ADDR(0x80020000))
 
 extern int8_t EVL_LOADING_COMPLETE;
 

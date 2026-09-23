@@ -1042,8 +1042,10 @@ int32_t tickEntityMoveTo(scriptId1, scriptId2, targetX, targetZ, speed,
 	int8_t withCamera;
 {
 	/* TODO: get rid of extra declaration */
+#ifndef DW_PORT
 	extern void setEntityPosition(int32_t entityId, int32_t x, long y,
 	                              int32_t z);
+#endif
 	Entity *entity;
 	Entity *targetEntity;
 	PositionData *position;

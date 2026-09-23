@@ -264,8 +264,10 @@ static int32_t renderInsetBox__garbage__(int32_t seed)
 
 void renderInsetBox(int16_t a, int16_t b, int16_t c, int16_t d, int32_t otz)
 {
+#ifndef DW_PORT
 	void renderBoxBar(int32_t x, int32_t y, int32_t w, int32_t h, uint8_t r,
 			  uint8_t g, uint8_t b, uint8_t flags, int32_t otz);
+#endif
 	int32_t x;
 	int32_t y;
 	int32_t y0;

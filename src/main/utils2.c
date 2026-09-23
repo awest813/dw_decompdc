@@ -8,6 +8,7 @@
 #include <dw/main.h>
 #include <dw/mov.h>
 #include <dw/params.h>
+#include <dw/psx_addr.h>
 #include <dw/sound.h>
 #include <dw/std.h>
 #include <dw/tournament.h>
@@ -289,6 +290,9 @@ void loadDynamicLibrary(Overlay lib, uint8_t *isComplete, dw_bool isAsync,
 {
 	uint8_t *nv;
 
+#ifdef DW_PORT
+	dw_overlay_reset(lib);
+#endif
 	if (!isAsync) {
 		readFile(MAIN_D_8012BA8C[lib - 1], (nv = MAIN_D_8012B96C[lib - 1]));
 	} else {

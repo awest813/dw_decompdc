@@ -13,6 +13,7 @@
 #include <dw/murd.h>
 #include <dw/params.h>
 #include <dw/partner.h>
+#include <dw/psx_addr.h>
 #include <dw/script.h>
 #include <dw/sound.h>
 #include <dw/tamer.h>
@@ -20,7 +21,7 @@
 #include <dw/ui.h>
 #include <dw/utils.h>
 
-#define MURD_ORDERING_TABLE_0	((GsOT_TAG *)0x8008c000)
+#define MURD_ORDERING_TABLE_0	((GsOT_TAG *)PSX_ADDR(0x8008c000))
 
 typedef struct {
 	int16_t timer;

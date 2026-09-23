@@ -137,7 +137,9 @@ void setShortWithStride();
 void getDrawingOffsetCopy(int32_t *x, int32_t *y);
 int32_t isTamerOnScreen(void);
 int32_t lerp(int32_t start, int32_t end, int32_t t0, int32_t t1, int32_t t);
+#ifndef DW_PORT
 void renderParticleFlash(int16_t *params);
+#endif
 void renderFXParticle(SVECTOR *pos, int32_t size, uint8_t *color);
 int32_t worldPosToScreenPos(int16_t *world, int16_t *screen);
 void addFXPrim(POLY_FT4 *prim, int32_t x, int32_t y, int16_t width, int16_t height, int32_t depth);

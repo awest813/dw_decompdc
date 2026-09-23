@@ -17,13 +17,14 @@
 #include <dw/model.h>
 #include <dw/move.h>
 #include <dw/params.h>
+#include <dw/psx_addr.h>
 #include <dw/sound.h>
 #include <dw/std.h>
 #include <dw/types.h>
 
 #include "common.h"
 
-#define STD_TMD_BUFFER	((uint8_t *)0x80038000)
+#define STD_TMD_BUFFER	((uint8_t *)PSX_ADDR(0x80038000))
 
 typedef struct {
 	uint32_t *vertTop;

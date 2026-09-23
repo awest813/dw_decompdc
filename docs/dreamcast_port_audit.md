@@ -90,7 +90,7 @@ A matching decomp only has to match what Metrowerks produced. GCC may legally co
 
 | Warning | Count | Why it matters | Action |
 |---|---|---|---|
-| `-Waggressive-loop-optimizations` | **5** | **GCC will miscompile these.** Loops index past the declared size of `extern` arrays: `STD_D_8007C7B0` (`std_effect.c:1085, 1143`; `std_hud.c:1264, 1271`) and `BTL_D_80075CA0` (`battle_effect.c:6300`). GCC may cut the loop short or delete it. | Correct the array sizes in the declarations. |
+| `-Waggressive-loop-optimizations` | **5** | **GCC will miscompile these.** Loops index past the declared size of `extern` arrays: `STD_D_8007C7B0` (`std_effect.c:1085, 1143`; `std_hud.c:1264, 1271`) and `BTL_D_80075CA0` (`battle_effect.c:6300`). GCC may cut the loop short or delete it. These are genuine out-of-bounds writes in the original game (`battle_effect.c` documents the BTL one as a known bug). | Don't resize the arrays: that would change behaviour. Keep the original data layout so the writes land where they did on the PS1, and build with `-fno-aggressive-loop-optimizations`. |
 | `-Warray-bounds` | 94 | Mostly undersized array declarations and struct overreach (21 of them inside `libgpu.h` macros). This works on the PS1 only because of the fixed memory layout. | Fix the declarations and keep the original data order (§3.5). |
 | `-Wreturn-type` | 110 | Non-`void` functions that fall off the end, some marked `// NOLINT undefined behavior intentional` (`_sin` in `math.c`, `readFile` in `file.c`). The MIPS caller received whatever was left in `v0`; on SH-4 it gets whatever is in `r0`. | Check every caller that uses the result. Most ignore it. |
 | `-W(maybe-)uninitialized` | 69 | Same problem: Metrowerks' register allocation happened to supply the value. | Audit each site. |
@@ -98,7 +98,7 @@ A matching decomp only has to match what Metrowerks produced. GCC may legally co
 | Mismatched `extern` types | 29 globals | Differences in signedness, array vs. pointer, or `PACKET[]` vs. `uint8_t[2][81920]`. Harmless with an identical memory layout. | Build with `-fno-strict-aliasing`. |
 | `setjmp`/`longjmp` | 42 sites | The script interpreter uses these as normal early exits, with no stack tricks. Locals changed between `setjmp` and `longjmp` must be `volatile` under GCC `-O2`. | Audit `script_interp.c` around `setjmp_retry`. |
 
-Recommended port build flags: `-fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -fno-toplevel-reorder -fno-common`. Once the audit above is done, promote these warnings to errors.
+Recommended port build flags: `-fno-strict-aliasing -fwrapv -fno-delete-null-pointer-checks -fno-aggressive-loop-optimizations -fno-toplevel-reorder -fno-common -fno-zero-initialized-in-bss`. `port/Makefile` uses exactly these. Once the audit above is done, promote these warnings to errors.
 
 ### 3.5 Memory-map assumptions
 
@@ -351,11 +351,13 @@ PowerVR VRAM: double-buffered 640×480 16-bit framebuffers take about 1.2 MB and
 
 ## 9. First steps (next 2–4 weeks)
 
-1. Install the KallistiOS toolchain (dc-chain, GCC 13 or later). Add `port/` and a separate `Makefile.dc` so the matching build and CI stay untouched.
-2. Behind `#ifdef PLATFORM_DC`, fix the 4 conflicting block-scope prototypes. Also correct the extern array sizes behind the 5 `-Waggressive-loop-optimizations` sites; those are worth upstreaming if the match holds.
-3. Write `tools/gen_bss_c.py` to emit the 766 BSS/SBSS globals as C in address order, reusing `config/bss.yaml` and `config/sbss.yaml`.
-4. Replace `mwinline_n.h` with `port/include/gte_inline.h`, backed by a software GTE in C. Unit-test it against known GTE results from psx-spx or captured from an emulator.
-5. Stub all ~194 PsyQ functions (log on first call), link the Dreamcast ELF, and reach `main()` and the first `VSync`.
+Progress is tracked in [`port/README.md`](../port/README.md). As of 2026-09-23, steps 1–5 are done, except that the Dreamcast link itself is still pending (step 1).
+
+1. ~~Add `port/` and a separate Makefile so the matching build stays untouched~~ Done: `port/Makefile`. **Still to do:** install the KallistiOS toolchain (dc-chain, GCC 13 or later) and do the first real Dreamcast link. The cloud environment used so far blocks the GNU and sourceware mirrors that dc-chain downloads from, so the port was verified with an `sh4-linux-gnu` GCC and qemu instead.
+2. ~~Fix the 4 conflicting block-scope prototypes behind an `#ifdef`~~ Done, behind `DW_PORT`. The 5 aggressive-loop sites are handled by compiler flags and layout, not source edits (§3.4).
+3. ~~Emit the BSS/SBSS globals in address order~~ Done: `port/tools/gen_glue.py` lays out the 712 that the game references at their original relative addresses.
+4. ~~Replace `mwinline_n.h` with a software GTE~~ Done: `port/psyq/gte.c`, `port/include/mwinline_n.h`, and `port/psyq/libgte.c`, with unit tests on the host and on SH-4.
+5. ~~Stub the remaining PsyQ functions, link, and reach `main()`~~ Done: 157 generated logging stubs. The game's `main()` runs on SH-4 (under qemu) through its whole init sequence and stops at the first disc read. The first `VSync` needs step 6.
 6. Implement raw-image `CdRead`, `LoadImage` into shadow VRAM, and an on-screen VRAM viewer. Load the title TIMs.
 7. Write a minimal ordering-table → PowerVR translator for `POLY_FT4` and sprites, and reach the title screen (M1).
 8. Start the SHOP overlay: add a `config/shop.yaml` splat config and run m2c for a first functional pass.

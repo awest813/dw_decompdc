@@ -11,6 +11,7 @@
 #include <dw/main.h>
 #include <dw/math.h>
 #include <dw/params.h>
+#include <dw/psx_addr.h>
 #include <dw/script.h>
 #include <dw/sound.h>
 #include <dw/sound_async.h>
@@ -18,11 +19,11 @@
 #include <dw/utils.h>
 #include <dw/world_object.h>
 
-#define BTL_FINISHER_TIM	((char *)0x80052ae0)
-#define BTL_FINISHER_MODEL	((char *)0x80053800)
-#define BTL_CONFUSION_MODEL	((char *)0x80054838)
-#define BTL_STUN_MODEL		((char *)0x80054d00)
-#define BTL_BUFF_MODEL		((char *)0x80055328)
+#define BTL_FINISHER_TIM	((char *)PSX_ADDR(0x80052ae0))
+#define BTL_FINISHER_MODEL	((char *)PSX_ADDR(0x80053800))
+#define BTL_CONFUSION_MODEL	((char *)PSX_ADDR(0x80054838))
+#define BTL_STUN_MODEL		((char *)PSX_ADDR(0x80054d00))
+#define BTL_BUFF_MODEL		((char *)PSX_ADDR(0x80055328))
 
 #define NUM_CONCAVE_SCREENS	18
 
