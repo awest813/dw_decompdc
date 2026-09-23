@@ -4412,8 +4412,7 @@ WARP_CRYSTAL_SCALE = 0x8012ABCC; // size:0x10
 MOVE_BOULDER_SCALE = 0x8012ABDC; // size:0x10
 EVO_REQ_DATA = 0x8012ABEC; // size:0x6e4
 EVO_GAINS_DATA = 0x8012B2D0; // size:0x39c
-// Two bytes are padding
-EVO_PATHS_DATA = 0x8012B66C; // size:0x2ac
+EVO_PATHS_DATA = 0x8012B66C; // type:s8 size:0x2AA
 // One byte is padding
 TEXT_COLORS = 0x8012B918; // type:s8 size:0x33 align:0x4
 MAIN_D_8012B94C = 0x8012B94C;
