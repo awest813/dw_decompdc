@@ -149,9 +149,10 @@ void dw_overlay_reset(int lib)
 
 /*
  * initializeHeap() passes these to the PsyQ InitHeap3(). The port's heap is
- * the C library's, so the values only need to describe an empty PS1 heap.
+ * the C library's, so they describe an empty PS1 heap: the heap starts at
+ * (_end & ~0xF) + 0x10 = 0x801FFF00 and ends at the stack, also 0x801FFF00.
  */
-unsigned long dw_rts_end = 0x801FFF00;
+unsigned long dw_rts_end = 0x801FFEF0;
 unsigned long dw_rts_stack_addr = 0x801FFF00;
 unsigned long dw_rts_stack_size = 0;
 

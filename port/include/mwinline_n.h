@@ -7,45 +7,53 @@
  * relatives) are provided; any other macro fails to compile, which is
  * intentional.
  *
- * Pointer arguments are accessed as 32-bit words, like lwc2/swc2. MIPS
- * requires the same alignment, so the game's pointers are already
- * suitably aligned.
+ * Memory is accessed in 16-bit halves. lwc2/swc2 need 4-byte alignment on
+ * MIPS, but GCC only guarantees 2 for SVECTOR/DVECTOR objects, and SH-4
+ * faults on misaligned 32-bit accesses (qemu does not).
  */
 #ifndef DW_PORT_MWINLINE_N_H
 #define DW_PORT_MWINLINE_N_H
 
 #include "../psyq/gte.h"
 
+/* Little-endian 32-bit word from two 16-bit halves. */
+static inline gte_u32 dw_gte_load32(const void *p, int word)
+{
+	const gte_u16 *h = (const gte_u16 *)p + word * 2;
+
+	return (gte_u32)h[0] | ((gte_u32)h[1] << 16);
+}
+
 static inline void dw_gte_ldv(int n, const void *p)
 {
-	const gte_u32 *w = (const gte_u32 *)p;
-
-	dw_gte_write_data(n * 2, w[0]);
-	dw_gte_write_data(n * 2 + 1, w[1]);
+	dw_gte_write_data(n * 2, dw_gte_load32(p, 0));
+	dw_gte_write_data(n * 2 + 1, dw_gte_load32(p, 1));
 }
 
 static inline void dw_gte_st(int reg, void *p)
 {
-	*(gte_u32 *)p = dw_gte_read_data(reg);
+	gte_u32 v = dw_gte_read_data(reg);
+	gte_u16 *h = (gte_u16 *)p;
+
+	h[0] = (gte_u16)v;
+	h[1] = (gte_u16)(v >> 16);
 }
 
+/* MATRIX: short m[3][3] at offset 0, long t[3] at offset 20. */
 static inline void dw_gte_set_rot(const void *m)
 {
-	const gte_u32 *w = (const gte_u32 *)m;
 	int i;
 
 	for (i = 0; i < 5; i++) {
-		dw_gte_write_ctrl(i, w[i]);
+		dw_gte_write_ctrl(i, dw_gte_load32(m, i));
 	}
 }
 
 static inline void dw_gte_set_trans(const void *m)
 {
-	const gte_u32 *w = (const gte_u32 *)m;
-
-	dw_gte_write_ctrl(5, w[5]);
-	dw_gte_write_ctrl(6, w[6]);
-	dw_gte_write_ctrl(7, w[7]);
+	dw_gte_write_ctrl(5, dw_gte_load32(m, 5));
+	dw_gte_write_ctrl(6, dw_gte_load32(m, 6));
+	dw_gte_write_ctrl(7, dw_gte_load32(m, 7));
 }
 
 /* Loads */
@@ -74,7 +82,7 @@ static inline void dw_gte_set_trans(const void *m)
 #define gte_stotz(r0)		dw_gte_st(7, (r0))
 #define gte_stopz(r0)		dw_gte_st(24, (r0))
 #define gte_stlzc(r0)		dw_gte_st(31, (r0))
-/* mfc2 SZ3; sra 2; sw */
-#define gte_stszotz(r0)		(*(gte_s32 *)(r0) = (gte_s32)dw_gte_read_data(19) >> 2)
+/* mfc2 SZ3; sra 2; sw (SZ3 is unsigned 16-bit, so this is SZ3 / 4) */
+#define gte_stszotz(r0)		(*(gte_s32 *)(r0) = (gte_s32)(dw_gte_read_data(19) >> 2))
 
 #endif /* DW_PORT_MWINLINE_N_H */

@@ -16,6 +16,7 @@ undefined. This script resolves them in two ways:
 """
 
 import argparse
+import bisect
 import re
 import subprocess
 import sys
@@ -51,13 +52,16 @@ def run_nm(nm, path, *flags):
 
 
 def object_symbols(nm, objects):
+    """Return (global definitions, references none of the objects define)."""
     defined, undefined = set(), set()
     for obj in objects:
         for line in run_nm(nm, obj):
             parts = line.split()
             if len(parts) == 2 and parts[0] == 'U':
                 undefined.add(parts[1])
-            elif len(parts) == 3 and parts[1] not in ('U', 'w'):
+            elif len(parts) == 3 and (parts[1].isupper() or parts[1] == 'u'):
+                # Upper case (and 'u', unique global) is a global definition;
+                # local symbols such as statics cannot satisfy references.
                 defined.add(parts[2])
     return defined, undefined - defined
 
@@ -106,9 +110,11 @@ def main():
     block_end = bss['end']
     addrs = sorted(a for a, _ in syms.values())
 
-    def gap_size(addr):
-        nxt = next((a for a in addrs if a > addr), addr + 4)
-        return max(4, min(nxt - addr, MAX_DATA_STUB))
+    def gap_size(addr, minimum):
+        """Distance to the next symbol in symbols.txt, clamped."""
+        i = bisect.bisect_right(addrs, addr)
+        nxt = addrs[i] if i < len(addrs) else addr + minimum
+        return max(minimum, min(nxt - addr, MAX_DATA_STUB))
 
     bss_syms, func_stubs, data_stubs, unknown = [], [], [], []
     for name in names:
@@ -121,7 +127,7 @@ def main():
         elif addr < MAIN_TEXT_END:
             func_stubs.append(name)
         else:
-            data_stubs.append((name, size or gap_size(addr)))
+            data_stubs.append((name, size or gap_size(addr, 4)))
 
     # Unknown names (not in the symbol map) are assumed to be functions.
     func_stubs += unknown
@@ -136,8 +142,12 @@ def main():
         f'\t.space 0x{block_end - block_start:X}',
     ]
     for addr, name in sorted(bss_syms):
+        # Size: from symbols.txt, else up to the next known symbol.
+        size = syms[name][1] or min(gap_size(addr, 1), block_end - addr)
         asm.append(f'\t.globl {pre}{name}')
+        asm.append(f'\t.type {pre}{name}, @object')
         asm.append(f'\t.set {pre}{name}, {pre}dw_main_bss + 0x{addr - block_start:X}')
+        asm.append(f'\t.size {pre}{name}, 0x{size:X}')
     # No executable stack (GNU/Linux linkers warn otherwise).
     asm.append('\t.section .note.GNU-stack,"",@progbits')
     args.out_asm.parent.mkdir(parents=True, exist_ok=True)

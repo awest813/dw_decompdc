@@ -231,10 +231,10 @@ static gte_u32 unr_divide(gte_u32 h, gte_u32 sz3)
 	return r > 0x1FFFF ? 0x1FFFF : (gte_u32)r;
 }
 
-/* MAC[i] = (T << 12 + M[row] . V) >> shift, with per-step overflow checks. */
+/* MAC[i] = (T * 0x1000 + M[row] . V) >> shift, with per-step overflow checks. */
 static gte_s64 dot3(int i, gte_s32 t, const gte_s16 *m, const gte_s16 *v)
 {
-	gte_s64 a = mac_chk(i, ((gte_s64)t << 12) + (gte_s64)m[0] * v[0]);
+	gte_s64 a = mac_chk(i, (gte_s64)t * 0x1000 + (gte_s64)m[0] * v[0]);
 
 	a = mac_chk(i, a + (gte_s64)m[1] * v[1]);
 	return mac_chk(i, a + (gte_s64)m[2] * v[2]);
@@ -386,7 +386,7 @@ static void op_mvmva(int sf, int mx, int vsel, int cv, int lm)
 		 * affect the flags; the result is (M12*V2 + M13*V3) >> shift.
 		 */
 		for (i = 0; i < 3; i++) {
-			gte_s64 a = mac_chk(i + 1, ((gte_s64)t[i] << 12) + (gte_s64)m[i][0] * v[0]);
+			gte_s64 a = mac_chk(i + 1, (gte_s64)t[i] * 0x1000 + (gte_s64)m[i][0] * v[0]);
 			gte_s64 b;
 
 			set_ir(i + 1, (gte_s32)(a >> shift), 0);
@@ -407,7 +407,7 @@ static void depth_cue(const gte_s64 pre[3], int shift, int lm)
 	int i;
 
 	for (i = 0; i < 3; i++) {
-		gte_s64 d = mac_chk(i + 1, ((gte_s64)dw_gte.fc[i] << 12) - pre[i]);
+		gte_s64 d = mac_chk(i + 1, (gte_s64)dw_gte.fc[i] * 0x1000 - pre[i]);
 
 		set_ir(i + 1, (gte_s32)(d >> shift), 0);
 	}
@@ -417,13 +417,13 @@ static void depth_cue(const gte_s64 pre[3], int shift, int lm)
 	set_ir_from_mac(lm);
 }
 
-/* [R*IR1, G*IR2, B*IR3] << 4 */
+/* [R*IR1, G*IR2, B*IR3] * 16 */
 static void color_times_ir(const gte_u8 *col, gte_s64 out[3])
 {
 	int i;
 
 	for (i = 0; i < 3; i++) {
-		out[i] = mac_chk(i + 1, ((gte_s64)col[i] * dw_gte.ir[i + 1]) << 4);
+		out[i] = mac_chk(i + 1, (gte_s64)col[i] * dw_gte.ir[i + 1] * 16);
 	}
 }
 
@@ -487,7 +487,7 @@ static void op_dpcs(const gte_u8 *col, int shift, int lm)
 	int i;
 
 	for (i = 0; i < 3; i++) {
-		pre[i] = (gte_s64)col[i] << 16;
+		pre[i] = (gte_s64)col[i] * 0x10000;
 	}
 	depth_cue(pre, shift, lm);
 	push_color();
@@ -592,7 +592,7 @@ void dw_gte_cmd(gte_u32 cmd)
 		break;
 	case GTE_OP_INTPL:
 		for (i = 0; i < 3; i++) {
-			pre[i] = (gte_s64)dw_gte.ir[i + 1] << 12;
+			pre[i] = (gte_s64)dw_gte.ir[i + 1] * 0x1000;
 		}
 		depth_cue(pre, shift, lm);
 		push_color();
@@ -611,7 +611,7 @@ void dw_gte_cmd(gte_u32 cmd)
 		break;
 	case GTE_OP_GPL:
 		for (i = 1; i <= 3; i++) {
-			set_mac(i, ((gte_s64)dw_gte.mac[i] << shift) +
+			set_mac(i, (gte_s64)dw_gte.mac[i] * ((gte_s64)1 << shift) +
 				       (gte_s64)dw_gte.ir[0] * dw_gte.ir[i], shift);
 		}
 		set_ir_from_mac(lm);

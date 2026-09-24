@@ -7,6 +7,7 @@
  * checked against the libgte disassembly (asm/main/psyq/libgte, produced
  * by `make regenerate` from the user's disc).
  */
+#include <stdio.h>
 #include <sys/types.h>
 #include <libgte.h>
 
@@ -91,22 +92,22 @@ void SetColorMatrix(MATRIX *m)
 
 void SetBackColor(long rbk, long gbk, long bbk)
 {
-	dw_gte.bk[0] = rbk << 4;
-	dw_gte.bk[1] = gbk << 4;
-	dw_gte.bk[2] = bbk << 4;
+	dw_gte.bk[0] = rbk * 16;
+	dw_gte.bk[1] = gbk * 16;
+	dw_gte.bk[2] = bbk * 16;
 }
 
 void SetFarColor(long rfc, long gfc, long bfc)
 {
-	dw_gte.fc[0] = rfc << 4;
-	dw_gte.fc[1] = gfc << 4;
-	dw_gte.fc[2] = bfc << 4;
+	dw_gte.fc[0] = rfc * 16;
+	dw_gte.fc[1] = gfc * 16;
+	dw_gte.fc[2] = bfc * 16;
 }
 
 void SetGeomOffset(long ofx, long ofy)
 {
-	dw_gte.ofx = ofx << 16;
-	dw_gte.ofy = ofy << 16;
+	dw_gte.ofx = ofx * 0x10000;
+	dw_gte.ofy = ofy * 0x10000;
 }
 
 void SetGeomScreen(long h)
@@ -129,6 +130,7 @@ void PushMatrix(void)
 	int i, j;
 
 	if (matrix_sp >= MATRIX_STACK_DEPTH) {
+		printf("[libgte] PushMatrix: stack (max %d) is full\n", MATRIX_STACK_DEPTH);
 		return;
 	}
 	for (i = 0; i < 3; i++) {
@@ -145,6 +147,7 @@ void PopMatrix(void)
 	int i, j;
 
 	if (matrix_sp <= 0) {
+		printf("[libgte] PopMatrix: stack is empty\n");
 		return;
 	}
 	matrix_sp--;
@@ -182,7 +185,7 @@ SVECTOR *ApplyMatrixSV(MATRIX *m, SVECTOR *v0, SVECTOR *v1)
 
 /*
  * RT * v for a 32-bit vector, split into 15-bit halves:
- * (RT * hi) << 3 + (RT * lo) >> 12. VERIFY rounding against libgte.
+ * (RT * hi) * 8 + (RT * lo) >> 12. VERIFY rounding against libgte.
  */
 static void apply_rt_long(long x, long y, long z, long *out)
 {
@@ -206,7 +209,7 @@ static void apply_rt_long(long x, long y, long z, long *out)
 	}
 
 	for (i = 0; i < 3; i++) {
-		out[i] = (hi[i] << 3) + lo[i];
+		out[i] = hi[i] * 8 + lo[i];
 	}
 }
 
@@ -304,9 +307,9 @@ MATRIX *ScaleMatrix(MATRIX *m, VECTOR *v)
 	int i;
 
 	for (i = 0; i < 3; i++) {
-		m->m[i][0] = (short)FIXED(m->m[i][0] * v->vx);
-		m->m[i][1] = (short)FIXED(m->m[i][1] * v->vy);
-		m->m[i][2] = (short)FIXED(m->m[i][2] * v->vz);
+		m->m[i][0] = (short)FIXED((long long)m->m[i][0] * v->vx);
+		m->m[i][1] = (short)FIXED((long long)m->m[i][1] * v->vy);
+		m->m[i][2] = (short)FIXED((long long)m->m[i][2] * v->vz);
 	}
 	return m;
 }

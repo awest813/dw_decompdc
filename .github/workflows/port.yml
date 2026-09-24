@@ -1,0 +1,49 @@
+name: port
+# Non-matching port build (port/). Needs no game data or proprietary tools.
+on:
+  push:
+    paths:
+      - 'port/**'
+      - 'src/**'
+      - 'include/**'
+      - 'config/symbols.txt'
+      - 'config/bss.yaml'
+      - 'config/sbss.yaml'
+      - '.github/workflows/port.yml'
+  pull_request:
+    paths:
+      - 'port/**'
+      - 'src/**'
+      - 'include/**'
+      - 'config/symbols.txt'
+      - 'config/bss.yaml'
+      - 'config/sbss.yaml'
+      - '.github/workflows/port.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sh4:
+    runs-on: ubuntu-24.04
+    steps:
+    - uses: actions/checkout@v5
+      with:
+        persist-credentials: false
+
+    - run: git submodule update --init --depth 1 external/psyq_headers
+
+    - run: |
+        sudo apt-get update
+        sudo apt-get install -y gcc-sh4-linux-gnu qemu-user-static python3-yaml
+
+    - name: Unit tests (host and SH-4)
+      run: make -C port test
+
+    - name: Build (SH-4)
+      run: make -C port -j$(nproc)
+
+    - name: Smoke test under qemu
+      # The game's main() must get through its init sequence to CdInit.
+      run: |
+        make -C port run RUN_SECONDS=10 | tee run.log
+        grep -qx '\[psyq stub\] CdInit' run.log

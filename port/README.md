@@ -17,6 +17,7 @@ to the original tokens when `DW_PORT` is not defined.
 | GTE | Software GTE: every COP2 command, register-accurate FLAG and saturation, UNR division. The game's inline GTE macros and 29 libgte functions run on it. Unit-tested on the host and on SH-4. |
 | Other PsyQ SDK functions | 157 functions are generated stubs that log their first call and return 0 (`build/port-*/glue/report.txt` lists them). |
 | Overlays | Linked statically. Loading an overlay restores its data from a startup snapshot, as reloading from disc does on the PS1. |
+| Data layout | Every game variable is 4-byte aligned, as in the original build. Game BSS globals sit at their original relative addresses. |
 | Dreamcast (KallistiOS) | `make PLATFORM=dc` is written but has never been run: the cloud environment used so far blocks the GNU/sourceware mirrors that the KallistiOS toolchain builder downloads from. |
 | SHOP overlay | Not decompiled yet. Loading it logs a message and does nothing. |
 
@@ -64,6 +65,7 @@ port/
     port_core.c        scratchpad, overlay area, overlay snapshots,
                        setjmp support, stub logging, main()
   tools/
+    fix_obj.py         per-object data alignment and overlay data grouping
     gen_glue.py        BSS layout + stubs for still-unresolved symbols
   tests/             unit tests
 include/dw/psx_addr.h  PSX_ADDR(): fixed PS1 addresses → port overlay area
@@ -74,10 +76,15 @@ include/dw/psx_addr.h  PSX_ADDR(): fixed PS1 addresses → port overlay area
 - **Compiler flags.** `port/Makefile` builds the game with flags that keep the original semantics where GCC would otherwise exploit undefined behaviour: `-fno-strict-aliasing`, `-fwrapv`, `-fno-aggressive-loop-optimizations`, `-fno-toplevel-reorder`, `-fno-zero-initialized-in-bss`, and others (audit §3.4).
 - **Header overrides.** `port/include` comes first on the include path, ahead of the PsyQ headers. Wrappers such as `libetc.h` use `#include_next` and then patch individual macros.
 - **Fixed addresses.** `dw_psx_arena` is a copy of the PS1 overlay load area (`0x80010000`–`0x80090000`). Overlay files are still read into it, because the loader's `*_START` symbols point there. The 17 hard-coded buffer and asset addresses (audit Appendix B) map into it through `PSX_ADDR()`.
-- **Overlays.** Their code and data are linked statically. `port/Makefile` renames each overlay object's `.data`/`.bss` so the linker groups them per overlay. `loadDynamicLibrary()` calls `dw_overlay_reset()` to restore that overlay's startup data.
+- **Data alignment.** The original build puts every top-level variable on a 4-byte boundary. GCC would align byte and short arrays to 1 or 2, which moves neighbours and turns the original code's word accesses into faults on SH-4. Game code is therefore compiled with `-fdata-sections`, and `tools/fix_obj.py` raises every data section to 4-byte alignment.
+- **Overlays.** Their code and data are linked statically. `tools/fix_obj.py` renames each overlay object's data sections to `dw_ovl_<name>_data`/`_bss`, so the linker groups them per overlay. `loadDynamicLibrary()` calls `dw_overlay_reset()` to restore that overlay's startup data.
 - **BSS globals.** In the matching build, 712 game globals only exist in `config/symbols.txt`. `gen_glue.py` lays them out in one block at their original relative addresses, so out-of-bounds accesses (which the original game has) land on the same neighbours.
 - **Entry point.** The game's `main()` is compiled as `dw_game_main()`. `port/platform/port_core.c` owns `main()`, snapshots the overlays, then calls it.
 - **Four prototype hacks.** Block-scope prototypes whose parameter types conflict with the real definitions are hidden from the port build (`tamer.c`, `overworld_status_boxes.c`, `efe.c`, `map.c`). Every caller already passes values of the narrower type, so behaviour is unchanged.
+
+## Testing caveat
+
+qemu accepts misaligned memory accesses that SH-4 hardware rejects with an address error. A clean qemu run therefore does not prove the port is free of them. Test on real hardware early.
 
 ## Accuracy notes
 
